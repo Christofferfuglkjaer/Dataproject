@@ -10,3 +10,5 @@ $$ 2x^2$$
 jsdfjsdlfkjsdlkfjsdf
 
 ### Skibidi
+
+Jeg er bare bedre
