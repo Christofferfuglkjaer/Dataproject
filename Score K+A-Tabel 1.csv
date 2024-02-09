@@ -1,0 +1,127 @@
+Center,Kassenr,ScandcleftID,Født,Spaltediagnose (I/K),Spalteside (H/V),Tidlig/sen (T/L),Århus/Hellerup (A/B),"OR I (Start)
+",OR I (Slut),OR I (Antal kons),"OR II (Start)
+","OR II (Slut)
+",OR II (Antal kons),Ortokir (Ja/Nej),Kommentarer,Materialedato A,Materialedato B,Materialedato C
+H,1.0,11209.0,1998-11-05 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,Udgået,NaT,NaT,NaT
+H,2.0,11214.0,1999-03-26 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2007-06-06 00:00:00,2009-04-14 00:00:00,2016-03-08 00:00:00
+H,3.0,11112.0,1999-03-12 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2007-02-24 00:00:00,2009-03-11 00:00:00,2018-02-28 00:00:00
+H,4.0,11215.0,1999-04-23 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2007-05-22 00:00:00,2013-02-20 00:00:00,2016-02-01 00:00:00
+H,5.0,11229.0,1999-11-22 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2007-11-14 00:00:00,2012-01-18 00:00:00,2018-04-25 00:00:00
+H,6.0,11218.0,1999-01-06 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2007-06-06 00:00:00,2013-05-14 00:00:00,2022-04-19 00:00:00
+H,7.0,11134.0,2000-01-23 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2008-01-16 00:00:00,2012-05-09 00:00:00,2015-12-09 00:00:00
+H,8.0,11237.0,2000-04-26 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2008-06-04 00:00:00,2012-05-01 00:00:00,2017-11-29 00:00:00
+H,9.0,11232.0,1999-11-05 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2007-11-21 00:00:00,2012-11-14 00:00:00,2017-06-07 00:00:00
+H,10.0,11143.0,2000-07-30 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2008-06-18 00:00:00,2010-06-17 00:00:00,2018-09-26 00:00:00
+H,12.0,11249.0,2000-11-22 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2008-11-26 00:00:00,2012-11-21 00:00:00,2018-04-04 00:00:00
+H,13.0,11251.0,2000-11-30 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2008-11-12 00:00:00,2013-09-25 00:00:00,2016-09-21 00:00:00
+H,14.0,11250.0,2000-11-30 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2008-11-19 00:00:00,2013-01-16 00:00:00,2016-11-02 00:00:00
+H,15.0,11253.0,2001-01-09 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2009-01-07 00:00:00,2013-03-13 00:00:00,2016-06-20 00:00:00
+H,16.0,11156.0,2001-01-23 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2009-01-28 00:00:00,2013-06-19 00:00:00,2018-01-22 00:00:00
+H,17.0,11268.0,2001-05-22 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2009-08-18 00:00:00,2013-06-10 00:00:00,2017-06-28 00:00:00
+H,18.0,11172.0,2001-06-15 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2009-06-10 00:00:00,2014-02-05 00:00:00,2018-04-18 00:00:00
+H,19.0,11271.0,2001-06-13 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2009-06-24 00:00:00,2013-09-24 00:00:00,2019-02-08 00:00:00
+H,20.0,11274.0,2001-06-21 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2009-06-24 00:00:00,2014-06-18 00:00:00,2018-09-16 00:00:00
+H,21.0,11273.0,2001-06-18 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2009-03-18 00:00:00,2011-06-08 00:00:00,2019-08-21 00:00:00
+H,22.0,11280.0,2001-10-19 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2009-10-21 00:00:00,2013-11-27 00:00:00,2018-10-03 00:00:00
+H,23.0,11183.0,2001-11-14 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2009-11-11 00:00:00,2013-11-13 00:00:00,2017-04-24 00:00:00
+H,24.0,11281.0,2001-10-23 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2009-10-29 00:00:00,2014-03-11 00:00:00,2018-06-25 00:00:00
+H,25.0,11288.0,2002-02-04 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2010-02-10 00:00:00,2014-08-12 00:00:00,2018-10-13 00:00:00
+H,26.0,11291.0,2002-04-22 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2010-04-13 00:00:00,2014-08-13 00:00:00,2018-09-26 00:00:00
+H,27.0,11192.0,2002-06-11 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2010-05-25 00:00:00,2015-03-03 00:00:00,2017-09-14 00:00:00
+H,28.0,11193.0,2002-07-28 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2010-06-02 00:00:00,2014-09-29 00:00:00,2017-12-13 00:00:00
+H,31.0,112103.0,2002-11-10 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-01-19 00:00:00,2013-01-30 00:00:00,2016-09-07 00:00:00
+H,32.0,112106.0,2002-12-21 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-03-29 00:00:00,2015-02-06 00:00:00,2002-12-21 00:00:00
+H,33.0,112111.0,2003-04-18 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-04-27 00:00:00,2015-06-03 00:00:00,2019-10-02 00:00:00
+H,34.0,112114.0,2003-04-28 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-04-27 00:00:00,2015-03-25 00:00:00,2018-09-26 00:00:00
+H,35.0,111115.0,2003-05-08 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-06-08 00:00:00,2015-03-11 00:00:00,2018-04-25 00:00:00
+H,36.0,112120.0,2003-06-26 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-09-07 00:00:00,2015-08-18 00:00:00,2021-03-03 00:00:00
+H,37.0,112127.0,2003-09-27 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-10-12 00:00:00,2015-08-18 00:00:00,2018-12-05 00:00:00
+H,38.0,112129.0,2003-11-14 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-11-08 00:00:00,2016-11-02 00:00:00,2023-01-12 00:00:00
+H,39.0,112131.0,2003-12-01 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2012-01-17 00:00:00,2014-01-28 00:00:00,2020-01-15 00:00:00
+H,40.0,112135.0,2004-02-18 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2012-02-29 00:00:00,2016-03-07 00:00:00,2022-09-22 00:00:00
+H,41.0,111134.0,2004-01-12 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2012-02-01 00:00:00,2014-01-28 00:00:00,2018-09-26 00:00:00
+H,42.0,112145.0,2004-07-16 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2012-10-31 00:00:00,2016-04-06 00:00:00,2022-10-18 00:00:00
+H,43.0,111146.0,2004-09-01 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2012-02-24 00:00:00,2016-09-06 00:00:00,2020-12-16 00:00:00
+H,44.0,111147.0,2004-09-21 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2012-05-07 00:00:00,2014-11-11 00:00:00,2018-10-31 00:00:00
+Å,1.0,11201.0,1998-01-30 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2010-02-26 00:00:00,NaT
+Å,2.0,11102.0,1998-02-14 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,3.0,11203.0,1998-03-20 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,4.0,11204.0,1998-06-12 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2010-06-16 00:00:00,NaT
+Å,5.0,11105.0,1998-07-21 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,6.0,11106.0,1998-08-10 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2010-09-14 00:00:00,NaT
+Å,7.0,11207.0,1998-10-14 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,8.0,11208.0,1998-12-13 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,9.0,11210.0,1999-01-25 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,2015-02-04 00:00:00
+Å,10.0,11213.0,1999-03-18 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,11.0,11116.0,1999-04-24 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,12.0,11217.0,1999-05-10 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2011-05-12 00:00:00,2015-05-21 00:00:00
+Å,13.0,11219.0,1999-05-30 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,14.0,11220.0,1999-06-28 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2011-06-22 00:00:00,2016-06-07 00:00:00
+Å,15.0,11221.0,1999-07-03 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2011-04-12 00:00:00,2015-04-28 00:00:00
+Å,16.0,11122.0,1999-07-08 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2011-08-16 00:00:00,2016-09-07 00:00:00
+Å,17.0,11223.0,1999-07-14 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,18.0,11224.0,1999-08-04 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2011-08-25 00:00:00,2015-08-14 00:00:00
+Å,19.0,11125.0,1999-09-21 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2011-09-22 00:00:00,2014-12-02 00:00:00
+Å,20.0,11226.0,1999-11-26 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,2015-11-17 00:00:00
+Å,21.0,11227.0,1999-11-30 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,22.0,11228.0,1999-12-06 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,23.0,11131.0,1999-12-26 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,25.0,11235.0,2000-03-07 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,26.0,11136.0,2000-04-18 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,27.0,11238.0,2000-05-18 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,28.0,11239.0,2000-06-07 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2012-06-28 00:00:00,2016-05-31 00:00:00
+Å,29.0,11141.0,2000-07-02 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,30.0,11142.0,2000-07-11 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,31.0,11148.0,2000-10-20 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,32.0,11152.0,2000-12-29 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,33.0,11254.0,2001-01-11 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,34.0,11255.0,2001-01-18 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,35.0,11257.0,2001-02-08 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,36.0,11259.0,2001-02-18 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2013-02-21 00:00:00,2015-01-09 00:00:00
+Å,37.0,11260.0,2001-03-23 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,38.0,11261.0,2001-03-12 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,39.0,11263.0,2001-03-16 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2013-03-19 00:00:00,2016-09-30 00:00:00
+Å,40.0,11264.0,2001-04-07 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,41.0,11265.0,2001-04-19 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,42.0,11166.0,2001-05-11 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,43.0,11267.0,2001-05-18 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,44.0,11269.0,2001-05-30 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,45.0,11175.0,2001-07-08 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,Udgået,NaT,NaT,NaT
+Å,nan,nan,2001-07-19 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,nan,nan,2001-07-19 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,48.0,11178.0,2001-08-13 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2013-08-20 00:00:00,2017-08-29 00:00:00
+Å,49.0,11279.0,2001-09-18 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2009-10-08 00:00:00,2013-09-26 00:00:00,2017-09-12 00:00:00
+Å,50.0,11282.0,2001-11-07 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,51.0,11184.0,2001-12-23 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,52.0,11285.0,2002-01-19 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2013-04-12 00:00:00,NaT
+Å,53.0,11286.0,2002-01-22 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2010-01-14 00:00:00,2014-01-23 00:00:00,2018-02-01 00:00:00
+Å,54.0,11187.0,2002-02-08 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2010-02-10 00:00:00,2012-02-09 00:00:00,2014-06-10 00:00:00
+Å,55.0,11189.0,2002-03-01 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,56.0,11290.0,2002-04-16 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2010-04-06 00:00:00,NaT,NaT
+Å,57.0,11194.0,2002-08-03 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,58.0,11196.0,2002-08-14 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,59.0,11198.0,2002-09-13 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2010-09-29 00:00:00,2014-09-16 00:00:00,2019-09-28 00:00:00
+Å,60.0,112101.0,2002-10-21 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2010-10-28 00:00:00,2014-11-05 00:00:00,NaT
+Å,61.0,112104.0,2002-11-23 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-04-13 00:00:00,2014-12-01 00:00:00,2018-11-28 00:00:00
+Å,62.0,111107.0,2002-12-19 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-03-24 00:00:00,NaT,2018-12-13 00:00:00
+Å,63.0,112108.0,2003-01-20 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-01-25 00:00:00,2015-01-20 00:00:00,NaT
+Å,64.0,111109.0,2003-03-01 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-03-23 00:00:00,NaT,2019-04-01 00:00:00
+Å,65.0,112110.0,2003-03-04 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,66.0,112112.0,2003-04-24 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,67.0,112116.0,2003-05-17 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-05-19 00:00:00,2019-04-01 00:00:00,NaT
+Å,68.0,112117.0,2003-05-30 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-05-26 00:00:00,2015-05-28 00:00:00,NaT
+Å,69.0,112120.0,2003-06-05 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-06-14 00:00:00,2018-10-11 00:00:00,NaT
+Å,71.0,112124.0,2003-08-12 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-08-23 00:00:00,NaT,2019-06-14 00:00:00
+Å,72.0,112125.0,2003-08-19 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,73.0,112126.0,2003-08-24 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-08-25 00:00:00,NaT,NaT
+Å,74.0,112130.0,2003-11-24 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,NaT
+Å,75.0,112133.0,2003-12-18 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2011-12-13 00:00:00,2015-12-08 00:00:00,NaT
+Å,76.0,111136.0,2004-02-28 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2016-02-23 00:00:00,NaT
+Å,77.0,112137.0,2004-03-16 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2012-03-27 00:00:00,NaT,2020-08-13 00:00:00
+Å,78.0,112138.0,2004-03-18 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2016-03-29 00:00:00,2020-06-02 00:00:00
+Å,79.0,112139.0,2004-04-07 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2012-04-12 00:00:00,2016-04-12 00:00:00,2019-03-05 00:00:00
+Å,80.0,112140.0,2004-05-04 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,2012-05-10 00:00:00,2016-05-10 00:00:00,2020-05-01 00:00:00
+Å,81.0,112141.0,2004-05-05 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2016-05-12 00:00:00,2019-10-25 00:00:00
+Å,82.0,112142.0,2004-05-10 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,2016-11-11 00:00:00,NaT
+Å,83.0,112143.0,2004-07-13 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,2020-09-08 00:00:00
+Å,84.0,112144.0,2004-07-16 00:00:00,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,nan,NaT,NaT,2020-09-29 00:00:00
