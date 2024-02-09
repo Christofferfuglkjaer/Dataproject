@@ -12,3 +12,5 @@ jsdfjsdlfkjsdlkfjsdf
 ### Skibidi
 
 Jeg er bare bedre
+du er bare dårlig
+```python
