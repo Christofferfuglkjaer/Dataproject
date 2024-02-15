@@ -3,9 +3,15 @@
 
 ## Table of contents
 * [introduction](##introduction)
-* [Technologies](#technologies)
-* [Setup](#setup)
+* [Goals](##Goals)
+* [](#setup)
 
-## introduction
+# introduction
 
+## goals 
+##problems
 
+#First hand findings
+# model 
+##useability 
+## shiny app
