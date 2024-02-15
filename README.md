@@ -6,12 +6,12 @@
 * [Goals](##Goals)
 * [](#setup)
 
-# introduction
+# Introduction
 
 ## goals 
-##problems
+## Problems
 
-#First hand findings
-# model 
-##useability 
-## shiny app
+# First hand findings
+# Model 
+## Useability 
+## Shiny app
