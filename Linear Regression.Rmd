@@ -9,21 +9,41 @@ library(tidyverse)
 ```
 
 ```{r}
-data <- read.csv("Full-data.csv")
+data <- read.csv("muteret-data.csv")
 data
 ```
 
 ```{r}
-summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Vertical.1.1 + Vertical.2.1 + Transverse.1 + Crowding.1 + Spacing.1 + Tooth.shape.size..1 + Pan.2..1))
+summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Vertical.1.1 + Vertical.2.1 + Transverse.1 + Crowding.1 + Spacing.1 + Tooth.shape.size..1 + Pan.2..1 + Goslon.Score.A))
 ```
 
 ```{r}
-plot(data$Total.Row.Score.B, data$Total.Row.Score.C)
+summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Pan.2..1 + Goslon.Score.A + alder.C))
 ```
 
 
+```{r}
+plot(data$Total.Row.Score.A, data$Total.Row.Score.C)
+```
+
+```{r}
+boxplot(data$Total.Row.Score.C~data$X)
+```
 
 
+```{r}
+y <- c(data$Total.Row.Score.A, data$Total.Row.Score.B, data$Total.Row.Score.C)
+x <- c()
+for (i in c(8, 12, 16)) {
+  for (j in c(0:122)) {
+    x <- append(x, i)
+  }
+}
+```
+
+```{r}
+boxplot(y~x)
+```
 
 
 
