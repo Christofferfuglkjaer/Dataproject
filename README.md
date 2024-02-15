@@ -32,8 +32,12 @@ of several predictive models on tabular data, with a particular focus on explain
 ## goals 
 The overall goal for this project is to create a way for dentist to estimate the final Pinheria score, from the initial measurement.
 ## Problems
+The first problem we found was the data with a $n=123$ it is difficult to create a neural network, also we didnt find any visible depence within the data.
 
 # First hand findings
+
 # Model 
+
 ## Useability 
+
 ## Shiny app
