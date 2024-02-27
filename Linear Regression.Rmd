@@ -9,21 +9,54 @@ library(tidyverse)
 ```
 
 ```{r}
-data <- read.csv("muteret-data.csv")
+data <- read.csv("Data for R.csv")
 data
 ```
 
 ```{r}
-summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Vertical.1.1 + Vertical.2.1 + Transverse.1 + Crowding.1 + Spacing.1 + Tooth.shape.size..1 + Pan.2..1 + Goslon.Score.A))
+summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Vertical.1.1 + Vertical.2.1 + Transverse.1 + Crowding.1 + Spacing.1 + Tooth.shape.size..1 + Pan.2..1 + alder.C))
 ```
 
 ```{r}
-summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Pan.2..1 + Goslon.Score.A + alder.C))
+summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Vertical.1.1 + Vertical.2.1 + Transverse.1 + Spacing.1 + Tooth.shape.size..1 + Pan.2..1 + alder.C))
 ```
+
+```{r}
+summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Vertical.2.1 + Transverse.1 + Spacing.1 + Tooth.shape.size..1 + Pan.2..1 + alder.C))
+```
+
+```{r}
+summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Vertical.2.1 + Transverse.1 + Tooth.shape.size..1 + Pan.2. + alder.C))
+```
+
+```{r}
+summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Vertical.2.1 + Transverse.1 + Tooth.shape.size..1 + Pan.2..1))
+```
+
+```{r}
+summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Vertical.2.1 + Tooth.shape.size..1 + Pan.2..1))
+```
+
+```{r}
+summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Tooth.shape.size..1 + Pan.2..1))
+```
+
+```{r}
+lm_pin <- lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior + Tooth.shape.size..1 + Pan.2..1)
+```
+
+```{r}
+plot(data = data, Total.Row.Score.C ~ Pan.2.)
+```
+
 
 
 ```{r}
 plot(data$Total.Row.Score.A, data$Total.Row.Score.C)
+```
+
+```{r}
+boxplot(data$Total.Row.Score.C~data$Center)
 ```
 
 ```{r}
@@ -45,8 +78,18 @@ for (i in c(8, 12, 16)) {
 boxplot(y~x)
 ```
 
+```{r}
+data_2 <- read.csv('Data for R and baby.csv')
+data_2
+```
 
+```{r}
+summary(lm(data = data_2, Total.Row.Score.C ~ Anterior.cleft.width.1 + c.c..Width.of.the.cleft.at.the.level.of.C.C..1 + m.m..width.of.the.cleft.at.the.level.of.M.M..1 + t.t..Width.of.the.cleft.at.the.level.of.T.T..1 + Arch.lenght..I.T.T..plane.1 + Total.arch.perimeter.1 + Cleft.surface.Total.max))
+```
 
+```{r}
+plot(data = data_2, Total.Row.Score.B ~ Cleft.surface.Total.max)
+```
 
 
 
