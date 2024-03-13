@@ -1,27 +1,31 @@
+import tensorflow as tf
+import keras as keras  
 from shiny.express import input, render, ui
+import h5py
 
-ui.page_opts(title="Clef project")
+file_name = h5py.File('/Users/christofferfuglkjaer/Library/Mobile Documents/com~apple~CloudDocs/Dataproject/bin_model_syn_train.h5', 'r')
+model = keras.models.load_model(file_name)
 
+
+
+ui.page_opts(title = "cleft lib ")
 
 with ui.sidebar():
-    ui.input_numeric("Anteroposterior_1", "Anteroposterior_1", value="Hello, world!")
+    ui.input_numeric("Anteroposterior_1", "Anteroposterior_1", value=False, min = 0, max = 12, step = 3 )
     ui.input_numeric("Anteroposterior_2", "Anteroposterior_2", value=True)
     ui.input_numeric("Vertical_1", "Vertical_1", value=False)
-
     ui.input_numeric("Vertical_2", "Vertical_2", value="Hello, world!")
     ui.input_numeric("Goslon_Score_A", "Goslon_Score_A", value=True)
     ui.input_numeric("Total_Row_Score_A", "Total_Row_Score_A	", value=False)
 
 
 
-@render.ui
-def result():
-    x = input.message()
-    if "Anteroposterior_1" is 2:
-        print(2)
-    if "Italic" in input.styles():
-        x = ui.em(x)
-    return x
+def server(input, output, session):
+    @output
+    def main():
+       y = model.summay()
+       return y 
+
 
 
 
@@ -33,5 +37,4 @@ def result():
 # print("Total_Row_Score_A", "Total_Row_Score_A	")
 
 # print("Anteroposterior_1", "Anteroposterior_1")
-def main():
-    pass
+ 
