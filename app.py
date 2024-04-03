@@ -1,40 +1,33 @@
-import tensorflow as tf
-import keras as keras  
-from shiny.express import input, render, ui
-import h5py
+# app.py
+from flask import Flask, render_template, request
+import pickle
+import numpy as np
 
-file_name = h5py.File('/Users/christofferfuglkjaer/Library/Mobile Documents/com~apple~CloudDocs/Dataproject/bin_model_syn_train.h5', 'r')
-model = keras.models.load_model(file_name)
+app = Flask(__name__)
 
+# Load the logistic regression model
+with open('finalized_model.pkl', 'rb') as model_file:
+    model = pickle.load(model_file)
 
+# Define routes
+@app.route('/')
+def index():
+    # Render the HTML template with buttons for each output
+    return render_template('index.html')
 
-ui.page_opts(title = "cleft lib ")
+@app.route('/predict', methods=['POST'])
+def predict():
+    # Get the inputs from the form
+    inputs = [float(request.form[f'input_{i}']) for i in range(1, 21)]
+    
+    # Convert inputs to numpy array
+    inputs_np = np.array([inputs])
 
-with ui.sidebar():
-    ui.input_numeric("Anteroposterior_1", "Anteroposterior_1", value=False, min = 0, max = 12, step = 3 )
-    ui.input_numeric("Anteroposterior_2", "Anteroposterior_2", value=True)
-    ui.input_numeric("Vertical_1", "Vertical_1", value=False)
-    ui.input_numeric("Vertical_2", "Vertical_2", value="Hello, world!")
-    ui.input_numeric("Goslon_Score_A", "Goslon_Score_A", value=True)
-    ui.input_numeric("Total_Row_Score_A", "Total_Row_Score_A	", value=False)
+    # Use the model to predict
+    prediction = model.predict(inputs_np)
+    
+    # Return the result
+    return f'Prediction: {prediction[0]}'
 
-
-
-def server(input, output, session):
-    @output
-    def main():
-       y = model.summay()
-       return y 
-
-
-
-
-# print("Anteroposterior_1", "Anteroposterior_1")
-# print("Anteroposterior_2", "Anteroposterior_2")
-# print("Vertical_1", "Vertical_1")
-# print("Vertical_2", "Vertical_2")
-# print("Goslon_Score_A", "Goslon_Score_A")
-# print("Total_Row_Score_A", "Total_Row_Score_A	")
-
-# print("Anteroposterior_1", "Anteroposterior_1")
- 
+if __name__ == '__main__':
+    app.run(debug=True)
