@@ -91,6 +91,16 @@ summary(lm(data = data_2, Total.Row.Score.C ~ Anterior.cleft.width.1 + c.c..Widt
 plot(data = data_2, Total.Row.Score.B ~ Cleft.surface.Total.max)
 ```
 
+```{r}
+total <- 0
+for (i in c(1:123)) {
+  if (data$Total.Row.Score.C[i] > 9) {
+    total <- total + 1
+  }
+}
+print(total / 1.23)
+```
+
 
 
 
