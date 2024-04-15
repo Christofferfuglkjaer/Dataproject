@@ -36,8 +36,8 @@ The first problem we found was the data with a $n=123$ it is difficult to create
 
 # First hand findings
 
-# Model 
+# logistic regression Model 
 
 ## Useability 
 
-## Shiny app
+## Streamlit app
