@@ -4,7 +4,6 @@
 ## Table of contents
 * [introduction](##introduction)
 * [Goals](##Goals)
-* [](#setup)
 * [model](#model)
 
 # Introduction (kopi basted aflevering)(malthe)  
