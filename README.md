@@ -41,4 +41,4 @@ The first problem we found was the data with a $n=123$ it is difficult to create
 
 ## Useability 
 
-## Shiny app
+## Streamlit
