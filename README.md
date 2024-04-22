@@ -51,6 +51,6 @@ The first problem we found was the data with a $n=123$ it is difficult to create
 
 
 # opnåede vi de mål? (team combo) 
-
+## lave upload tamtam 
 ## Streamlit app (Christoffer)
 link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
