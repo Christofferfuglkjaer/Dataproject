@@ -7,7 +7,7 @@
 * [](#setup)
 * [model](#model)
 
-# Introduction (kopi basted aflevering) 
+# Introduction (kopi basted aflevering)(malthe)  
 Cleft lip and palate is the most common with-born disease. It appears in approximately 0.02% of all new-borns. The cleft of the lip and palate is surgically closed in early childhood (primary surgery) and
 it is well-known, that this surgery creates scar tissue which might influence growth of the maxillofacial
 complex as well as occlusion (bite). This study is part of a multicentre prospective, randomised,
@@ -41,7 +41,7 @@ The first problem we found was the data with a $n=123$ it is difficult to create
 # Model 
 
 ## hvilken model bruger vi, og hvorfor (Christoffer)
-## hvad indebærer modellen og hvordan virker den i praksis ()
+## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
 ## SHAP værdier og hvad bruger vi dem til. (Oswald)
 ## problemer 
 
@@ -51,7 +51,7 @@ The first problem we found was the data with a $n=123$ it is difficult to create
 ## PCA og SVD. (Oswald)
 
 
-# opnåede vi de mål? 
+# opnåede vi de mål? (team combo) 
 
 ## Streamlit app (Christoffer)
-
+link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
