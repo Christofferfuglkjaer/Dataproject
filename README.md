@@ -42,6 +42,11 @@ The first problem we found was the data with a $n=123$ it is difficult to create
 ## hvilken model bruger vi, og hvorfor (Christoffer)
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
 ## SHAP værdier og hvad bruger vi dem til. (Oswald)
+SHAP (SHapley Additive exPlanations) er en metode, der kan bruges til at fortolke/forklare Machine Mearning modellers forudsigelser. Mere specifikt, kan man se hver parameters effekt på en forudsigelse.
+Vi bruger to plot 
+Når man arbejder med SHAP-værdier, er det vigtigt at notere sig, at de ikke kan bruges til at forklare kausalitet. Siger udelukkende noget om, hvordan modellen er kommet frem til en forudsigelse/resultat.
+https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability
+
 ## problemer 
 
 # andre tilgange ()
