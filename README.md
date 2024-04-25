@@ -43,9 +43,12 @@ The first problem we found was the data with a $n=123$ it is difficult to create
 Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi ønskede at lave en binear klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model. 
 
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
-Vi bruger modellen, ved at lave en binear variable som bare er 1 hvis resultatet er godt og 0 hvis det ikke er, da vil den forudsigelse som vores model laver, være en sandsynlighed for at ligge i en af de to klasser. \
-Den logistiske model er opskrevet således $$p(x) = \frac{1}{1+e^{-\frac{x-\mu}{s}}}$$
 
+Vi bruger modellen, ved at lave en binear variable som bare er 1 hvis resultatet er godt og 0 hvis det ikke er, da vil den forudsigelse som vores model laver, være en sandsynlighed for at ligge i en af de to klasser. \
+Den logistiske model er opskrevet således $$p(x) = \frac{1}{1+e^{-(x-\mu)/s}$$ Hvor $\mu$ er det sted hvor $p(x) = \frac{1}{2}$ ## måske gennemgå det her sammen, da det er ret tung teori.\
+
+I jupyter notebook filen 'Logistic-regression-model' bruger vi Sklearn pakken til vores model. Helt generelt så har importere vi det allerede opryddet data, da standardisere vi data og opretter vores binar kolonne. Dernæst splitter vi data op i $75 \%$ trænings data og $25\%$ test data. Nu kan vi træne vores model og bagefter bruge test data til at få hvor "god" vores model er, vi laver også en confusion matrix og en klassificerings report for bedre at kunne se, hvordan vores modellen gætter. Da vi havde store svingninger i vores models præcision, valgte vi at bruge en bootstrap tilgang, hvor vi kører modellen 25 gange og tager middelværdien af forudsigelse, præcision og SHAP værdierne. Det har gjort at vores model er mere stabil og giver en mere ensartet forudsigelse. 
+ 
 ## SHAP værdier og hvad bruger vi dem til. (Oswald)
 SHAP (SHapley Additive exPlanations) er en metode, der kan bruges til at fortolke/forklare Machine Mearning modellers forudsigelser. Mere specifikt, kan man se hver parameters effekt på en forudsigelse.\
 Når man arbejder med SHAP-værdier, er det vigtigt at notere sig, at de ikke kan bruges til at forklare kausalitet. Siger udelukkende noget om, hvordan modellen er kommet frem til en forudsigelse/resultat.\
@@ -58,7 +61,7 @@ https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-i
 
 # andre tilgange ()
 ## neural network (Christoffer)
-
+Inden vi valgte at bruge en logistisk regression, blev muligheden for et neuralt netværk udforsket, dette tog lang tid og endte ud i det vi  fra starten lidt havde forudsagt. Vi har simpelthen ikke nok data, og for mange variable. Men det gav os en bedre forståelse for hvodan et neuralt netværk virker, men vigtigste af alt, hvornår giver det mening at bruge et neuralt netværk. Vi endte lidt en i en blindgyde hvor modellen præcision ikke var særlig god, valgte vi at tage et skridt bagud og genoverveje hvordan vi ville takle dette projekt. 
 
 ## verdens bedste LM (Malthe)
 ## PCA og SVD. (Oswald)
@@ -67,4 +70,6 @@ https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-i
 # opnåede vi de mål? (team combo) 
 ## lave upload tamtam 
 ## Streamlit app (Christoffer)
+Da vi gerne vil have at tandlægerne kan bruge den model vi har lavet som et værktøj, ønskede vi fra starten at gøre det så nemt som muligt for dem at indtaste nye tal og så få en forudsigelse tilbage. Her har vi brugt en python pakke som hedder Streamlit, som ligeledes hoster hjemmesiden i skyen for os. Det betyder at vi laver et slags dashboard, det gør det nemt for tandlægerne at bruge vores model uden at skulle installere python eller overhovedet forstå det tekniske bag vores model og forudsigelse. (Ligeledes er det muligt for dem at oploade mere data, som vores model så kan bruge i fremad.)\
+Det har været vanskeligt og meget tid er langt i hjemmesiden, da vi skulle lære en hvordan Streamlit fungerer. Vi opfordre at man går ind og kigger på hjemmesiden. 
 link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
