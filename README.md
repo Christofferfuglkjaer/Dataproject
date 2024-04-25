@@ -44,7 +44,7 @@ Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi �
 
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
 Vi bruger modellen, ved at lave en binear variable som bare er 1 hvis resultatet er godt og 0 hvis det ikke er, da vil den forudsigelse som vores model laver, være en sandsynlighed for at ligge i en af de to klasser. \
-Den logistiske model er opskrevet således $$ p(x) = \frac{1}{1+e^{-\frac{x-\mu}{s}$$ 
+Den logistiske model er opskrevet således $$p(x) = \frac{1}{1+e^{-\frac{x-\mu}{s}$$ 
 
 ## SHAP værdier og hvad bruger vi dem til. (Oswald)
 SHAP (SHapley Additive exPlanations) er en metode, der kan bruges til at fortolke/forklare Machine Mearning modellers forudsigelser. Mere specifikt, kan man se hver parameters effekt på en forudsigelse.\
