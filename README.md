@@ -45,7 +45,7 @@ Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi �
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
 
 Vi bruger modellen, ved at lave en binear variable som bare er 1 hvis resultatet er godt og 0 hvis det ikke er, da vil den forudsigelse som vores model laver, være en sandsynlighed for at ligge i en af de to klasser. \
-Den logistiske model er opskrevet således $$p(x) = \frac{1}{1+e^{-(x-\mu)/s}$$ Hvor $\mu$ er det sted hvor $p(x) = \frac{1}{2}$ ## måske gennemgå det her sammen, da det er ret tung teori.\
+Den logistiske model er opskrevet således $$p(x) = \frac{1}{1+e^{-(x-\mu)/s}}$$ Hvor $\mu$ er det sted hvor $p(x) = \frac{1}{2}$ ## måske gennemgå det her sammen, da det er ret tung teori.\
 
 I jupyter notebook filen 'Logistic-regression-model' bruger vi Sklearn pakken til vores model. Helt generelt så har importere vi det allerede opryddet data, da standardisere vi data og opretter vores binar kolonne. Dernæst splitter vi data op i $75 \%$ trænings data og $25\%$ test data. Nu kan vi træne vores model og bagefter bruge test data til at få hvor "god" vores model er, vi laver også en confusion matrix og en klassificerings report for bedre at kunne se, hvordan vores modellen gætter. Da vi havde store svingninger i vores models præcision, valgte vi at bruge en bootstrap tilgang, hvor vi kører modellen 25 gange og tager middelværdien af forudsigelse, præcision og SHAP værdierne. Det har gjort at vores model er mere stabil og giver en mere ensartet forudsigelse. 
  
