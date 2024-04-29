@@ -7,37 +7,19 @@
 * [model](#model)
 * [problemer](#problemer)
 
-# Introduction (kopi basted aflevering)(malthe)  
-Cleft lip and palate is the most common with-born disease. It appears in approximately 0.02% of all new-borns. The cleft of the lip and palate is surgically closed in early childhood (primary surgery) and
-it is well-known, that this surgery creates scar tissue which might influence growth of the maxillofacial
-complex as well as occlusion (bite). This study is part of a multicentre prospective, randomised,
-controlled clinical trial studying non-syndromic Caucasian children with unilateral cleft lip and palate,
-which evaluated timing and method of the primary surgery in 450 patients. In Trial 1, which the Aarhus
-group belongs to, the surgical variable was timing. All patients received surgical closure of the lip at 3
-months of age; then, half of the patients received closure of the palate at 1 year of age (group A) and
-the other half at 3 years of age (group B). The outcome we want to look at is craniofacial growth and
-occlusion.
-The Aarhus material consists of 84 patients followed from birth to 21 years of age. Patients received
-orthodontic treatment at the age of 8 (OR I) in the mixed dentition before they received secondary
-surgery for closure of the cleft in the alveolar process. When the patients were in the permanent
-dentition a second orthodontic treatment (OR II) was performed. Lateral cephalograms and dental
-casts were taken before (age 12) and after (age 16) this orthodontic treatment. At 16 years and after
-OR II the patient is considered at the end of treatment and occlusion and growth can be evaluated.
-Occlusion is evaluated on the study models taken at age 8, 12 and 16 with two different scoring systems
-[Goslon (score 1-5) and Pinheira (score 0-52)]. Craniofacial growth was evaluated by assessing specific
-angles between anatomical landmarks on cephalometric radiographs.
-The aim of this project is to assess whether the abovementioned measurements at age 8 can be used
-to predict the craniofacial growth and occlusion at a later age. It involves the analysis and evaluation
-of several predictive models on tabular data, with a particular focus on explainability of the model.
+# Introduktion
+Læbe-ganespalte er en medfødt tilstand, som rammer omkring 1 / 500 af børn. Børn med Læbe-ganespalte gennemgår tre operationer (se figur 1). En primær operation, som er en kirurgisk lukning af læbespalten og den bløde gane. Dette sker, når patienterne er spædbørn. I en alder af enten et eller tre år lukkes den hårde gane. Når patienterne er 8 år, lukkes alveolær spalte (spalte i gummen), og bøjlebehandlingen påbegyndes. I 12-års alderen vil den endelige bøjlebehandling blive påbegyndt, og der vil eventuelt blive foretaget mindre justeringer. Tilsidst vil bøjle blive taget af, typisk i 16-års alderen.
 
-## goals 
+<img width="894" alt="Skærmbillede 2024-04-03 kl  22 26 42" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/ebdc42f4-f83a-4bb9-ada1-b10800b02e95">
 
-## Problems
+I et internationalt studie, har man undersøgt forskellige primære operationer til sammenligning - I Danmark har man undersøgt metode a og b (i metode a lukkes den hårde gane ved 12 måneder, og i metode b, ved 36 måneder). I forbindelse med dette har man i Danmark indsamlet data på børnenes udvikling ved henholdsvis 8, 12 og 16 år.
 
+Vi vil forsøge at lave en model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis otte og tolv år, og med dette forudsige den endelige tilstand, når patienten er omkring 16 år.
 
-# First hand findings
-<img width="1429" alt="Skærmbillede 2024-03-18 kl  13 11 03" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/d0c111ac-0f1c-4132-802f-c5106a98f705">
+Datasættet har 124 patienter med 36 kolonner, og består af tre målings-tidspunkter i hhv. aldrene 8, 12 og 16. For hver måling har vi 10 værdier for patientens tilstand, f.eks. 'Spacing, 'Transverse' og 'Crowding'. Summen af alle værdierne udgør patientens Pinheiro score. Scoren ligger mellem 0 og 52, og man ønsker en lav score.
 
+Vi ønsker at lave en applikation gennem Streamlit, hvor tandlæger kan tilgå vores model. Gennem denne kan de indtaste værdier for de første to målinger, hvortil vores model vil give en forudsigelse for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Det vil også være muligt at se information omkring modellen.
+Formålet med denne applikation er at patienterne kan få at vide, hvordan de kan forvente deres udvikling. Tandlægerne kan vurdere ud fra modellens forudsigelse, om en patient sandsynligvis ender med god eller dårlig udvikling. De kan også bruge modellens sikkerhed til at vurdere, om det er relevant at forberede patienten på den udvikling.
 
 # Model 
 
