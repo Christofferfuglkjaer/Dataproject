@@ -36,6 +36,8 @@ The first problem we found was the data with a $n=123$ it is difficult to create
 
 # First hand findings
 <img width="1429" alt="Skærmbillede 2024-03-18 kl  13 11 03" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/f9c3827a-b53d-48bf-817c-38a9ac89fd15">
+![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/d0c111ac-0f1c-4132-802f-c5106a98f705)
+
 
 # Model 
 
@@ -61,7 +63,7 @@ https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-i
 
 # andre tilgange ()
 ## neural network (Christoffer)
-Inden vi valgte at bruge en logistisk regression, blev muligheden for et neuralt netværk udforsket, dette tog lang tid og endte ud i det vi  fra starten lidt havde forudsagt. Vi har simpelthen ikke nok data, og for mange variable. Men det gav os en bedre forståelse for hvodan et neuralt netværk virker, men vigtigste af alt, hvornår giver det mening at bruge et neuralt netværk. Vi endte lidt en i en blindgyde hvor modellen præcision ikke var særlig god, valgte vi at tage et skridt bagud og genoverveje hvordan vi ville takle dette projekt. 
+Inden vi valgte at bruge en logistisk regression, blev muligheden for et neuralt netværk udforsket, dette tog lang tid og endte ud i det vi  fra starten lidt havde forudsagt. Vi har simpelthen ikke nok data, og for mange variable. Men det gav os en bedre forståelse for hvordan et neuralt netværk virker, men vigtigste af alt, hvornår giver det mening at bruge et neuralt netværk. Da vi endte lidt en i en blindgyde hvor modellen præcision ikke var særlig god, valgte vi at tage et skridt bagud og genoverveje hvordan vi ville takle dette projekt. 
 
 ## verdens bedste LM (Malthe)
 ## PCA og SVD. (Oswald)
