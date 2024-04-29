@@ -36,13 +36,12 @@ The first problem we found was the data with a $n=123$ it is difficult to create
 
 # First hand findings
 <img width="1429" alt="Skærmbillede 2024-03-18 kl  13 11 03" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/d0c111ac-0f1c-4132-802f-c5106a98f705">
-![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/d0c111ac-0f1c-4132-802f-c5106a98f705)
 
 
 # Model 
 
 ## hvilken model bruger vi, og hvorfor (Christoffer)
-Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi ønskede at lave en binear klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model. 
+Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi ønskede at lave en binear klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er godt eller dårligt. 
 
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
 
