@@ -2,9 +2,10 @@
 
 
 ## Table of contents
-* [introduction](##introduction)
-* [Goals](##Goals)
+* [introduction](##introduktion)
+* [Goals](##Mål)
 * [model](#model)
+* [problemer](#problemer)
 
 # Introduction (kopi basted aflevering)(malthe)  
 Cleft lip and palate is the most common with-born disease. It appears in approximately 0.02% of all new-borns. The cleft of the lip and palate is surgically closed in early childhood (primary surgery) and
