@@ -70,6 +70,7 @@ Inden vi valgte at bruge en logistisk regression, blev muligheden for et neuralt
 
 
 # opnåede vi de mål? (team combo) 
+
 ## lave upload tamtam 
 ## Streamlit app (Christoffer)
 Da vi gerne vil have at tandlægerne kan bruge den model vi har lavet som et værktøj, ønskede vi fra starten at gøre det så nemt som muligt for dem at indtaste nye tal og så få en forudsigelse tilbage. Her har vi brugt en python pakke som hedder Streamlit, som ligeledes hoster hjemmesiden i skyen for os. Det betyder at vi laver et slags dashboard, det gør det nemt for tandlægerne at bruge vores model uden at skulle installere python eller overhovedet forstå det tekniske bag vores model og forudsigelse. (Ligeledes er det muligt for dem at oploade mere data, som vores model så kan bruge i fremad.)\
