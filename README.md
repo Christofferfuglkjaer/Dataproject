@@ -30,9 +30,9 @@ to predict the craniofacial growth and occlusion at a later age. It involves the
 of several predictive models on tabular data, with a particular focus on explainability of the model.
 
 ## goals 
-The overall goal for this project is to create a way for dentist to estimate the final Pinheria score, from the initial measurement.
+
 ## Problems
-The first problem we found was the data with a $n=123$ it is difficult to create a neural network, also we didnt find any visible depence within the data.
+
 
 # First hand findings
 <img width="1429" alt="Skærmbillede 2024-03-18 kl  13 11 03" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/d0c111ac-0f1c-4132-802f-c5106a98f705">
