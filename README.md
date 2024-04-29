@@ -35,7 +35,7 @@ The overall goal for this project is to create a way for dentist to estimate the
 The first problem we found was the data with a $n=123$ it is difficult to create a neural network, also we didnt find any visible depence within the data.
 
 # First hand findings
-<img width="1429" alt="Skærmbillede 2024-03-18 kl  13 11 03" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/f9c3827a-b53d-48bf-817c-38a9ac89fd15">
+<img width="1429" alt="Skærmbillede 2024-03-18 kl  13 11 03" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/d0c111ac-0f1c-4132-802f-c5106a98f705">
 ![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/d0c111ac-0f1c-4132-802f-c5106a98f705)
 
 
