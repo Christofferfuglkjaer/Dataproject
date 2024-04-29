@@ -49,12 +49,12 @@ Inden vi valgte at bruge en logistisk regression, blev muligheden for et neuralt
 
 ## verdens bedste LM (Malthe)
 ## PCA og SVD. (Oswald)
-Principal Component Analysis er en metode, der bruges til at reducere antallet af dimensioner for data. Dette gøres ved at finde de retninger, hvor dataet spreder sig mest, og repræsentere dataet langs disse. Normalt indeholder PCA følgende trin:\
--	Normalisering af variabler – trækker gennemsnittet fra.\
--	Beregning af kovarians matricen.\
--	Beregning af egenværdier og egenvektorer.\
--	Valg af komponenter (Vælger typisk op til at 95% varians er forklaret).\
--	Transformering af data (omdanner det oprindelige data til det nye rum defineret af de valgte komponenter).\
+Principal Component Analysis er en metode, der bruges til at reducere antallet af dimensioner for data. Dette gøres ved at finde de retninger, hvor dataet spreder sig mest, og repræsentere dataet langs disse. Normalt indeholder PCA følgende trin:
+-	Normalisering af variabler – trækker gennemsnittet fra.
+-	Beregning af kovarians matricen.
+-	Beregning af egenværdier og egenvektorer.
+-	Valg af komponenter (Vælger typisk op til at 95% varians er forklaret).
+-	Transformering af data (omdanner det oprindelige data til det nye rum defineret af de valgte komponenter).
 
 I vores tilfælde kan 95% af variansen forklares med 12 variable (starter på 18). Dog ser vi ikke en effekt på vores regression, og vælger derfor at bibeholde alle variable. Da dette også giver os muligheden for at benytte SHAP-værdier. 
 
