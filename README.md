@@ -29,10 +29,7 @@ Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi �
 
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
 
-Vi opskriver den betingede sandsynligheden for at vores udfald er givet således 
-$$P(Y=1|x)= \pi(x)$$
-
-Da er logit af vores to klasser mange variable logistiske regressions model være givet på formen 
+Vores to klasser mange variable logistiske regressions model være givet på formen 
 
 $$g(x) = \beta_0+\beta_1x_1+...+b_m x_m$$
 
