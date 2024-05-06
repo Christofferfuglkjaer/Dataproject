@@ -42,13 +42,16 @@ Vi vil nu opskrive vores likelihood funktion. Vi har et $Y$ som er vores "dummy 
 
 $$\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y}$$
 vi ved at alle observationer er uafhængige, da er vores likelihood et samlet produkt af udtrykket oven over 
+
 $$l(\beta)=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}$$
+
 princippet bag maksimum likelihood funktionen er at estimere vores værdien for hver $\beta_m$ som maksimerer, det er en del nemmere at udregne en log likelihood, så vi omskriver $l(\beta)$ til 
 $$L(\beta)=\ln(l(\beta)) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i)$$
 For at finde værdierne for vores $\beta_m$ som maksimere, differenciere vi $L(\beta)$ med respekt til $\beta_m$ hvilket resultere i 
 $$\frac{\partial L(\beta)}{\partial \beta_m} = \sum^i_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
 Nu har vi fundet vores maksimum likelihood estimater som vi beskriver ved $\hat{\beta}$
-nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta}$ og indsætter dem i $$ \pi(x) = \frac{e^{ \hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}{1}$$
+
+nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta}$ og indsætter dem i $$\pi(x) = \frac{e^{ \hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}{1}$$
 
 Alt teorien er fundet i (1) s.6-9 og s.31-34
 
