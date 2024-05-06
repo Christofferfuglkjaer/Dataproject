@@ -13,13 +13,13 @@ Læbe-ganespalte er en medfødt tilstand, som rammer omkring 1 / 500 af børn. B
 
 <img width="894" alt="Skærmbillede 2024-04-03 kl  22 26 42" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/ebdc42f4-f83a-4bb9-ada1-b10800b02e95">
 
-I et internationalt studie, har man undersøgt forskellige primære operationer til sammenligning - I Danmark har man undersøgt metode a og b (i metode a lukkes den hårde gane ved 12 måneder, og i metode b, ved 36 måneder). I forbindelse med dette har man i Danmark indsamlet data på børnenes udvikling ved henholdsvis 8, 12 og 16 år.
+I et internationalt studie, har man undersøgt forskellige primære operationer til sammenligning. I forbindelse med dette har man i Danmark indsamlet data på børnenes udvikling ved henholdsvis 8, 12 og 16 år.
 
-Vi vil forsøge at lave en model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis otte og tolv år, og med dette forudsige den endelige tilstand, når patienten er omkring 16 år.
+Vi har lavet en model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis otte og tolv år, og med dette forudsige den endelige tilstand, når patienten er omkring seksten år.
 
 Datasættet har 124 patienter med 36 kolonner, og består af tre målings-tidspunkter i hhv. aldrene 8, 12 og 16. For hver måling har vi 10 værdier for patientens tilstand, f.eks. 'Spacing, 'Transverse' og 'Crowding'. Summen af alle værdierne udgør patientens Pinheiro score. Scoren ligger mellem 0 og 52, og man ønsker en lav score.
 
-Vi ønsker at lave en applikation gennem Streamlit, hvor tandlæger kan tilgå vores model. Gennem denne kan de indtaste værdier for de første to målinger, hvortil vores model vil give en forudsigelse for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Det vil også være muligt at se information omkring modellen.
+Vi har lavet en applikation gennem Streamlit, hvor tandlæger kan tilgå vores model. Gennem denne kan de indtaste værdier for de første to målinger, hvortil vores model vil give en forudsigelse for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Det vil også være muligt at se information omkring modellen.
 Formålet med denne applikation er at patienterne kan få at vide, hvordan de kan forvente deres udvikling. Tandlægerne kan vurdere ud fra modellens forudsigelse, om en patient sandsynligvis ender med god eller dårlig udvikling. De kan også bruge modellens sikkerhed til at vurdere, om det er relevant at forberede patienten på den udvikling.
 
 # Model 
@@ -28,17 +28,36 @@ Formålet med denne applikation er at patienterne kan få at vide, hvordan de ka
 Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi ønskede at lave en binær klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er godt eller dårligt. For bedre at kunne demostrere hvordan vi bruger dette i praksis, gennemgår vi kort teorien bag vores model, og så hvordan vi implementere dette i Python 
 
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
+En logistisk regression benytter sig af binær variable og giver som output en sandsynlighed for at være i en klasse defineret udfra de binære variable.
 
-Vi bruger modellen, ved at lave en binær variable som bare er 1 hvis resultatet er godt og 0 hvis det ikke er, da vil den forudsigelse som vores model laver, være en sandsynlighed for at ligge i en af de to klasser. 
-$$p(x) = \frac{1}{1+e^{\beta_0+\beta_1x_1+...+\beta_m+x_m}}$$
+Vores to klasser mange variable logistiske regressions model være givet på formen 
 
-Hvor $m=16$
+$$g(x) = \beta_0+\beta_1x_1+...+b_m x_m$$
 
-$$l = \sum^K_{k =1}(y_k\ln(p_k)+(1-y_k)\ln(1-p_k))$$
+hvor $m=16$
+Vi kan nu opskrive vores model på formen 
 
-$$\frac{\partial l }{\partial \beta_m}= 0 = \sum^K_{k=1} y_k x_{km}-p(x_k)x_{km}$$
+$$\pi(x)=\frac{e^{g(x)}}{1+e^{g(x)}}$$
 
-Vi maksimerer ved udregne de afledte af log-likelihood funktionen, som med respekt til hver $\beta$ der giver et $0$.
+Vi vil nu opskrive vores likelihood funktion. Vi har et $Y$ som er vores "dummy variabel" som er 0 eller 1, da giver $\pi(x)$ en betinget sandsynlighed som hvis $Y = 1$ er $P(Y=1|x)$ og $1-\pi(x)$ giver $P(Y=0|x)$, vi kan nu benytte Bernoulli fordelingen til at opstille vores likelihood funktion 
+
+$$\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y}$$
+vi ved at alle observationer er uafhængige, da er vores likelihood et samlet produkt af udtrykket oven over 
+
+$$l(\beta)=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}$$
+
+princippet bag maksimum likelihood funktionen er at estimere vores værdien for hver $\beta_m$ som maksimerer, det er en del nemmere at udregne en log likelihood, så vi omskriver $l(\beta)$ til 
+$$L(\beta)=\ln(l(\beta)) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i)$$
+For at finde værdierne for vores $\beta_m$ som maksimere, differenciere vi $L(\beta)$ med respekt til $\beta_m$ hvilket resultere i 
+$$\frac{\partial L(\beta)}{\partial \beta_m} = \sum^i_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
+Nu har vi fundet vores maksimum likelihood estimater som vi beskriver ved $\hat{\beta}$
+
+Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta}$ og indsætter dem i $$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
+
+
+Alt teorien er fundet i (1) s.6-9 og s.31-34
+
+
 
 
 I jupyter notebook filen 'Logistic-regression-model' bruger vi Sklearn pakken til vores model. Helt generelt så importere vi det allerede opryddet data, da standardiserer vi data og opretter vores binær kolonne. Dernæst splitter vi data op i $75 \%$ trænings data og $25\%$ test data. Nu kan vi træne vores model og bagefter bruge test data til at få hvor "god" vores model er, vi laver også en confusion matrix og en klassificerings report for bedre at kunne se, hvordan vores modellen gætter. Da vi havde store svingninger i vores models præcision, valgte vi at bruge en bootstrap tilgang, hvor vi kører modellen 25 gange og tager middelværdien af forudsigelse, præcision og SHAP værdierne. Det har gjort at vores model er mere stabil og giver en mere ensartet forudsigelse. 
@@ -81,3 +100,7 @@ Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datas
 Da vi gerne vil have at tandlægerne kan bruge den model vi har lavet som et værktøj, ønskede vi fra starten at gøre det så nemt som muligt for dem at indtaste nye tal og så få en forudsigelse tilbage. Her har vi brugt en python pakke som hedder Streamlit, som ligeledes hoster hjemmesiden i skyen for os. Det betyder at vi laver et slags dashboard, det gør det nemt for tandlægerne at bruge vores model uden at skulle installere python eller overhovedet forstå det tekniske bag vores model og forudsigelse. (Ligeledes er det muligt for dem at oploade mere data, som vores model så kan bruge i fremad.)\
 Det har været vanskeligt og meget tid er langt i hjemmesiden, da vi skulle lære en hvordan Streamlit fungerer. Vi opfordre at man går ind og kigger på hjemmesiden. 
 link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
+
+# referencer 
+
+(1) https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/REGRESI%20LOGISTIK/epdf.pub_applied-logistic-regression-wiley-series-in-probab.pdf
