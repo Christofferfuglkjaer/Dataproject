@@ -29,16 +29,41 @@ Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi �
 
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
 
-Vi bruger modellen, ved at lave en binær variable som bare er 1 hvis resultatet er godt og 0 hvis det ikke er, da vil den forudsigelse som vores model laver, være en sandsynlighed for at ligge i en af de to klasser. 
-$$p(x) = \frac{1}{1+e^{\beta_0+\beta_1x_1+...+\beta_m+x_m}}$$
+Vi opskriver den betingede sandsynligheden for at vores udfald er givet således 
+$$
+P(Y=1|x)= \pi(x)
+$$
+Da er logit af vores to klasser mange variable logistiske regressions model være givet på formen 
 
-Hvor $m=16$
+$$
+g(x) = \beta_0+\beta_1x_1+...+b_m x_m
+$$
 
-$$l = \sum^K_{k =1}(y_k\ln(p_k)+(1-y_k)\ln(1-p_k))$$
+hvor $m=16$
+Vi kan nu opskrive vores model på formen 
+$$
+\pi(x)=\frac{e^{g(x)}}{1+e^{g(x)}}
+$$
+Vi vil nu opskrive vores likelihood funktion. Vi har et $Y$ som er vores "dummy variabel" som er 0 eller 1, da giver $\pi(x)$ en betinget sandsynlighed som hvis $Y = 1$ er $P(Y=1|x)$ og $1-\pi(x)$ giver $P(Y=0|x)$, vi kan nu benytte Bernoulli fordelingen til at opstille vores likelihood funktion 
 
-$$\frac{\partial l }{\partial \beta_m}= 0 = \sum^K_{k=1} y_k x_{km}-p(x_k)x_{km}$$
+$$
+\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y}
+$$
+vi ved at alle observationer er uafhængige, da er vores likelihood et samlet produkt af udtrykket oven over 
+$$
+l(\beta)=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}
+$$
+princippet bag maksimum likelihood funktionen er at estimere vores værdien for hver $\beta_m$ som maksimerer, det er en del nemmere at udregne en log likelihood, så vi omskriver $l(\beta)$ til 
+$$
+L(\beta)=\ln(l(\beta)) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i)
+$$
+For at finde værdierne for vores $\beta_m$ som maksimere, differenciere vi $L(\beta)$ med respekt til $\beta_m$ hvilket resultere i 
+$$
+\frac{\partial L(\beta)}{\partial \beta_m} = \sum^i_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0
+$$
+Nu har vi fundet vores maksimum likelihood estimater som vi beskriver ved $\hat{\beta}$
 
-Vi maksimerer ved udregne de afledte af log-likelihood funktionen, som med respekt til hver $\beta$ der giver et $0$.
+
 
 
 I jupyter notebook filen 'Logistic-regression-model' bruger vi Sklearn pakken til vores model. Helt generelt så importere vi det allerede opryddet data, da standardiserer vi data og opretter vores binær kolonne. Dernæst splitter vi data op i $75 \%$ trænings data og $25\%$ test data. Nu kan vi træne vores model og bagefter bruge test data til at få hvor "god" vores model er, vi laver også en confusion matrix og en klassificerings report for bedre at kunne se, hvordan vores modellen gætter. Da vi havde store svingninger i vores models præcision, valgte vi at bruge en bootstrap tilgang, hvor vi kører modellen 25 gange og tager middelværdien af forudsigelse, præcision og SHAP værdierne. Det har gjort at vores model er mere stabil og giver en mere ensartet forudsigelse. 
