@@ -90,7 +90,7 @@ Principal Component Analysis er en metode, der bruges til at reducere antallet a
 -	Valg af komponenter (Vælger typisk op til at 95% varians er forklaret).
 -	Transformering af data (omdanner det oprindelige data til det nye rum defineret af de valgte komponenter).
 
-I vores tilfælde kan 95% af variansen forklares med 13 variable (starter på 16). Dog ser vi ikke en effekt på vores regression, og vælger derfor at bibeholde alle variable, da dette giver os muligheden for at benytte SHAP-værdier. 
+I vores tilfælde kan 95% af variansen forklares med 14 variable (starter på 16). Dog ser vi ikke en effekt på vores regression, og vælger derfor at bibeholde alle variable, da dette giver os muligheden for at benytte SHAP-værdier. 
 
 Singular value decomposition kan bruges, ligesom PCA, til at reducere antallet af komponenter. Dette gøres ved at faktorisere vores data til tre matricer. Så $A = U\Sigma V^T$, hvor $A$ er en $mxn$ matrice, $U$ er en $mxm$ matrice bestående af de orthonormal egenvektorer fra $AA^T$, $V^T$ er en $nxn$ matrixe af $A^TA$, og $\Sigma$ er diagonalmatrice med roden af de positive egenværdier.
 
