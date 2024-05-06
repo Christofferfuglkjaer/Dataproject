@@ -1,5 +1,5 @@
-# Forudsigelse af kraniofacial vækst og tandstilling for
-læbe-ganespaltepatienter
+# Forudsigelse af kraniofacial vækst og tandstilling for læbe-ganespaltepatienter
+Christoffer Fuglkjær, Malthe Friskost og Oswald eide bech
 
 
 ## Table of contents
