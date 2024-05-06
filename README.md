@@ -103,9 +103,11 @@ Da vi gerne vil have at tandlægerne kan bruge den model vi har lavet som et væ
 Det har været vanskeligt og meget tid er langt i hjemmesiden, da vi skulle lære en hvordan Streamlit fungerer. Vi opfordre at man går ind og kigger på hjemmesiden. 
 link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
 
-# referencer 
+# Referencer 
 
-(1) https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/REGRESI%20LOGISTIK/epdf.pub_applied-logistic-regression-wiley-series-in-probab.pdf
-=======
-## Streamlit app
->>>>>>> b5a266f579676f41d0389090b5bedf6cd1c23e42
+(1):
+
+https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/REGRESI%20LOGISTIK/epdf.pub_applied-logistic-regression-wiley-series-in-probab.pdf
+
+
+
