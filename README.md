@@ -29,10 +29,8 @@ Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi �
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
 
 Vi bruger modellen, ved at lave en binear variable som bare er 1 hvis resultatet er godt og 0 hvis det ikke er, da vil den forudsigelse som vores model laver, være en sandsynlighed for at ligge i en af de to klasser. 
-$$
-p(x) = \frac{1}{1+e^{\beta_0+\beta_1x_1+...+\beta_m+x_m}}
-$$
-Hvor $m=16$\\
+$$p(x) = \frac{1}{1+e^{\beta_0+\beta_1x_1+...+\beta_m+x_m}}$$
+Hvor $m=16$
 $$
 l = \sum^K_{k =1}(y_k\ln(p_k)+(1-y_k)\ln(1-p_k))
 $$
