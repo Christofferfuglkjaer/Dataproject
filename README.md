@@ -65,6 +65,8 @@ Alt teorien er fundet i (1) s.6-9 og s.31-34
 I jupyter notebook filen 'Logistic-regression-model' bruger vi Sklearn pakken til vores model. Helt generelt så importere vi det allerede opryddet data, da standardiserer vi data og opretter vores binær kolonne. Dernæst splitter vi data op i $75 \%$ trænings data og $25\%$ test data. Nu kan vi træne vores model og bagefter bruge test data til at få hvor "god" vores model er, vi laver også en confusion matrix og en klassificerings report for bedre at kunne se, hvordan vores modellen gætter. Da vi havde store svingninger i vores models præcision, valgte vi at bruge en bootstrap tilgang, hvor vi kører modellen 25 gange og tager middelværdien af forudsigelse, præcision og SHAP værdierne. Det har gjort at vores model er mere stabil og giver en mere ensartet forudsigelse. 
  
 ## SHAP værdier og hvad bruger vi dem til. (Oswald)
+![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/a1f217cc-596c-4617-ba16-6d0e76af2616)
+
 SHAP (SHapley Additive exPlanations) er en metode, der kan bruges til at fortolke/forklare Machine Mearning modellers forudsigelser. Mere specifikt, kan man se hver parameters effekt på en forudsigelse.\
 Når man arbejder med SHAP-værdier, er det vigtigt at notere sig, at de ikke kan bruges til at forklare kausalitet. Siger udelukkende noget om, hvordan modellen er kommet frem til en forudsigelse/resultat.\
 \
