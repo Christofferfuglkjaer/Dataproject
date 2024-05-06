@@ -51,7 +51,7 @@ For at finde værdierne for vores $\beta_m$ som maksimere, differenciere vi $L(\
 $$\frac{\partial L(\beta)}{\partial \beta_m} = \sum^i_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
 Nu har vi fundet vores maksimum likelihood estimater som vi beskriver ved $\hat{\beta}$
 
-nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta}$ og indsætter dem i $$\pi(x) = \frac{e^{ \hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}{1}$$
+nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta}$ og indsætter dem i $$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}$$
 
 Alt teorien er fundet i (1) s.6-9 og s.31-34
 
