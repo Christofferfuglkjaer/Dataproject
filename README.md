@@ -13,13 +13,13 @@ Læbe-ganespalte er en medfødt tilstand, som rammer omkring 1 / 500 af børn. B
 
 <img width="894" alt="Skærmbillede 2024-04-03 kl  22 26 42" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/ebdc42f4-f83a-4bb9-ada1-b10800b02e95">
 
-I et internationalt studie, har man undersøgt forskellige primære operationer til sammenligning - I Danmark har man undersøgt metode a og b (i metode a lukkes den hårde gane ved 12 måneder, og i metode b, ved 36 måneder). I forbindelse med dette har man i Danmark indsamlet data på børnenes udvikling ved henholdsvis 8, 12 og 16 år.
+I et internationalt studie, har man undersøgt forskellige primære operationer til sammenligning. I forbindelse med dette har man i Danmark indsamlet data på børnenes udvikling ved henholdsvis 8, 12 og 16 år.
 
-Vi vil forsøge at lave en model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis otte og tolv år, og med dette forudsige den endelige tilstand, når patienten er omkring 16 år.
+Vi har lavet en model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis otte og tolv år, og med dette forudsige den endelige tilstand, når patienten er omkring seksten år.
 
 Datasættet har 124 patienter med 36 kolonner, og består af tre målings-tidspunkter i hhv. aldrene 8, 12 og 16. For hver måling har vi 10 værdier for patientens tilstand, f.eks. 'Spacing, 'Transverse' og 'Crowding'. Summen af alle værdierne udgør patientens Pinheiro score. Scoren ligger mellem 0 og 52, og man ønsker en lav score.
 
-Vi ønsker at lave en applikation gennem Streamlit, hvor tandlæger kan tilgå vores model. Gennem denne kan de indtaste værdier for de første to målinger, hvortil vores model vil give en forudsigelse for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Det vil også være muligt at se information omkring modellen.
+Vi har lavet en applikation gennem Streamlit, hvor tandlæger kan tilgå vores model. Gennem denne kan de indtaste værdier for de første to målinger, hvortil vores model vil give en forudsigelse for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Det vil også være muligt at se information omkring modellen.
 Formålet med denne applikation er at patienterne kan få at vide, hvordan de kan forvente deres udvikling. Tandlægerne kan vurdere ud fra modellens forudsigelse, om en patient sandsynligvis ender med god eller dårlig udvikling. De kan også bruge modellens sikkerhed til at vurdere, om det er relevant at forberede patienten på den udvikling.
 
 # Model 
