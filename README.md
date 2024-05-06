@@ -65,7 +65,7 @@ Principal Component Analysis er en metode, der bruges til at reducere antallet a
 -	Valg af komponenter (Vælger typisk op til at 95% varians er forklaret).
 -	Transformering af data (omdanner det oprindelige data til det nye rum defineret af de valgte komponenter).
 
-I vores tilfælde kan 95% af variansen forklares med 12 variable (starter på 16). Dog ser vi ikke en effekt på vores regression, og vælger derfor at bibeholde alle variable, da dette giver os muligheden for at benytte SHAP-værdier. 
+I vores tilfælde kan 95% af variansen forklares med 13 variable (starter på 16). Dog ser vi ikke en effekt på vores regression, og vælger derfor at bibeholde alle variable, da dette giver os muligheden for at benytte SHAP-værdier. 
 
 
 # opnåede vi de mål? (team combo) 
