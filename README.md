@@ -92,3 +92,7 @@ Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datas
 Da vi gerne vil have at tandlægerne kan bruge den model vi har lavet som et værktøj, ønskede vi fra starten at gøre det så nemt som muligt for dem at indtaste nye tal og så få en forudsigelse tilbage. Her har vi brugt en python pakke som hedder Streamlit, som ligeledes hoster hjemmesiden i skyen for os. Det betyder at vi laver et slags dashboard, det gør det nemt for tandlægerne at bruge vores model uden at skulle installere python eller overhovedet forstå det tekniske bag vores model og forudsigelse. (Ligeledes er det muligt for dem at oploade mere data, som vores model så kan bruge i fremad.)\
 Det har været vanskeligt og meget tid er langt i hjemmesiden, da vi skulle lære en hvordan Streamlit fungerer. Vi opfordre at man går ind og kigger på hjemmesiden. 
 link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
+
+# referencer 
+
+(1) https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/REGRESI%20LOGISTIK/epdf.pub_applied-logistic-regression-wiley-series-in-probab.pdf
