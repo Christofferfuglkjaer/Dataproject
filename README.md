@@ -2,8 +2,8 @@
 
 
 ## Table of contents
-* [introduction](##introduktion)
-* [Goals](##Mål)
+* [introduktion](##introduktion)
+* [Mål](##Mål)
 * [model](#model)
 * [problemer](#problemer)
 * [referencer](#referencer)
