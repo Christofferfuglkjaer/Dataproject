@@ -30,37 +30,26 @@ Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi �
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
 
 Vi opskriver den betingede sandsynligheden for at vores udfald er givet således 
-$$
-P(Y=1|x)= \pi(x)
-$$
+$$P(Y=1|x)= \pi(x)$$
+
 Da er logit af vores to klasser mange variable logistiske regressions model være givet på formen 
 
-$$
-g(x) = \beta_0+\beta_1x_1+...+b_m x_m
-$$
+$$g(x) = \beta_0+\beta_1x_1+...+b_m x_m$$
 
 hvor $m=16$
 Vi kan nu opskrive vores model på formen 
-$$
-\pi(x)=\frac{e^{g(x)}}{1+e^{g(x)}}
-$$
+
+$$\pi(x)=\frac{e^{g(x)}}{1+e^{g(x)}}$$
+
 Vi vil nu opskrive vores likelihood funktion. Vi har et $Y$ som er vores "dummy variabel" som er 0 eller 1, da giver $\pi(x)$ en betinget sandsynlighed som hvis $Y = 1$ er $P(Y=1|x)$ og $1-\pi(x)$ giver $P(Y=0|x)$, vi kan nu benytte Bernoulli fordelingen til at opstille vores likelihood funktion 
 
-$$
-\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y}
-$$
+$$\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y}$$
 vi ved at alle observationer er uafhængige, da er vores likelihood et samlet produkt af udtrykket oven over 
-$$
-l(\beta)=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}
-$$
+$$l(\beta)=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}$$
 princippet bag maksimum likelihood funktionen er at estimere vores værdien for hver $\beta_m$ som maksimerer, det er en del nemmere at udregne en log likelihood, så vi omskriver $l(\beta)$ til 
-$$
-L(\beta)=\ln(l(\beta)) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i)
-$$
+$$L(\beta)=\ln(l(\beta)) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i)$$
 For at finde værdierne for vores $\beta_m$ som maksimere, differenciere vi $L(\beta)$ med respekt til $\beta_m$ hvilket resultere i 
-$$
-\frac{\partial L(\beta)}{\partial \beta_m} = \sum^i_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0
-$$
+$$\frac{\partial L(\beta)}{\partial \beta_m} = \sum^i_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
 Nu har vi fundet vores maksimum likelihood estimater som vi beskriver ved $\hat{\beta}$
 
 
