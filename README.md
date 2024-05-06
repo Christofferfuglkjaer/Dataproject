@@ -22,11 +22,12 @@ Datasættet har 124 patienter med 36 kolonner, og består af tre målings-tidspu
 Vi har lavet en applikation gennem Streamlit, hvor tandlæger kan tilgå vores model. Gennem denne kan de indtaste værdier for de første to målinger, hvortil vores model vil give en forudsigelse for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Det vil også være muligt at se information omkring modellen.
 Formålet med denne applikation er at patienterne kan få at vide, hvordan de kan forvente deres udvikling. Tandlægerne kan vurdere ud fra modellens forudsigelse, om en patient sandsynligvis ender med god eller dårlig udvikling. De kan også bruge modellens sikkerhed til at vurdere, om det er relevant at forberede patienten på den udvikling.
 
-# Model 
+# logistic regression Model 
 
 ## hvilken model bruger vi, og hvorfor (Christoffer)
 Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi ønskede at lave en binær klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er godt eller dårligt. For bedre at kunne demostrere hvordan vi bruger dette i praksis, gennemgår vi kort teorien bag vores model, og så hvordan vi implementere dette i Python 
 
+<<<<<<< HEAD
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
 En logistisk regression benytter sig af binær variable og giver som output en sandsynlighed for at være i en klasse defineret udfra de binære variable.
 
@@ -104,3 +105,6 @@ link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
 # referencer 
 
 (1) https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/REGRESI%20LOGISTIK/epdf.pub_applied-logistic-regression-wiley-series-in-probab.pdf
+=======
+## Streamlit app
+>>>>>>> b5a266f579676f41d0389090b5bedf6cd1c23e42
