@@ -28,6 +28,7 @@ Formålet med denne applikation er at patienterne kan få at vide, hvordan de ka
 Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi ønskede at lave en binær klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er godt eller dårligt. For bedre at kunne demostrere hvordan vi bruger dette i praksis, gennemgår vi kort teorien bag vores model, og så hvordan vi implementere dette i Python 
 
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
+En logistisk regression benytter sig af binær variable og giver som output en sandsynlighed for at være i en klasse defineret udfra de binære variable.
 
 Vores to klasser mange variable logistiske regressions model være givet på formen 
 
@@ -51,7 +52,8 @@ For at finde værdierne for vores $\beta_m$ som maksimere, differenciere vi $L(\
 $$\frac{\partial L(\beta)}{\partial \beta_m} = \sum^i_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
 Nu har vi fundet vores maksimum likelihood estimater som vi beskriver ved $\hat{\beta}$
 
-nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta}$ og indsætter dem i $$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
+Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta}$ og indsætter dem i $$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
+
 
 Alt teorien er fundet i (1) s.6-9 og s.31-34
 
