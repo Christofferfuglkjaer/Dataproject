@@ -24,11 +24,11 @@ Formålet med denne applikation er at patienterne kan få at vide, hvordan de ka
 # Model 
 
 ## hvilken model bruger vi, og hvorfor (Christoffer)
-Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi ønskede at lave en binear klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er godt eller dårligt. 
+Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi ønskede at lave en binær klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er godt eller dårligt. For bedre at kunne demostrere hvordan vi bruger dette i praksis, gennemgår vi kort teorien bag vores model, og så hvordan vi implementere dette i Python 
 
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
 
-Vi bruger modellen, ved at lave en binear variable som bare er 1 hvis resultatet er godt og 0 hvis det ikke er, da vil den forudsigelse som vores model laver, være en sandsynlighed for at ligge i en af de to klasser. 
+Vi bruger modellen, ved at lave en binær variable som bare er 1 hvis resultatet er godt og 0 hvis det ikke er, da vil den forudsigelse som vores model laver, være en sandsynlighed for at ligge i en af de to klasser. 
 $$p(x) = \frac{1}{1+e^{\beta_0+\beta_1x_1+...+\beta_m+x_m}}$$
 
 Hvor $m=16$
@@ -37,7 +37,7 @@ $$l = \sum^K_{k =1}(y_k\ln(p_k)+(1-y_k)\ln(1-p_k))$$
 
 $$\frac{\partial l }{\partial \beta_m}= 0 = \sum^K_{k=1} y_k x_{km}-p(x_k)x_{km}$$
 
-Vi maksimerer ved udregne de afledte af log-likelihood funktionen, som med respekt til hver $\beta$ der giver et  $0$.
+Vi maksimerer ved udregne de afledte af log-likelihood funktionen, som med respekt til hver $\beta$ der giver et $0$.
 
 
 I jupyter notebook filen 'Logistic-regression-model' bruger vi Sklearn pakken til vores model. Helt generelt så importere vi det allerede opryddet data, da standardiserer vi data og opretter vores binær kolonne. Dernæst splitter vi data op i $75 \%$ trænings data og $25\%$ test data. Nu kan vi træne vores model og bagefter bruge test data til at få hvor "god" vores model er, vi laver også en confusion matrix og en klassificerings report for bedre at kunne se, hvordan vores modellen gætter. Da vi havde store svingninger i vores models præcision, valgte vi at bruge en bootstrap tilgang, hvor vi kører modellen 25 gange og tager middelværdien af forudsigelse, præcision og SHAP værdierne. Det har gjort at vores model er mere stabil og giver en mere ensartet forudsigelse. 
