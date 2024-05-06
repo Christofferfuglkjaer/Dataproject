@@ -30,13 +30,12 @@ Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi √
 
 Vi bruger modellen, ved at lave en binear variable som bare er 1 hvis resultatet er godt og 0 hvis det ikke er, da vil den forudsigelse som vores model laver, v√¶re en sandsynlighed for at ligge i en af de to klasser. 
 $$p(x) = \frac{1}{1+e^{\beta_0+\beta_1x_1+...+\beta_m+x_m}}$$
+
 Hvor $m=16$
-$$
-l = \sum^K_{k =1}(y_k\ln(p_k)+(1-y_k)\ln(1-p_k))
-$$
-$$
-\frac{\partial l }{\partial \beta_m}= 0 = \sum^K_{k=1} y_k x_{km}-p(x_k)x_{km}
-$$
+
+$$l = \sum^K_{k =1}(y_k\ln(p_k)+(1-y_k)\ln(1-p_k))$$
+
+$$\frac{\partial l }{\partial \beta_m}= 0 = \sum^K_{k=1} y_k x_{km}-p(x_k)x_{km}$$
 
 Vi maksimerer ved udregne de afledte af log-likelihood funktionen, som med respekt til hver $\beta$ der giver et  $0$.
 
