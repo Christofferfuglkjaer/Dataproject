@@ -70,7 +70,7 @@ I vores tilfælde kan 95% af variansen forklares med 13 variable (starter på 16
 
 Singular value decomposition kan bruges, ligesom PCA, til at reducere antallet af komponenter. Dette gøres ved at faktorisere vores data til tre matricer. Så $A = U\Sigma V^T$, hvor $A$ er en $mxn$ matrice, $U$ er en $mxm$ matrice bestående af de orthonormal egenvektorer fra $AA^T$, $V^T$ er en $nxn$ matrixe af $A^TA$, og $\Sigma$ er diagonalmatrice med roden af de positive egenværdier.
 
-Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datasæt.
+Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datasæt. Vi har også her valgt ikke at benytte reduceringen.
 
 
 
