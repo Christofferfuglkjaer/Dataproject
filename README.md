@@ -78,10 +78,13 @@ https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-i
 ## problemer 
 
 # andre tilgange ()
+
+## verdens bedste LM (Malthe)
+En af de første modeller vi forsøgte os med var en lineær model. 
+
 ## neural network (Christoffer)
 Inden vi valgte at bruge en logistisk regression, blev muligheden for et neuralt netværk udforsket, dette tog lang tid og endte ud i det vi  fra starten lidt havde forudsagt. Vi har simpelthen ikke nok data, og for mange variable. Men det gav os en bedre forståelse for hvordan et neuralt netværk virker, men vigtigste af alt, hvornår giver det mening at bruge et neuralt netværk. Da vi endte lidt en i en blindgyde hvor modellen præcision ikke var særlig god, valgte vi at tage et skridt bagud og genoverveje hvordan vi ville takle dette projekt. 
 
-## verdens bedste LM (Malthe)
 ## PCA og SVD. (Oswald)
 Principal Component Analysis er en metode, der bruges til at reducere antallet af dimensioner for data. Dette gøres ved at finde de retninger, hvor dataet spreder sig mest, og repræsentere dataet langs disse. Normalt indeholder PCA følgende trin:
 -	Normalisering af variabler (trækker gennemsnittet fra).
