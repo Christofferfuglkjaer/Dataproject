@@ -85,9 +85,9 @@ https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-i
 # Andre tilgange
 
 ## Lineær model
-En af de første modeller vi forsøgte os med var en lineær model. Vores process kan findes under "Ekstra" i filen "Lineær reggression.Rmd". I R benyttede vi funktionen lm() til at lave en lineær reggression af dataet. Vi brugte da back propegation til at finde de mest relevante variable, ved at fjerne den mindst signifikante variabel og lave en ny lineær reggression, indtil alle resterende variable var signifikante. Af dette kom vi fra til, at de mest relevante variable er Anteroposterior 1.1, Anteroposterior 1.2, Anteroposterior 2.2, Tooth shape/size 2 og Pan 2.2, hvor vi ser et sammenhæng med SHAP-væriderne for vores logistiske reggression. Denne model er:
+En af de første modeller vi forsøgte os med var en lineær model. Vores process kan findes under "Ekstra" i filen "Lineær regression.Rmd". I R benyttede vi funktionen lm() til at lave en lineær regression af dataet. Vi brugte da back propegation til at finde de mest relevante variable, ved at fjerne den mindst signifikante variabel og lave en ny lineær regression, indtil alle resterende variable var signifikante. Af dette kom vi fra til, at de mest relevante variable er Anteroposterior 1.1, Anteroposterior 1.2, Anteroposterior 2.2, Tooth shape/size 2 og Pan 2.2, hvor vi ser et sammenhæng med SHAP-væriderne for vores logistiske regression. Denne model er:
 $$lm = 0.4430 An_{1.1} + 0.6198 An_{1.2} + 3.277 An_{2.2} - 2.581 Tss_2 - 1.929 Pan_{2.2} + 6.343$$
-Det følgende plot er den egentlige værdi for Pinheiro scoren på værdierne fra vores lineære reggression:
+Det følgende plot er den egentlige værdi for Pinheiro scoren på værdierne fra vores lineære regression:
 <img width="727" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/074756f0-b463-45ce-a3b3-67c843e53e54">\
 Her ses et svagt forhold mellem de to, men det er tydeligt, at der ikke er et stærkt forhold. \
 Særligt er der to "egenskaber" at lægge mærke til i dette plot:\
