@@ -69,12 +69,9 @@ summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Vertical.2.1 +
 summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior1.2 + Anteroposterior2.2 + Tooth.shape.size.2. + Pan.2.2.))
 ```
 
-```{r}
-summary(lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior1.2 + Anteroposterior2.2 + Pan.2.2.))
-```
 
 ```{r}
-lm_pin <- lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior1.2 + Anteroposterior2.2 + Pan.2.2.)
+lm_pin <- lm(data = data, Total.Row.Score.C ~ Anteroposterior.1.1 + Anteroposterior1.2 + Anteroposterior2.2 + Tooth.shape.size.2. + Pan.2.2.)
 ```
 
 
@@ -88,7 +85,8 @@ lm_out <- koef[1] +
   data$Anteroposterior.1.1 * koef[2] +
   data$Anteroposterior1.2 * koef[3] +
   data$Anteroposterior2.2 * koef[4] +
-  data$Pan.2.2. * koef[5]
+  data$Tooth.shape.size.2. * koef[5] +
+  data$Pan.2.2. * koef[6]
 lm_out
 ```
 
@@ -107,7 +105,57 @@ mean(abs(data_2$Total.Row.Score.C - data_2$lm_out))
 ```
 
 ```{r}
-plot(data_2$Total.Row.Score.C, data_2$lm_out)
+plot(data_2$Total.Row.Score.C, data_2$lm_out, xlab = "Pinheiro score ved 16", ylab = "Resultat fra lm")
+```
+
+```{r}
+c(mean(data_2$lm_out), mean(data_2$Total.Row.Score.C))
+```
+
+```{r}
+c(var(data_2$lm_out), var(data_2$Total.Row.Score.C))
+```
+
+```{r}
+y <- c(data_2$Total.Row.Score.C, data_2$lm_out)
+x <- c()
+for (i in c("Egentlig score", "lm værdi")) {
+  for (j in c(0:(nrow(data_2) - 1))) {
+    x <- append(x, i)
+  }
+}
+```
+
+```{r}
+boxplot(y~x, xlab = "Målingsdato", ylab = "Pinheiro score")
+```
+
+
+
+```{r}
+y <- c()
+x <- c()
+
+data_3 <- data_2[sample(1:nrow(data_2)), ]
+
+for (i in c(0:20)) {
+  y <- append(y, data_3$Total.Row.Score.A[i])
+  y <- append(y, data_3$Total.Row.Score.B[i])
+  y <- append(y, data_3$Total.Row.Score.C[i])
+  for (j in c(8, 12, 16)) {
+    x <- append(x, j)
+  }
+}
+```
+
+
+```{r}
+for (i in c(0:20)) {
+  x0 <- x[(1 + 3 * i):(3 + 3 * i)]
+  y0 <- y[(1 + 3 * i):(3 + 3 * i)]
+  plot(y0~x0, type='b', main='Udvikling i ganen for hhv. 8, 12 og 16 år', xlab='Målingsdato', ylab='Pinheiro score', ylim=c(0,35))
+  par(new=TRUE)
+}
 ```
 
 
@@ -132,6 +180,6 @@ for (i in c(8, 12, 16)) {
 ```
 
 ```{r}
-boxplot(y~x)
+boxplot(y~x, xlab = "Målingsdato", ylab = "Pinheiro score")
 ```
 
