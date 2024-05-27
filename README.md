@@ -31,7 +31,7 @@ Vi har valgt at bruge en logistisk regression, da vi ønskede at lave en binær 
 En logistisk regression benytter sig af binær variable og giver som output en sandsynlighed for at være i en klasse defineret udfra de binære variable.
 
 
-Givet vi har en n datapunkter som er I.I.D som er angivet på formen $X = [x_1,x_2,...,x_n]$ 
+Givet vi har en n datapunkter som er I.I.D og er angivet på formen $X = [x_1,x_2,...,x_n]$ 
 logit af vores multipel regression er givet som nedenstående: 
 $$g(x) =\left(\frac{\pi(X)}{1-\pi(X)}\right) = \beta_0+\beta_1x_1+...+b_n x_n$$
 hvor $n=16$.
