@@ -130,4 +130,4 @@ link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
 
 # referencer 
 
-(1) https://ftp.idu.ac.id/wp-content/uploads/ebook/ip/REGRESI%20LOGISTIK/epdf.pub_applied-logistic-regression-wiley-series-in-probab.pdf
+(1) Applied Logistic Regressio: http://dl.icdst.org/pdfs/files4/7751d268eb7358d3ca5bd88968d9227a.pdf
