@@ -24,10 +24,10 @@ Formålet med denne applikation er at patienterne kan få at vide, hvordan de ka
 
 # Model 
 
-## hvilken model bruger vi, og hvorfor?
+## Hvilken model bruger vi, og hvorfor?
 Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi ønskede at lave en binær klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er godt eller dårligt. For bedre at kunne demostrere hvordan vi bruger dette i praksis, gennemgår vi kort teorien bag vores model, og så hvordan vi implementere dette i Python 
 
-## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
+## Hvad indebærer modellen og hvordan virker den i praksis.
 En logistisk regression benytter sig af binær variable og giver som output en sandsynlighed for at være i en klasse defineret udfra de binære variable.
 
 Vores to klasser mange variable logistiske regressions model være givet på formen 
