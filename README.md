@@ -24,7 +24,7 @@ Formålet med denne applikation er at patienterne kan få at vide, hvordan de ka
 
 # Model 
 
-## hvilken model bruger vi, og hvorfor (Christoffer)
+## hvilken model bruger vi, og hvorfor?
 Vi har valgt at bruge en logistisk regression, denne model blev valgt fordi vi ønskede at lave en binær klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er godt eller dårligt. For bedre at kunne demostrere hvordan vi bruger dette i praksis, gennemgår vi kort teorien bag vores model, og så hvordan vi implementere dette i Python 
 
 ## hvad indebærer modellen og hvordan virker den i praksis (Chrizz)
@@ -65,7 +65,7 @@ I jupyter notebook filen 'Logistic-regression-model' bruger vi Sklearn pakken ti
 
 
  
-## SHAP værdier og hvad bruger vi dem til. (Oswald)
+## SHAP værdier og hvad bruger vi dem til.
 SHAP (SHapley Additive exPlanations) er en metode, der kan bruges til at fortolke/forklare Machine Mearning modellers forudsigelser. Mere specifikt, kan man se hver parameters effekt på en forudsigelse.\
 Når man arbejder med SHAP-værdier, er det vigtigt at notere sig, at de ikke kan bruges til at forklare kausalitet. Siger udelukkende noget om, hvordan modellen er kommet frem til en forudsigelse/resultat.\
 \
@@ -101,10 +101,10 @@ En del af dette kan også skyldes, ligesom med den logistiske reggression, at de
 
 Alt i alt kom vi frem til, at den lineære model ikke er god at bruge i praksis, da modellen har en tendens til at give et bud tæt ved middelværdien, hvilken den gør for lave såvel som høje værdier. Man kan derfor ikke sige meget om den endelige værdi, hvis modellen gav et resultat på mellem 7 og 10, hvilket den lader til at gøre i omkring halvdelen af tilfælde.
 
-## neural network (Christoffer)
+## Neural network.
 Inden vi valgte at bruge en logistisk regression, blev muligheden for et neuralt netværk udforsket, dette tog lang tid og endte ud i det vi  fra starten lidt havde forudsagt. Vi har simpelthen ikke nok data, og for mange variable. Men det gav os en bedre forståelse for hvordan et neuralt netværk virker, men vigtigste af alt, hvornår giver det mening at bruge et neuralt netværk. Da vi endte lidt en i en blindgyde hvor modellen præcision ikke var særlig god, valgte vi at tage et skridt bagud og genoverveje hvordan vi ville takle dette projekt. 
 
-## PCA og SVD. (Oswald)
+## PCA og SVD.
 Principal Component Analysis er en metode, der bruges til at reducere antallet af dimensioner for data. Dette gøres ved at finde de retninger, hvor dataet spreder sig mest, og repræsentere dataet langs disse. Normalt indeholder PCA følgende trin:
 -	Normalisering af variabler (trækker gennemsnittet fra).
 -	Beregning af kovarians matricen.
@@ -120,7 +120,7 @@ Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datas
 
 
 
-# opnåede vi de mål? (team combo) 
+# Konklusion
 
 ## lave upload tamtam 
 ## Streamlit app (Christoffer)
