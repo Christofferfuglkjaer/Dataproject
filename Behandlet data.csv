@@ -1,8 +1,4 @@
-;Anteroposterior 1;Anteroposterior 2;Vertical 1;Vertical 2;Transverse;Crowding ;Spacing;"Tooth shape/size  
-";"Pan 2
-";Anteroposterior 1.1;Anteroposterior;Vertical 1.1;Vertical 2.1;Transverse.1;Crowding .1;Spacing.1;"Tooth shape/size
-";"Pan 2
-.1";Total Row Score C
+;Anteroposterior 1.1;Anteroposterior 1.2;Vertical 1.1;Vertical 1.2;Transverse 1;Crowding 1;Spacing 1;Tooth shape/size 1;Pan 1;Anteroposterior 2.1;Anteroposterior 2.2;Vertical 2.1;Vertical 2.2;Transverse 2;Crowding 2;Spacing 2;Tooth shape/size 2;Pan 2;Total Row Score C
 1;9,0;0,0;0,0;0,0;6,0;0,0;4,0;0,0;4,0;0,0;0,0;0,0;0,0;6,0;0,0;4,0;0,0;3,0;0
 2;9,0;0,0;0,0;0,0;6,0;1,0;1,0;1,0;3,0;9,0;0,0;2,0;4,0;6,0;0,0;0,0;1,0;3,0;8
 3;0,0;0,0;0,0;0,0;2,0;3,0;1,0;0,0;4,0;0,0;0,0;0,0;0,0;6,0;1,0;3,0;0,0;0,0;9
