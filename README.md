@@ -61,7 +61,7 @@ Alt teorien er fundet i (1) s.6-9 og s.31-34
 
 
 I jupyter notebook filen 'Logistic-regression-model' bruger vi Sklearn pakken til vores model. Helt generelt så importere vi det allerede opryddet data, da standardiserer vi data og opretter vores binær kolonne. Dernæst splitter vi data op i $75 \%$ trænings data og $25\%$ test data. Nu kan vi træne vores model og bagefter bruge test data til at få hvor "god" vores model er, vi laver også en confusion matrix og en klassificerings report for bedre at kunne se, hvordan vores modellen gætter. Da vi havde store svingninger i vores models præcision, valgte vi at bruge en bootstrap tilgang, hvor vi kører modellen 25 gange og tager middelværdien af forudsigelse, præcision og SHAP værdierne. Det har gjort at vores model er mere stabil og giver en mere ensartet forudsigelse. 
-<img width="723" alt="Skærmbillede 2024-05-06 kl  13 11 29" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/dfe15110-7ee3-4f5b-b1e1-afe1c7a2c3f8">
+
 
 
  
@@ -95,7 +95,7 @@ Vores lineære model giver mange bud omkring 10, både for lave og høje egentli
 Mange af de egentlige værdier ligger omkring 0.
 
 Til den første egenskab, kan vi bemærke, at middelværdien for modellen er nær identisk med det egentlige data, henholdsvis 8.881530 og 8.881536. Tilgengæld er variationen i vores model betydenligt lavere end for det egentlige data, henholdsvis 43.24 og 103.44. Noget af dette kan hænge sammen med den anden egenskab. I et boksplot over den egentlige værdi og lm værdierne, kan man se forskellen i spredning i pinheiro score:\
-
+<img width="729" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/d77ffbab-81d2-4ac8-912a-00aa82a1a25b">\
 Det kan her ses, hvordan de egentlige værdier har større spredning, og særligt hvor mange der ligger omkring 0 til 1. Boksplottet for den lineære model ligger langt mere samlet rundt om middelværdien. Da vores lineære model forsøger at mindske afstanden for hele datasættet, er det oplagt at den ligger sig rundt om middelværdien. Den gennemsnitlige afvigelse for vores model er 6.042.\
 En del af dette kan også skyldes, ligesom med den logistiske reggression, at det generelt er et svagt sammenhæng mellem målinger fra 8 og 12 år og målinger fra 16 år.
 
@@ -122,7 +122,8 @@ Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datas
 
 # Konklusion
 
-<img width="729" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/d77ffbab-81d2-4ac8-912a-00aa82a1a25b">\
+
+<img width="723" alt="Skærmbillede 2024-05-06 kl  13 11 29" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/dfe15110-7ee3-4f5b-b1e1-afe1c7a2c3f8">
 
 ## lave upload tamtam 
 ## Streamlit app (Christoffer)
