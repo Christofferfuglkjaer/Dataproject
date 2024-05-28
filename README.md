@@ -33,6 +33,7 @@ For bedre at kunne demonstrere, hvordan vi bruger dette i praksis, gennemgår vi
 Givet vi har en n datapunkter som er I.I.D og er angivet på formen $X = [x_1,x_2,...,x_n]$. Da er logit af vores multipel regression givet som: 
 $$g(x) =\left(\frac{\pi(X)}{1-\pi(X)}\right) = \beta_0+\beta_1x_1+...+b_n x_n$$
 hvor $n=16$.
+
 Vi kan nu opskrive vores multipel logisitiske regression på formen:
 
 $$\pi(x)=\frac{e^{g(x)}}{1+e^{g(x)}}$$
