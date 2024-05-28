@@ -71,7 +71,8 @@ Når man arbejder med SHAP-værdier, er det vigtigt at notere sig, at de ikke ka
 \
 Vi bruger to plots fra pakken 'shap', til forklare modellens forudsigelser. De kan findes under 'Extra Information' i streamlit appen. Her kan man se, at de fleste gange modellen bliver kørt, vil Antereoposterior 1.1 være den parameter med størst effekt. På det andet plot ses, hvor uforudsiglig problemstillingen egentlig er - der er ikke stor sammenhæng mellem parameter-værdien og shap-værdien. (Optimalt ville røde og blå punkter være adskilt).\
 
-![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/6c1272d5-2353-4056-83ce-f77ed19d1363)
+![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/026fdeb7-9239-4f76-a84a-c99aae7f6f91)
+
 
 
 https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability
