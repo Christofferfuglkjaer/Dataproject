@@ -123,7 +123,8 @@ Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datas
 # Konklusion
 
 
-<img width="723" alt="Skærmbillede 2024-05-06 kl  13 11 29" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/dfe15110-7ee3-4f5b-b1e1-afe1c7a2c3f8">
+![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/7675eb18-99a6-441a-b433-9513182e6d42)
+
 
 ## lave upload tamtam 
 ## Streamlit app (Christoffer)
