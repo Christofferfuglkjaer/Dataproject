@@ -122,7 +122,9 @@ Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datas
 
 
 # Konklusion
-
+- vi opnåede vores mål med modellen, som virker ish og bliver brugt af tandlægerne
+- vi fandt de relevante værdier ift de målinger de tager
+- 
 
 ![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/7675eb18-99a6-441a-b433-9513182e6d42)
 
