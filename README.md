@@ -45,8 +45,10 @@ Vi ved at alle observationer er uafhængige, da er vores likelihood et samlet pr
 
 $$l(\beta)=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}$$
 
-princippet bag maksimum likelihood funktionen er at estimere vores værdien for hver $\beta_m$ som maksimerer, det er en del nemmere at udregne en log likelihood, så vi omskriver $l(\beta)$ til 
+princippet bag maksimum likelihood funktionen er at estimere vores værdien for hver $\beta_m$ som maksimerer. For at gøre det nemmere at estimere $\beta_m$ benytter vi Log-likelihood methode og omskriver  $l(\beta)$ til 
+
 $$L(\beta)=\ln(l(\beta)) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i)$$
+
 For at finde værdierne for vores $\beta_m$ som maksimere, differenciere vi $L(\beta)$ med respekt til $\beta_m$ hvilket resultere i 
 $$\frac{\partial L(\beta)}{\partial \beta_m} = \sum^n_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
 Nu har vi fundet vores maksimum likelihood estimater som vi beskriver ved $\hat{\beta}$
