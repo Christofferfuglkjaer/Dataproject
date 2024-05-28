@@ -49,8 +49,8 @@ princippet bag maksimum likelihood funktionen er at estimere vores værdien for 
 
 $$L(\beta)=\ln(l(\beta)) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i)$$
 
-For at finde værdierne for vores $\beta_m$ som maksimere, differenciere vi $L(\beta)$ med respekt til $\beta_m$ hvilket resultere i 
-$$\frac{\partial L(\beta)}{\partial \beta_m} = \sum^n_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
+Nu differenciere vi $L(\beta)$ med respekt til $\beta_m$ for at finde de værdier som maksimere vores udtryk
+$$\hat{\beta}= \frac{\partial L(\beta)}{\partial \beta_m} = \sum^n_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
 Nu har vi fundet vores maksimum likelihood estimater som vi beskriver ved $\hat{\beta}$
 
 Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta}$ og indsætter dem i $$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
