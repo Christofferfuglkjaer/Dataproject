@@ -15,7 +15,7 @@ Læbe-ganespalte er en medfødt tilstand, som rammer omkring 1 / 500 af børn. B
 
 I et internationalt studie, har man undersøgt forskellige primære operationer til sammenligning. I forbindelse med dette har man i Danmark indsamlet data på børnenes udvikling ved henholdsvis 8, 12 og 16 år.
 
-Vi har lavet en model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis otte og tolv år, og med dette forudsige den endelige tilstand, når patienten er omkring seksten år.
+Vi har lavet en model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis 8 og 12 år, og med dette forudsige den endelige tilstand, når patienten er omkring 16 år.
 
 Datasættet har 124 patienter med 36 kolonner, og består af tre målings-tidspunkter i hhv. aldrene 8, 12 og 16. For hver måling har vi 10 værdier for patientens tilstand, f.eks. 'Spacing, 'Transverse' og 'Crowding'. Summen af alle værdierne udgør patientens Pinheiro score. Scoren ligger mellem 0 og 52, og man ønsker en lav score.
 
