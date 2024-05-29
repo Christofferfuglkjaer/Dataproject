@@ -126,7 +126,7 @@ Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datas
 
 
 # Konklusion
-Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangende i en binær klassifikations model. Det hænger dog sammen med, at mange af datapunkterne er overvejende ens indtil sidste måling. Derudover er modellen forholdsvis god til at forudsige, hvis den endelige score er dårlig. Dette er visualiseret med en ”confusion matrix”, som ses nedenfor.
+Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangende i en binær klassifikations model. Det hænger dog sammen med, at mange af datapunkterne er overvejende ens indtil sidste måling. Som diskuteret i afsnittet, om vores problemer/udfordringer.
 
 Vi har fundet de parametre, som har størst indflydelse på modellen, ved hjælp af SHAP. Det hjælper tandlægerne med forståelse og fortolkning af modellens forudsigelser.
 
