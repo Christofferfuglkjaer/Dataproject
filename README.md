@@ -4,7 +4,7 @@
 ## Table of contents
 * [introduktion](##introduktion)
 * [model](#model)
-* [SHAP] (#SHAP værdier og hvad bruger vi dem til.) 
+* [SHAP værdier og hvad bruger vi dem til.] (#SHAP værdier og hvad bruger vi dem til.) 
 * [problemer](#problemer)
 * [Andre tilgange](#Andre tilgange) 
 * [referencer](#referencer)
