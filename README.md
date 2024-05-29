@@ -78,10 +78,17 @@ Vi bruger to plots fra pakken 'shap', til forklare modellens forudsigelser. De k
 ![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/026fdeb7-9239-4f76-a84a-c99aae7f6f91)
 
 ## Problemer 
+På grund af vores data har vi haft nogle problemer med at lave vores model. Vi har været begrænset af størrelsen af vores data, der indeholder 123 patienter, som har gjort at vi har skulle være opmærksomme på overfitting.  Vi har forsøgt at undgå dette i vores logistiske regressionsmodel ved at bruge bootstrapping. Her vil vi lave modellen på forskellige dele af datasættet, hvor den gennemsnitlige model da gerne skulle have mindre overfitting.
 
+Derudover har datasættet ikke et stærkt sammenhæng mellem målingerne fra 8 og 12 år og målingerne fra 16 år. Særligt har vi set, at patienter, som har en høj score i de to første målinger, kan ende med både gode og dårlige resultater i sidste måling, som kan ses i figuren under.
 
 <img width="730" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/ac63ddf7-863b-44bc-9182-4893c11ec845">
 
+For patienter med end Pinheiro score over 20 i målingen ved 12 år ender omkring 37\% af dem med et godt resultat. Det giver en del usikkerhed i vores model, som derfor har en tendens til at gætte imellem. I denne figur har vi lavet modellem 10.000 gange med et udsnit af datasættet som træningsdata, og observeret hvor sikker den er på, at hver testpatient ender med et godt resultat.
+
+![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/0bcd3a26-f04f-4fa0-9766-871a65c70ba3)
+
+Det kan her ses, at vores model ofte gætter, at sandsynligheden for et godt resultat er mellem 0,4 og 0,7. Den er sjældent meget sikker på at det ender dårligt, og endnu mere sjældent at det ender godt. Det kan godt give problemer, da et usikkert resultat ikke kan aflæses, andet end at det er usikkert. Tandlægerne kan da bruge dette resultat sammen med deres andre værktøjer til at give en forudsigelse for patienten.
 
 ## Streamlit app 
 En del af projekt var at finde en måde hvormed tandlægerne kunne benytte vores model, uden at have kendskab til Python eller den bagved liggende matematik, det endte ud i en app, hvor tandlægerne kan bruge den model vi har lavet som et værktøj. Det er gjort nemt for dem at indsætte tal og for en forudsigelse tilbage. For at lave appen har vi brugt python pakken ‘Streamlit’ som producerer en cloud-based hjemmeside.
@@ -94,6 +101,8 @@ Det har været vanskeligt og meget tid er langt i hjemmesiden, da vi skulle lær
 link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
 
 # Andre tilgange
+
+I forbindelse med projektet har vi også forsøgt os med andre tilgange. Det involverer andre modeller samt dimensionalitetsreduktion i forsøg på at forbedre vores modeller.
 
 ## Lineær model
 En af de første modeller vi forsøgte os med var en lineær model. Vores process kan findes under "Ekstra" i filen "Lineær regression.Rmd". I R benyttede vi funktionen lm() til at lave en lineær regression af dataet. Vi brugte da back propegation til at finde de mest relevante variable, ved at fjerne den mindst signifikante variabel og lave en ny lineær regression, indtil alle resterende variable var signifikante. Af dette kom vi fra til, at de mest relevante variable er Anteroposterior 1.1, Anteroposterior 1.2, Anteroposterior 2.2, Tooth shape/size 2 og Pan 2.2, hvor vi ser et sammenhæng med SHAP-væriderne for vores logistiske regression. Denne model er:
