@@ -3,9 +3,10 @@
 
 ## Table of contents
 * [introduktion](##introduktion)
-* [Mål](##Mål)
 * [model](#model)
+* [SHAP] (##SHAP) 
 * [problemer](#problemer)
+* [Andre tilgange](#andre tilgange) 
 * [referencer](#referencer)
 
 # Introduktion
