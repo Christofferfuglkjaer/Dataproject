@@ -97,8 +97,8 @@ Appen er bruger vores bootstrap logistisk regression som i ‘logistisk regressi
 
 Det betyder at vi laver et slags dashboard, det gør det nemt for tandlægerne at bruge vores model uden at skulle installere python eller overhovedet forstå det tekniske bag vores model og forudsigelse. 
 Hjemmesiden er blevet modtaget med stor glæde og interesse fra tandlægerne. 
-Det har været vanskeligt og meget tid er langt i hjemmesiden, da vi skulle lære en hvordan Streamlit pakken fungerer. Vi opfordre at man går ind og kigger på hjemmesiden. 
-link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
+ 
+Link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
 
 # Andre tilgange
 
