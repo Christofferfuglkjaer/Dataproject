@@ -142,6 +142,6 @@ Vi har fundet de parametre, som har størst indflydelse på modellen, ved hjælp
 
 # Referencer 
 
-(1) Applied Logistic Regression: http://dl.icdst.org/pdfs/files4/7751d268eb7358d3ca5bd88968d9227a.pdf 
+[1] Avid W. Hosmer JR, Stanly Lemeshow, Rodney X. Sturdivant: Applied Logistic Regression:  http://dl.icdst.org/pdfs/files4/7751d268eb7358d3ca5bd88968d9227a.pdf 
 
-(2) SHAP: https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability
+[2] SHAP: https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability
