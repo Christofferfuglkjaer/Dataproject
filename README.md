@@ -14,21 +14,22 @@
 Læbe-ganespalte er en medfødt tilstand, som rammer omkring 1 / 500 af børn. Børn med Læbe-ganespalte gennemgår tre operationer (se figur 1). En primær operation, som er en kirurgisk lukning af læbespalten og den bløde gane. Dette sker, når patienterne er spædbørn. I en alder af enten et eller tre år lukkes den hårde gane. Når patienterne er 8 år, lukkes alveolær spalte (spalte i gummen), og bøjlebehandlingen påbegyndes. I 12-års alderen vil den endelige bøjlebehandling blive påbegyndt, og der vil eventuelt blive foretaget mindre justeringer. Til sidst vil bøjle blive taget af, typisk i 16-års alderen.
 
 <img width="894" alt="Skærmbillede 2024-04-03 kl  22 26 42" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/ebdc42f4-f83a-4bb9-ada1-b10800b02e95">\
-(fig.1: forløb for ganespaltepatienter)\
+(figur.1: forløb for ganespaltepatienter)\
 I et internationalt studie, har man undersøgt forskellige primære operationer til sammenligning. I forbindelse med dette har man i Danmark indsamlet data på børnenes udvikling ved henholdsvis 8, 12 og 16 år.
 
-Datasættet har 124 patienter med 36 kolonner, og består af tre målings-tidspunkter i hhv. aldrene 8, 12 og 16. For hver måling har vi 10 værdier for patientens tilstand, f.eks. 'Spacing, 'Transverse' og 'Crowding'. Summen af alle værdierne udgør patientens Pinheiro score. Scoren ligger mellem 0 og 52, og man ønsker en lav score.
+ Datasættet har 124 patienter med 36 kolonner, og består af tre målings-tidspunkter i hhv. aldrene 8, 12 og 16. For hver måling har vi 10 værdier for patientens tilstand, f.eks. 'Spacing, 'Transverse' og 'Crowding'. Summen af alle værdierne udgør patientens Pinheiro score. Scoren ligger mellem 0 og 52, og man ønsker en lav score.
 
-Vi har lavet en model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis 8 og 12 år, og med dette forudsige den endelige tilstand, når patienten er omkring 16 år.
+Vores model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis 8 og 12 år, og vil prædiktere den endelige tilstand når patienten er 16 år, baseret på tidligere datapunkter
+(Denne model bliver lavet til en app som tandlægerne kan bruge som et værktøj til at bekræfte deres faglige intuition.)
 
-Vi har lavet en app gennem Streamlit, hvor tandlæger kan tilgå vores model og bruge den i praksis. Gennem appen kan de indtaste værdier for de første to målinger, hvortil vores model vil give en probabilistisk forudsigelse for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Det vil også være muligt at se information omkring modellen.
+For at tandlæger kan tilgå og bruge modellen i praksis, er der udviklet en app igennem Streamlit. Gennem appen kan tandlægerene  indtaste værdier for de første to målinger, hvortil vores model vil give en prædiktion for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Det vil også være muligt at se information omkring modellen.
 
 
 # Model 
 
 ## Hvilken model bruger vi, og hvorfor.
 Vi har valgt at bruge en logistisk regression, da vi ønskede at lave en binær klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er god eller dårlig. Den logistiske regressions output er en sandsynlighed for at ende i en god eller dårlig.
-For bedre at kunne demonstrere, hvordan vi bruger dette i praksis, gennemgår vi kort teorien bag vores model, samt hvordan vi implementere dette i Python 
+For bedre at kunne demonstrere, hvordan vi bruger dette i praksis, gennemgår vi kort teorien bag den multiple logistisk regression, samt hvordan vi implementerer dette i Python.
 
 ## Hvad indebærer modellen, og hvordan den virker i praksis.
 
