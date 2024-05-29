@@ -96,10 +96,7 @@ En af de første modeller vi forsøgte os med var en lineær model. Vores proces
 $$lm = 0.4430 An_{1.1} + 0.6198 An_{1.2} + 3.277 An_{2.2} - 2.581 Tss_2 - 1.929 Pan_{2.2} + 6.343$$
 Det følgende plot er den egentlige værdi for Pinheiro scoren på værdierne fra vores lineære regression:
 <img width="727" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/074756f0-b463-45ce-a3b3-67c843e53e54">\
-Her ses et svagt forhold mellem de to, men det er tydeligt, at der ikke er et stærkt forhold. \
-Særligt er der to "egenskaber" at lægge mærke til i dette plot:\
-Vores lineære model giver mange bud omkring 10, både for lave og høje egentlige værdier.\
-Mange af de egentlige værdier ligger omkring 0.
+Her ses et svagt forhold mellem de to, men det er tydeligt, at der ikke er et stærkt forhold. Særligt er der to "egenskaber" at lægge mærke til i dette plot: Vores lineære model giver mange bud omkring 10, både for lave og høje egentlige værdier. Mange af de egentlige værdier ligger omkring 0.
 
 Til den første egenskab, kan vi bemærke, at middelværdien for modellen er nær identisk med det egentlige data, henholdsvis 8.881530 og 8.881536. Tilgengæld er variationen i vores model betydenligt lavere end for det egentlige data, henholdsvis 43.24 og 103.44. Noget af dette kan hænge sammen med den anden egenskab. I et boksplot over den egentlige værdi og lm værdierne, kan man se forskellen i spredning i pinheiro score:\
 <img width="729" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/d77ffbab-81d2-4ac8-912a-00aa82a1a25b">\
