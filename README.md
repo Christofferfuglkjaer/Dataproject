@@ -2,13 +2,13 @@
 
 
 ## Indholdsfortegnelse
-* [introduktion](#introduktion)
-* [model](#model)
+* [Introduktion](#introduktion)
+* [Model](#model)
 * [SHAP værdier og hvad bruger vi dem til.](#shap-værdier-og-hvad-bruger-vi-dem-til)
-* [problemer](#problemer)
+* [Problemer](#problemer)
 * [Andre tilgange](#andre-tilgange)
 * [Konklusion](#konklusion)
-* [referencer](#referencer)
+* [Referencer](#referencer)
 
 # Introduktion
 Læbe-ganespalte er en medfødt tilstand, som rammer omkring 1 / 500 af børn. Børn med Læbe-ganespalte gennemgår tre operationer (se figur 1). En primær operation, som er en kirurgisk lukning af læbespalten og den bløde gane. Dette sker, når patienterne er spædbørn. I en alder af enten et eller tre år lukkes den hårde gane. Når patienterne er 8 år, lukkes alveolær spalte (spalte i gummen), og bøjlebehandlingen påbegyndes. I 12-års alderen vil den endelige bøjlebehandling blive påbegyndt, og der vil eventuelt blive foretaget mindre justeringer. Tilsidst vil bøjle blive taget af, typisk i 16-års alderen.
