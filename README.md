@@ -41,17 +41,17 @@ $$\pi(x)=\frac{e^{g(x)}}{1+e^{g(x)}}$$
 Vi vil nu opskrive vores likelihood funktion. Vi har et $Y$, vores "dummy variabel", som er 0 eller 1. $\pi(x)$ er en betinget sandsynlighed, som er $P(Y=1|x) = \pi(x)$, hvis $Y = 1$ og $1-\pi(x)$, hvis $Y = 0$ . Vi kan nu benytte Bernoulli fordelingen til at opstille vores likelihood funktion.
 
 $$\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y}$$
-Vi ved at alle observationer er uafhængige, da vores likelihood er et samlet produkt af udtrykket oven over 
+Vi ved at alle observationer er uafhængige, da vores likelihood er et samlet produkt af udtrykket oven over.
 
 $$l(\beta)=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}$$
 
-princippet bag maksimum likelihood funktionen er at estimere vores værdien for hver $\beta_m$ som maksimerer. For at gøre det nemmere at estimere $\beta_m$ benytter vi Log-likelihood methoden og omskriver  $l(\beta)$ til 
+Princippet bag maksimum likelihood funktionen er at estimere værdien for hver $\beta_m$, som maksimerer udtrykket. For at gøre det nemmere at estimere $\beta_m$, benytter vi Log-likelihood methoden og omskriver  $l(\beta)$ til 
 
 $$L(\beta)=\ln(l(\beta)) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i)$$
 
-Nu differenciere vi $L(\beta)$ med respekt til $\beta_m$ for at finde de værdier som maksimere vores udtryk
+Nu differenciere vi $L(\beta)$ med respekt til $\beta_m$ for at finde de værdier, som maksimere vores udtryk
 $$\hat{\beta}= \frac{\partial L(\beta)}{\partial \beta_m} = \sum^n_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
-Nu har vi fundet vores maksimum likelihood estimater som vi beskriver ved $\hat{\beta}$
+Nu har vi fundet vores maksimum likelihood estimater, som vi beskriver ved $\hat{\beta}$
 
 Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta}$ og indsætter dem i $$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
 
