@@ -45,11 +45,11 @@ Vi vil nu opskrive vores likelihood funktion. Vi har et $Y$, vores "dummy variab
 $$\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y}$$
 Vi ved at alle observationer er uafhængige, da vores likelihood er et samlet produkt af udtrykket oven over.
 
-$$l(\beta)=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}$$
+$$l(\beta_m)=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}$$
 
 Princippet bag maksimum likelihood funktionen er at estimere værdien for hver $\beta_m$, som maksimerer udtrykket. For at gøre det nemmere at estimere $\beta_m$, benytter vi Log-likelihood methoden og omskriver  $l(\beta)$ til 
 
-$$L(\beta)=\ln(l(\beta)) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i))$$
+$$L(\beta_m)=\ln(l(\beta_m)) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i))$$
 
 Nu differencierer vi $L(\beta)$ med respekt til $\beta_m$ for at finde de værdier, som maksimere vores udtryk
 $$\hat{\beta}= \frac{\partial L(\beta)}{\partial \beta_m} = \sum^n_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
