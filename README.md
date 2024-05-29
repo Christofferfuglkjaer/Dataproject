@@ -26,11 +26,11 @@ Vi har lavet en app gennem Streamlit, hvor tandlæger kan tilgå vores model og 
 
 # Model 
 
-## Hvilken model bruger vi, og hvorfor?
+## Hvilken model bruger vi, og hvorfor.
 Vi har valgt at bruge en logistisk regression, da vi ønskede at lave en binær klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er god eller dårlig. Den logistiske regressions output er en sandsynlighed for at ende i en god eller dårlig.
 For bedre at kunne demonstrere, hvordan vi bruger dette i praksis, gennemgår vi kort teorien bag vores model, samt hvordan vi implementere dette i Python 
 
-## Hvad indebærer modellen og hvordan virker den i praksis.
+## Hvad indebærer modellen og hvordan den virker i praksis.
 
 Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X = [x_1,x_2,...,x_n]$. Da er logit af vores multipel regression givet som: 
 $$g(x) =\ln\left(\frac{\pi(X)}{1-\pi(X)}\right) = \beta_0+\beta_1x_1+...+b_n x_n$$
