@@ -125,11 +125,13 @@ Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datas
 
 
 # Konklusion
-- vi opnåede vores mål med modellen, som virker ish og bliver brugt af tandlægerne
-- vi fandt de relevante værdier ift de målinger de tager
-- 
+Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangende i en binær klassifikations model. Det hænger dog sammen med, at mange af datapunkterne er overvejende ens indtil sidste måling. Derudover er modellen forholdsvis god til at forudsige, hvis den endelige score er dårlig. Dette er visualiseret med en ”confusion matrix”, som ses nedenfor.
 
-![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/7675eb18-99a6-441a-b433-9513182e6d42)
+Vi har fundet de parametre, som har størst indflydelse på modellen, ved hjælp af SHAP. Det hjælper tandlægerne med forståelse og fortolkning af modellens forudsigelser.
+
+
+<img width="389" alt="Dataprojekt confusion matrix" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/143393880/18d7ffe9-ac89-4359-b38c-7d7e1170b039">
+
 
 
 
