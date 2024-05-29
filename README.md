@@ -1,12 +1,13 @@
 # Forudsigelse af kraniofacial vækst og tandstilling forlæbe-ganespaltepatienter
 
 
-## Table of contents
-* [introduktion](##introduktion)
+## Indholdsfortegnelse
+* [introduktion](#introduktion)
 * [model](#model)
-* [SHAP værdier og hvad bruger vi dem til.] (#SHAP værdier og hvad bruger vi dem til.) 
+* [SHAP værdier og hvad bruger vi dem til.](#shap-værdier-og-hvad-bruger-vi-dem-til)
 * [problemer](#problemer)
-* [Andre tilgange](#Andre tilgange) 
+* [Andre tilgange](#andre-tilgange)
+* [Konklusion](#konklusion)
 * [referencer](#referencer)
 
 # Introduktion
