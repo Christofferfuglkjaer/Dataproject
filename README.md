@@ -73,7 +73,7 @@ I Jupyter notebook filen 'Logistisk-regression' bruger vi Sklearn pakken til vor
 SHAP (SHapley Additive exPlanations) er en metode, der kan bruges på Machine Learning modeller, til at se hver parameters effekt på en forudsigelse.\
 Når man arbejder med SHAP-værdier, er det vigtigt at notere sig, at de ikke kan bruges til at forklare kausalitet. Siger udelukkende noget om, hvordan modellen er kommet frem til en forudsigelse.\
 \
-Vi bruger to plots fra pakken \texttt{shap}, til forklare modellens forudsigelser. De kan findes under 'Extra Information' i streamlit appen. Her kan man se, at de fleste gange modellen bliver kørt, vil Antereoposterior 2.1 være den parameter med størst effekt.
+Vi bruger to plots fra pakken SHAP, til forklare modellens forudsigelser. De kan findes under 'Extra Information' i streamlit appen. Her kan man se, at de fleste gange modellen bliver kørt, vil Antereoposterior 2.1 være den parameter med størst effekt.
 
 ![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/026fdeb7-9239-4f76-a84a-c99aae7f6f91)
 
