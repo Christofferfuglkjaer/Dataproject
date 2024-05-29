@@ -125,16 +125,16 @@ Vores neurale netværk består af et hidden layer og vores output layer bruger v
 Hele processen tog lang tid og endte ud i det vi fra starten lidt havde forudsagt. Vi har simpelthen ikke nok data, og for mange variable. Men det gav os en bedre forståelse for hvordan et neuralt netværk virker, men vigtigste af alt, hvornår giver det mening at bruge et neuralt netværk. Da vi endte lidt en i en blindgyde hvor modellen præcision ikke var særlig god, valgte vi at tage et skridt bagud og genoverveje hvordan vi ville takle dette projekt
 
 ## PCA og SVD.
-Principal Component Analysis er en metode, der bruges til at reducere antallet af dimensioner for data. Dette gøres ved at finde de retninger, hvor dataet spreder sig mest, og repræsentere dataet langs disse. Normalt indeholder PCA følgende trin:
--	Normalisering af variabler (trækker gennemsnittet fra).
--	Beregning af kovarians matricen.
--	Beregning af egenværdier og egenvektorer.
--	Valg af komponenter (Vælger typisk op til at 95% varians er forklaret).
--	Transformering af data (omdanner det oprindelige data til det nye rum defineret af de valgte komponenter).
+Principal Component Analysis (PCA) er en metode, der bruges til at reducere antallet af dimensioner for data. Dette gøres ved at finde de retninger, hvor dataet spreder sig mest, og repræsentere dataet langs disse. Normalt indeholder PCA følgende trin:
+1. Normalisering af variabler.
+2. Beregning af kovarians matricen.
+3.	Beregning af egenværdier og egenvektorer.
+4.	Valg af komponenter (Vælger typisk op til at 95% varians er forklaret).
+5.	Transformering af data (omdanner det oprindelige data til det nye rum defineret af de valgte komponenter).
 
-I vores tilfælde kan 95% af variansen forklares med 14 variable (starter på 16). Dog ser vi ikke en effekt på vores regression, og vælger derfor at bibeholde alle variable, da dette giver os muligheden for at benytte SHAP-værdier. 
+I vores tilfælde kan 95% af variansen forklares med 14 variable - en reduktion fra 16 variable. Dog ser vi ikke en effekt på vores logistiske regression, og vælger derfor at bibeholde alle variable, da dette giver os muligheden for at benytte SHAP-værdier. 
 
-Singular value decomposition kan bruges, ligesom PCA, til at reducere antallet af komponenter. Dette gøres ved at faktorisere vores data til tre matricer. Så $A = U\Sigma V^T$, hvor $A$ er en $m \times n$ matrice, $U$ er en $m \times m$ matrice bestående af de orthonormal egenvektorer fra $AA^T$, $V^T$ er en $n \times n$ matrixe af $A^TA$, og $\Sigma$ er diagonalmatrice med roden af de positive egenværdier.
+Singular value decomposition (SVD) kan bruges, ligesom PCA, til at reducere antallet af dimensioner. Dette gøres ved at faktorisere vores data til tre matricer. Så $A = U\Sigma V^T$, hvor $A$ er en $m \times n$ matrice, $U$ er en $m \times m$ matrice bestående af de orthonormal egenvektorer fra $AA^T$, $V^T$ er en $n \times n$ matrice af $A^TA$, og $\Sigma$ er diagonalmatrice med roden af de positive egenværdier.
 
 Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datasæt. Vi har også her valgt ikke at benytte reduceringen.
 
