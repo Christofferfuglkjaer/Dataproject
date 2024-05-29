@@ -130,7 +130,8 @@ Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangend
 Vi har fundet de parametre, som har størst indflydelse på modellen, ved hjælp af SHAP. Det hjælper tandlægerne med forståelse og fortolkning af modellens forudsigelser.
 
 
-![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/7675eb18-99a6-441a-b433-9513182e6d42)
+<img width="389" alt="Dataprojekt confusion matrix" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/143393880/18d7ffe9-ac89-4359-b38c-7d7e1170b039">
+
 
 
 
