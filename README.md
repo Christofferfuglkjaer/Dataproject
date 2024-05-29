@@ -76,10 +76,6 @@ Vi bruger to plots fra pakken 'shap', til forklare modellens forudsigelser. De k
 
 ![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/026fdeb7-9239-4f76-a84a-c99aae7f6f91)
 
-
-
-https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability
-
 ## Problemer 
 
 
@@ -147,4 +143,5 @@ Vi har fundet de parametre, som har størst indflydelse på modellen, ved hjælp
 
 # referencer 
 
-(1) Applied Logistic Regressio: http://dl.icdst.org/pdfs/files4/7751d268eb7358d3ca5bd88968d9227a.pdf
+(1) Applied Logistic Regression: http://dl.icdst.org/pdfs/files4/7751d268eb7358d3ca5bd88968d9227a.pdf
+(2) SHAP: https://www.datacamp.com/tutorial/introduction-to-shap-values-machine-learning-interpretability
