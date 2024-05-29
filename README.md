@@ -107,7 +107,9 @@ Alt i alt kom vi frem til, at den lineære model ikke er god at bruge i praksis,
 
 ## Neural network.
 Inden vi valgte at bruge en logistisk regression, blev muligheden for et neuralt netværk udforsket.
-Vores neurale netværk består af et hidden layer og vores output layer bruger vi en softmax activation layer, som giver os en sandsynlighed for at ende i en af de to klasser. Resultatet er dog skuffende og ender tit med at forudsige ret tilfældigt. Hele processen tog lang tid og endte ud i det vi fra starten lidt havde forudsagt. Vi har simpelthen ikke nok data, og for mange variable. Men det gav os en bedre forståelse for hvordan et neuralt netværk virker, men vigtigste af alt, hvornår giver det mening at bruge et neuralt netværk. Da vi endte lidt en i en blindgyde hvor modellen præcision ikke var særlig god, valgte vi at tage et skridt bagud og genoverveje hvordan vi ville takle dette projekt
+Vores neurale netværk består af et hidden layer og vores output layer bruger vi en softmax activation layer, som giver os en sandsynlighed for at ende i en af de to klasser. Resultateterne er dog skuffende og ender tit med at forudsige ret tilfældigt. I Jupyter notebook filen ‘Binary NN Classifier.ipynb” er det muligt at se hvordan vi har implementeret det i python, med Keras biblioteket 
+
+Hele processen tog lang tid og endte ud i det vi fra starten lidt havde forudsagt. Vi har simpelthen ikke nok data, og for mange variable. Men det gav os en bedre forståelse for hvordan et neuralt netværk virker, men vigtigste af alt, hvornår giver det mening at bruge et neuralt netværk. Da vi endte lidt en i en blindgyde hvor modellen præcision ikke var særlig god, valgte vi at tage et skridt bagud og genoverveje hvordan vi ville takle dette projekt
 
 ## PCA og SVD.
 Principal Component Analysis er en metode, der bruges til at reducere antallet af dimensioner for data. Dette gøres ved at finde de retninger, hvor dataet spreder sig mest, og repræsentere dataet langs disse. Normalt indeholder PCA følgende trin:
