@@ -19,9 +19,8 @@ I et internationalt studie, har man undersøgt forskellige primære operationer 
 
  Datasættet har 124 patienter med 36 kolonner, og består af tre målings-tidspunkter i hhv. aldrene 8, 12 og 16. For hver måling har vi 10 værdier for patientens tilstand, f.eks. 'Spacing, 'Transverse' og 'Crowding'. Summen af alle værdierne udgør patientens Pinheiro score. Scoren ligger mellem 0 og 52, og man ønsker en lav score.
 
-Vores model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis 8 og 12 år, og vil prædiktere den endelige tilstand når patienten er 16 år, baseret på tidligere datapunkter, dette bliver gjort ved at lave en binær variable, som er god, hvis den endelige Pinheiro score er 5 eller under, og alt over er et dårligt resultat. Vi har valgt 5 i samarbejde med tandlægerne, da det er medianen for endelige Pinheiro-score og stemmer overens med et lægefagligt godt resultat. 
+Vores model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis 8 og 12 år, og vil prædiktere den endelige tilstand når patienten er 16 år, baseret på tidligere datapunkter, dette bliver gjort ved at lave en binær variable, som er god, hvis den endelige Pinheiro score er 5 eller under som vi klassificere som 0, og alt over er et dårligt resultat som vi klassificere som 1. Vi har valgt 5 i samarbejde med tandlægerne, da det er medianen for endelige Pinheiro-score og stemmer overens med et lægefagligt godt resultat. 
 
-Her vil et 0 være et godt resultat og 1 være et dårligt resultat. Modellen vil give sandsynlighederne for at være i 0 og 1. 
 
 For at tandlæger kan tilgå og bruge modellen i praksis, er der udviklet en app igennem Streamlit. Gennem appen kan tandlægerene  indtaste værdier for de første to målinger, hvortil vores model vil give en prædiktion for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Appen skal bruges som et værktøj af tandlægerne til at understøtte deres faglige intuition.
 
@@ -29,8 +28,8 @@ For at tandlæger kan tilgå og bruge modellen i praksis, er der udviklet en app
 # Model 
 
 ## Logistisk regression
-Vi har valgt at bruge en logistisk regression, da vi ønskede at lave en binær klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er god eller dårlig.
-Vi vel hurtigt gennemgå teorien bag den multiple logistisk regression, og derefter hvordan vi implementerer og træner vores model i python.
+Vi har valgt at bruge en logistisk regression, da vi ønskede at lave en binær klassificering gav det mening at bruge en supervised model, hvor labels er givet ud fra vores binær variabel.
+Vi vil gennemgå teorien bag den multiple logistisk regression, og derefter hvordan vi implementerer og fitter vores model i python.
 
 ## Teori
 
@@ -38,11 +37,11 @@ Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X = [x_1,x_2,
 $$g(x) =\ln\left(\frac{\pi(X)}{1-\pi(X)}\right) = \beta_0+\beta_1x_1+...+b_n x_n$$
 hvor $n=16$.
 
-Vi kan nu opskrive vores multipel logisitiske regression på formen:
+Vi kan nu opskrive vores multipel logisitiske regression, den har formen af en logistisk sigmoid:
 
 $$\pi(x)=\frac{e^{g(x)}}{1+e^{g(x)}}$$
 
-Vi vil nu opskrive vores likelihood funktion. Vi har et $Y$, vores "dummy variabel", som er 0 eller 1. $\pi(x)$ er en betinget sandsynlighed, som er $P(Y=1|x) = \pi(x)$, og $1-\pi(x)$ for $P(Y = 0|x)$ . Vi kan nu benytte Bernoulli fordelingen til at opstille vores likelihood funktion.
+Vi vil nu opskrive vores likelihood funktion. Vi har et $Y$, vores "dummy variabel", som er 0 eller 1. $\pi(x)$ er en betinget sandsynlighed, som er $P(Y=1|x) = \pi(x)$, og $P(Y = 0|x) = 1-\pi(x)$  Vi kan nu benytte Bernoulli fordelingen til at opstille vores likelihood funktion.
 
 $$\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y}$$
 Vi ved at alle observationer er uafhængige, da det er målinger fra forskellige patienter. Da er vores likelihood funktion et samlet produkt af ovenstående udtryk.
@@ -56,13 +55,13 @@ $$L(\beta')=\ln(l(\beta')) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i
 
 Nu differencierer vi $L(\beta')$ med respekt til $\beta'$ for at finde de værdier, som maksimerer vores udtryk.
 $$\hat{\beta'}= \frac{\partial L(\beta')}{\partial \beta_m} = \sum^n_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
-Nu har vi fundet vores maksimum likelihood estimater, som vi beskriver ved $\hat{\beta}$
+Nu har vi fundet vores maksimum likelihood estimater, som vi beskriver ved $\hat{\beta'} = [\hat{\beta_0},...,\hat{\beta_m}]$$
 
-Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta'}$ og indsætter dem i 
+Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi $\hat{\beta'}$ og indsætter dem i 
 $$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
 
 
-Alt teorien er fundet i (1) s.6-9 og s.31-34
+Alt teorien er fundet i [1] s.6-9 og s.31-34
 
 
 I Jupyter notebook filen 'Logistisk-regression.ipynb' bruger vi $\textit{Sklearn}$ til lave og træne vores model. Helt generelt, så importerer vi det behandlede data, da standardiserer vi data med en $\textit{MinMaxScaler}$, hvilket betyder at datapunkter bliver skaleret til at være mellem 0 og 1. Da kan vi oprette vores binær target kolonne. Dernæst splitter vi data op i 75 procent trænings data og 25 procent test data. Nu kan vi fitte vores model og bruge test data til analysere hvor præcis vores model er. Da vi havde store svingninger i vores models præcision, valgte vi at bruge en Bootstrap tilgang, hvor vi kører modellen 25 gange, med tilbagelægning, og tager middelværdien af forudsigelserne, præcision og SHAP-værdierne. Det har gjort at vores model er mere stabil og giver en mere ensartet forudsigelse. 
@@ -149,7 +148,9 @@ Singular value decomposition (SVD) kan bruges, ligesom PCA, til at reducere anta
 
 Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datasæt. Vi har også her valgt ikke at benytte reduceringen.
 
+## Andre statiske modeller
 
+Vi undersøgte også andre 
 
 # Resultater
 Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangende i en binær klassifikations model. Det hænger dog sammen med, at mange af datapunkterne er overvejende ens indtil sidste måling. Som diskuteret i afsnittet, om vores problemer/udfordringer.
