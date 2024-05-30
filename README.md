@@ -7,7 +7,7 @@
 * [SHAP værdier.](#shap-værdier)
 * [Udfordringer](#udfordringer)
 * [Andre tilgange](#andre-tilgange)
-* [Konklusion](#konklusion)
+* [Resultater](#resultater)
 * [Referencer](#referencer)
 
 # Introduktion
