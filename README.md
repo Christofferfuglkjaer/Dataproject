@@ -76,7 +76,7 @@ Hjemmesiden er blevet modtaget med stor glæde og interesse fra tandlægerne.
 Link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
 
  
-## SHAP værdier og hvad bruger vi dem til.
+## SHAP værdier.
 SHAP (Shapley Additive exPlanations) er en metode, der kan bruges på Machine Learning modeller, til at se hver parameters effekt på en forudsigelse.\
 Når man arbejder med SHAP-værdier, er det vigtigt at notere sig, at de ikke kan bruges til at forklare kausalitet. Siger udelukkende noget om, hvordan modellen er kommet frem til en forudsigelse.\
 \
