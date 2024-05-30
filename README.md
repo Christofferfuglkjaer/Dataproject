@@ -86,7 +86,11 @@ Vi bruger to plots fra pakken SHAP, til forklare modellens forudsigelser. Det er
 (figur 2. SHAP plot)
 
 ## Problemer 
-På grund af vores data har vi haft nogle problemer med at lave vores model. Vi har været begrænset af størrelsen af vores data, der indeholder 123 patienter, som har gjort at vi har skulle være opmærksomme på overfitting.  Vi har forsøgt at undgå dette i vores logistiske regressionsmodel ved at bruge bootstrapping. Her vil vi lave modellen på forskellige dele af datasættet, hvor den gennemsnitlige model da gerne skulle have mindre overfitting.
+
+På grund af vores data har vi haft nogle problemer med at lave vores model. Vi har været begrænset af størrelsen af vores data, der indeholder 123 patienter, som har gjort at vi har skulle være opmærksomme på overfitting. Yderlige har der været datapunkter med manglende værdier, så vi ender med 116 datapunkter. Datoerne for målingerne er tilgængelige for patienter fra hovedstaden, men manglende for patienter fra Aarhus, hvilket tvinger os til ikke at bruge dem. De kunne have haft en effekt, da patientens alder ved sidste varierer en del. Dette skyldes, at patienten skal være helt færdig med behandlingen før de får taget de sidste mål.
+
+Begrænsningen af et lille datasæt har vi forsøgt at undgå i vores logistiske regressionsmodel ved at bruge Bootstrapping. Her vil vi lave modellen på forskellige dele af datasættet, hvor den gennemsnitlige model da gerne skulle have mindre overfitting.
+
 
 Derudover har datasættet ikke et stærkt sammenhæng mellem målingerne fra 8 og 12 år og målingerne fra 16 år. Særligt har vi set, at patienter, som har en høj score i de to første målinger, kan ende med både gode og dårlige resultater i sidste måling, som kan ses i figuren under.
 
