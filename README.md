@@ -155,13 +155,15 @@ Med 14 komponenter er lidt over 95 procent af variansen forklaret i vores datas�
 Vi undersøgte også andre klassificeringsmodeller, som $\textit{RandomForrestClassifier}$, $\textit{DecisionTreeClassifier}$ og $\textit{KNeighborsClassifier}$. Som man kan se i $\textit{Andre statistiske modeller.ipynb}$ så får vi den samme præcision som Logistisk regression, og da logistisk regression var hurtigere valgte vi at beholde vores logistiske regression. 
 
 # Resultater
-Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangende i en binær klassifikations model. Det hænger dog sammen med, at mange af datapunkterne er overvejende ens indtil sidste måling. Som diskuteret i afsnittet, om vores problemer/udfordringer.
+Formålet med projektet var at forsøge at prædiktere om den endelige Pinheiro-score ville ende i den gode eller dårlige kategori. Det er til en vis grad lykkedes. Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangende i en binær klassifikations model. Det hænger dog sammen med, at mange af datapunkterne er overvejende ens indtil sidste måling. Som diskuteret i afsnittet, om vores udfordringer. Dog kommer denne usikkerhed også til udtryk i modellen, da den både viser sandsynligheden for at ende gode kategori og den dårlige kategori. Dvs. at tandlægerne kan se, når prædiktion kan kategoriseres som ugyldig eller for usikker.
+
+Vi bruger her en confusion matrix til at visualisere modellens samlede præcision, hvor nederste venstre boks er antallet af falske positive og øverste højre boks er falske negative.
 
 
 <img width="389" alt="Dataprojekt confusion matrix" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/143393880/18d7ffe9-ac89-4359-b38c-7d7e1170b039">\
 (figur 7.)
 
-Vi har fundet de parametre, som har størst indflydelse på modellen, ved hjælp af SHAP, de tre mest signifikante værende Anteroposterior 2.1, Pan 2 og Anteroposterior 1.1. Det hjælper tandlægerne med forståelse og fortolkning af modellens forudsigelser.
+Vi ville også undersøge, hvilke parametre, der mest indflydelse på det endelige resultat. Det er lykkedes med SHAP, som viser at de tre mest signifikante værende Anteroposterior 2.1, Pan 2 og Anteroposterior 1.1. er de parametre, der har størst effekt på modellens prædiktion. Ligeledes bliver de andres parametres effekt også beregnet. 
 
 Tandlægerne kan da bruge modellen som et værktøj i deres forudsigelse af en patients udvikling til at understøtte deres faglige intuition.
 
