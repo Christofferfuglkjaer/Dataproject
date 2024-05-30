@@ -163,7 +163,7 @@ Vi bruger her en confusion matrix til at visualisere modellens samlede præcisio
 <img width="389" alt="Dataprojekt confusion matrix" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/143393880/18d7ffe9-ac89-4359-b38c-7d7e1170b039">\
 (figur 7.)
 
-Vi ville også undersøge, hvilke parametre, der mest indflydelse på det endelige resultat. Det er lykkedes med SHAP, som viser at de tre mest signifikante værende Anteroposterior 2.1, Pan 2 og Anteroposterior 1.1. er de parametre, der har størst effekt på modellens prædiktion. Ligeledes bliver de andres parametres effekt også beregnet. 
+Vi ville også undersøge, hvilke parametre, der mest indflydelse på det endelige resultat. Det er lykkedes med SHAP, som viser at de tre parametre, der har størst effekt på modellens prædiktion, er Anteroposterior 2.1, Pan 2 og Anteroposterior 1.1. Ligeledes bliver de andres parametres effekt også beregnet. 
 
 Tandlægerne kan da bruge modellen som et værktøj i deres forudsigelse af en patients udvikling til at understøtte deres faglige intuition.
 
