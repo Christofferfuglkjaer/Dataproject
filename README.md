@@ -1,4 +1,4 @@
-# Forudsigelse af kraniofacial vækst og tandstilling forlæbe-ganespaltepatienter
+# Forudsigelse af kraniofacial vækst og tandstilling for læbe-ganespaltepatienter
 
 
 ## Indholdsfortegnelse
