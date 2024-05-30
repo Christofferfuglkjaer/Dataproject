@@ -147,7 +147,7 @@ Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datas
 
 
 
-# Konklusion
+# Resultater
 Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangende i en binær klassifikations model. Det hænger dog sammen med, at mange af datapunkterne er overvejende ens indtil sidste måling. Som diskuteret i afsnittet, om vores problemer/udfordringer.
 
 
