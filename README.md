@@ -46,25 +46,24 @@ Vi vil nu opskrive vores likelihood funktion. Vi har et $Y$, vores "dummy variab
 $$\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y}$$
 Vi ved at alle observationer er uafhængige, da vores likelihood er et samlet produkt af udtrykket oven over.
 
-$$l(\beta_m)=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}$$
+$$l(\beta')=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}$$
+hvor $\beta' = [\beta_0,...,\beta_m]$
+Princippet bag maksimum likelihood funktionen er at estimere værdien for hver $\beta_m$, som maksimerer udtrykket. For at gøre det nemmere at estimere $\beta'$, benytter vi Log-likelihood methoden og omskriver  $l(\beta')$ til 
 
-Princippet bag maksimum likelihood funktionen er at estimere værdien for hver $\beta_m$, som maksimerer udtrykket. For at gøre det nemmere at estimere $\beta_m$, benytter vi Log-likelihood methoden og omskriver  $l(\beta_m)$ til 
+$$L(\beta')=\ln(l(\beta')) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i))$$
 
-$$L(\beta_m)=\ln(l(\beta_m)) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i))$$
-
-Nu differencierer vi $L(\beta)$ med respekt til $\beta_m$ for at finde de værdier, som maksimere vores udtryk
-$$\hat{\beta}= \frac{\partial L(\beta)}{\partial \beta_m} = \sum^n_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
+Nu differencierer vi $L(\beta')$ med respekt til $\beta'$ for at finde de værdier, som maksimerer vores udtryk
+$$\hat{\beta'}= \frac{\partial L(\beta')}{\partial \beta_m} = \sum^n_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
 Nu har vi fundet vores maksimum likelihood estimater, som vi beskriver ved $\hat{\beta}$
 
-Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta}$ og indsætter dem i $$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
+Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta'}$ og indsætter dem i 
+$$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\textbf{\beta'}}x_m}}$$
 
 
 Alt teorien er fundet i (1) s.6-9 og s.31-34
 
 
-
-
-I Jupyter notebook filen 'Logistisk-regression' bruger vi Sklearn pakken til vores model. Helt generelt så importerer vi det allerede opryddet data, da standardiserer vi data og opretter vores binær kolonne. Dernæst splitter vi data op i 75 procent trænings data og 25 procent test data. Nu kan vi træne vores model og bagefter bruge test data til at få hvor "god" vores model er, vi laver også en confusion matrix og en klassificerings rapport for bedre at kunne se, hvordan vores model gætter. Da vi havde store svingninger i vores models præcision, valgte vi at bruge en Bootstrap tilgang, hvor vi kører modellen 25 gange og tager middelværdien af forudsigelse, præcision og SHAP-værdierne. Det har gjort at vores model er mere stabil og giver en mere ensartet forudsigelse.
+I Jupyter notebook filen 'Logistisk-regression.ipynb' bruger vi Sklearn til lave og træne vores model. Helt generelt så importerer vi det behandlet data, da standardiserer vi data med en MinMax, hvilket betyder at datapunkter bliver skaleret til at være mellem 0 og 1. Da kan vi oprette vores binær kolonne. Dernæst splitter vi data op i 75 procent trænings data og 25 procent test data. Nu kan vi træne vores model og bagefter bruge test data til analysere hvor præcis vores model er, vi laver også en confusion matrix for at se, hvordan vores model gætter. Da vi havde store svingninger i vores models præcision, valgte vi at bruge en Bootstrap tilgang, hvor vi kører modellen 25 gange og tager middelværdien af forudsigelserne, præcision og SHAP-værdierne. Det har gjort at vores model er mere stabil og giver en mere ensartet forudsigelse.
 
 ## Streamlit app 
 En del af projekt var at finde en måde hvormed tandlægerne kunne benytte vores model, uden at have kendskab til Python eller den bagved liggende matematik, det endte ud i en app, hvor tandlægerne kan bruge den model vi har lavet som et værktøj. Det er gjort nemt for dem at indsætte tal og for en forudsigelse tilbage. For at lave appen har vi brugt python pakken ‘Streamlit’ som producerer en cloud-based hjemmeside.
@@ -78,7 +77,7 @@ Link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
 
  
 ## SHAP værdier og hvad bruger vi dem til.
-SHAP (SHapley Additive exPlanations) er en metode, der kan bruges på Machine Learning modeller, til at se hver parameters effekt på en forudsigelse.\
+SHAP (Shapley Additive exPlanations) er en metode, der kan bruges på Machine Learning modeller, til at se hver parameters effekt på en forudsigelse.\
 Når man arbejder med SHAP-værdier, er det vigtigt at notere sig, at de ikke kan bruges til at forklare kausalitet. Siger udelukkende noget om, hvordan modellen er kommet frem til en forudsigelse.\
 \
 Vi bruger to plots fra pakken SHAP, til forklare modellens forudsigelser. Det er muligt at se hvordan SHAP værdier bliver lavet i 'logistisk regression.ipynb'. Her kan man se, at de fleste gange modellen bliver kørt, vil Antereoposterior 2.1 være den parameter med størst effekt.
