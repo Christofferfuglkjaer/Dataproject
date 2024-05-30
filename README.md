@@ -110,7 +110,9 @@ Det kan her ses, at vores model ofte gætter, at sandsynligheden for et godt res
 I forbindelse med projektet har vi også forsøgt os med andre tilgange. Det involverer andre modeller samt dimensionalitetsreduktion i forsøg på at forbedre vores modeller.
 
 ## Lineær model
-Den første model vi forsøgte os med var en lineær model. Koden til dette kan findes under "Andre tilgange" i filen "Lineær regression.Rmd". I R benyttede vi funktionen $\textit{lm()}$ til at lave en lineær regression af dataet. Vi brugte da $\textit{backwards selection}$ til at finde de mest relevante variable. Dette sker ved at fjerne den mindst signifikante variabel, lave en ny lineær regression og gentage, indtil alle resterende variable var signifikante. Af dette kom vi fra til, at de mest relevante variable er Anteroposterior 1.1, Anteroposterior 1.2, Anteroposterior 2.2, Tooth shape/size 2 og Pan 2.2, som stemmer overens med SHAP-værdierne for vores logistiske regression. Herunder ses den lineære model:
+Den første model vi forsøgte os med var en lineær model. Koden til dette kan findes under "Andre tilgange" i filen "Lineær regression.Rmd". I R benyttede vi funktionen $\textit{lm()}$ til at lave en lineær regression af dataet.
+
+Vi brugte da backwards selection til at finde de mest relevante variable. Dette sker ved at fjerne den mindst signifikante variabel, lave en ny lineær regression og gentage, indtil alle resterende variable var signifikante. Af dette kom vi fra til, at de mest relevante variable er Anteroposterior 1.1, Anteroposterior 1.2, Anteroposterior 2.2, Tooth shape/size 2 og Pan 2.2, som stemmer overens med SHAP-værdierne for vores logistiske regression. Herunder ses den lineære model:
 $$lm = 0.4430 An_{1.1} + 0.6198 An_{1.2} + 3.277 An_{2.2} - 2.581 Tss_2 - 1.929 Pan_{2.2} + 6.343$$
 Denne model har en forklaringsgrad på 0,4, og den gennemsnitlige afvigelse fra den egentlige værdi for Pinheiro scoren er 6,042.
 
@@ -159,7 +161,7 @@ Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangend
 <img width="389" alt="Dataprojekt confusion matrix" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/143393880/18d7ffe9-ac89-4359-b38c-7d7e1170b039">\
 (figur 7.)
 
-Vi har fundet de parametre, som har størst indflydelse på modellen, ved hjælp af SHAP, det tre mest signifikante værende Anteroposterior 2.1, Pan 2 og Anteroposterior 1.1. Det hjælper tandlægerne med forståelse og fortolkning af modellens forudsigelser.
+Vi har fundet de parametre, som har størst indflydelse på modellen, ved hjælp af SHAP, de tre mest signifikante værende Anteroposterior 2.1, Pan 2 og Anteroposterior 1.1. Det hjælper tandlægerne med forståelse og fortolkning af modellens forudsigelser.
 
 Tandlægerne kan da bruge modellen som et værktøj i deres forudsigelse af en patients udvikling til at understøtte deres faglige intuition.
 
