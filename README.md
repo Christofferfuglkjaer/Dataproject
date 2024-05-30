@@ -5,7 +5,7 @@
 * [Introduktion](#introduktion)
 * [Model](#model)
 * [SHAP værdier og hvad bruger vi dem til.](#shap-værdier-og-hvad-bruger-vi-dem-til)
-* [Problemer](#problemer)
+* [Udfordringer](#udfordringer)
 * [Andre tilgange](#andre-tilgange)
 * [Konklusion](#konklusion)
 * [Referencer](#referencer)
@@ -85,7 +85,7 @@ Vi bruger to plots fra pakken SHAP, til forklare modellens forudsigelser. Det er
 ![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/026fdeb7-9239-4f76-a84a-c99aae7f6f91)\
 (figur 2. SHAP plot)
 
-## Problemer 
+## Udfordringer 
 
 På grund af vores data har vi haft nogle problemer med at lave vores model. Vi har været begrænset af størrelsen af vores data, der indeholder 123 patienter, som har gjort at vi har skulle være opmærksomme på overfitting. Yderlige har der været datapunkter med manglende værdier, så vi ender med 116 datapunkter. Datoerne for målingerne er tilgængelige for patienter fra hovedstaden, men manglende for patienter fra Aarhus, hvilket tvinger os til ikke at bruge dem. De kunne have haft en effekt, da patientens alder ved sidste varierer en del. Dette skyldes, at patienten skal være helt færdig med behandlingen før de får taget de sidste mål.
 
