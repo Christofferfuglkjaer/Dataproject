@@ -19,7 +19,7 @@ I et internationalt studie, har man undersøgt forskellige primære operationer 
 
  Datasættet har 124 patienter med 36 kolonner, og består af tre målings-tidspunkter i hhv. aldrene 8, 12 og 16. For hver måling har vi 10 værdier for patientens tilstand, f.eks. 'Spacing, 'Transverse' og 'Crowding'. Summen af alle værdierne udgør patientens Pinheiro score. Scoren ligger mellem 0 og 52, og man ønsker en lav score.
 
-Vores model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis 8 og 12 år, og vil prædiktere den endelige tilstand når patienten er 16 år, baseret på tidligere datapunkter, dette bliver gjort ved at lave en binær variable som er god hvis den endelige Pinheiro score er 5 eller under, og alt over er et dårligt resultat. vi har valgt 5 i samarbejde med tandlægerne, da det er medianen for endelige Pinheiro-score og stemmer overens med et lægefagligt godt resultat. 
+Vores model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis 8 og 12 år, og vil prædiktere den endelige tilstand når patienten er 16 år, baseret på tidligere datapunkter, dette bliver gjort ved at lave en binær variable som er god hvis den endelige Pinheiro score er 5 eller under, og alt over er et dårligt resultat. Vi har valgt 5 i samarbejde med tandlægerne, da det er medianen for endelige Pinheiro-score og stemmer overens med et lægefagligt godt resultat. 
 
 Her vil et 0 være et godt resultat og 1 dårligt resultat. Modellen vil derfor prædiktere en sandsynlighed for at være i 0 eller 1. 
 
@@ -112,20 +112,23 @@ Det kan her ses, at vores model ofte gætter, at sandsynligheden for et godt res
 I forbindelse med projektet har vi også forsøgt os med andre tilgange. Det involverer andre modeller samt dimensionalitetsreduktion i forsøg på at forbedre vores modeller.
 
 ## Lineær model
-En af de første modeller vi forsøgte os med var en lineær model. Vores process kan findes under "Ekstra" i filen "Lineær regression.Rmd". I R benyttede vi funktionen lm() til at lave en lineær regression af dataet. Vi brugte da back propegation til at finde de mest relevante variable, ved at fjerne den mindst signifikante variabel og lave en ny lineær regression, indtil alle resterende variable var signifikante. Af dette kom vi fra til, at de mest relevante variable er Anteroposterior 1.1, Anteroposterior 1.2, Anteroposterior 2.2, Tooth shape/size 2 og Pan 2.2, hvor vi ser et sammenhæng med SHAP-væriderne for vores logistiske regression. Denne model er:
+Den første model vi forsøgte os med var en lineær model. Koden til dette kan findes under "Andre tilgange" i filen "Lineær regression.Rmd". I R benyttede vi funktionen $\textit{lm()}$ til at lave en lineær regression af dataet. Vi brugte da back propagation til at finde de mest relevante variable, ved at fjerne den mindst signifikante variabel, lave en ny lineær regression og gentage, indtil alle resterende variable var signifikante. Af dette kom vi fra til, at de mest relevante variable er Anteroposterior 1.1, Anteroposterior 1.2, Anteroposterior 2.2, Tooth shape/size 2 og Pan 2.2, hvor vi ser et sammenhæng med SHAP-værdierne for vores logistiske regression. Herunder ses den lineære model:
 $$lm = 0.4430 An_{1.1} + 0.6198 An_{1.2} + 3.277 An_{2.2} - 2.581 Tss_2 - 1.929 Pan_{2.2} + 6.343$$
-Det følgende plot er den egentlige værdi for Pinheiro scoren på værdierne fra vores lineære regression:
+Denne model har en forklaringsgrad på 0,4, og den gennemsnitlige afvigelse fra den egentlige værdi for Pinheiro scoren er 6.042.
+
+Det følgende plot er den egentlige værdi for  scoren af x-aksen imod værdierne fra vores lineære regression af y-aksen:
 <img width="727" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/074756f0-b463-45ce-a3b3-67c843e53e54">\
 (figur 5.)\
-Her ses et svagt forhold mellem de to, men det er tydeligt, at der ikke er et stærkt forhold. Særligt er der to "egenskaber" at lægge mærke til i dette plot: Vores lineære model giver mange bud omkring 10, både for lave og høje egentlige værdier. Mange af de egentlige værdier ligger omkring 0.
+Af dette plot kan vi se begrænsningerne i vores lineære model. Mange af de egentlige værdier for Pinheiro scoren ender i nul, mens den lineære model giver værdier for disse patienter mellem nul og 10. På samme vis ser vi en gruppe af egentlige værdier omkring 30, som modellen giver en værdi omkring 10.
+Generelt ser vi et svagt sammenhæng, det er tydeligt, at værdierne af den lineære model stiger sammen med de egentlige værdier. Men outputtet fra modellen kan variere meget fra den egentlige værdi.
 
-Til den første egenskab, kan vi bemærke, at middelværdien for modellen er nær identisk med det egentlige data, henholdsvis 8.881530 og 8.881536. Tilgengæld er variationen i vores model betydenligt lavere end for det egentlige data, henholdsvis 43.24 og 103.44. Noget af dette kan hænge sammen med den anden egenskab. I et boksplot over den egentlige værdi og lm værdierne, kan man se forskellen i spredning i pinheiro score:\
+Vi bemærker også, at middelværdien for modellen er nær identisk med det oprindelige data, henholdsvis 8.881530 og 8.881536. Til gengæld er variationen i vores model markant lavere end for det oprindelige data, henholdsvis 43.24 og 103.44. I et boksplot over den egentlige værdi og lm værdierne kan man se forskellen i spredning i  score:\
 <img width="729" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/d77ffbab-81d2-4ac8-912a-00aa82a1a25b">\
 (figur 6.)\
-Det kan her ses, hvordan de egentlige værdier har større spredning, og særligt hvor mange der ligger omkring 0 til 1. Boksplottet for den lineære model ligger langt mere samlet rundt om middelværdien. Da vores lineære model forsøger at mindske afstanden for hele datasættet, er det oplagt at den ligger sig rundt om middelværdien. Den gennemsnitlige afvigelse for vores model er 6.042.\
-En del af dette kan også skyldes, ligesom med den logistiske reggression, at det generelt er et svagt sammenhæng mellem målinger fra 8 og 12 år og målinger fra 16 år.
+Det kan her ses, hvordan de egentlige værdier har større spredning, og særligt hvor mange der ligger omkring 0 til 1. Boksplottet for den lineære model ligger langt mere samlet rundt om middelværdien.\
+Ligesom med den logistiske regression konkluderer vi, at det generelt er et svagt sammenhæng mellem målinger fra 8 og 12 år og målinger fra 16 år.
 
-Alt i alt kom vi frem til, at den lineære model ikke er god at bruge i praksis, da modellen har en tendens til at give et bud tæt ved middelværdien, hvilken den gør for lave såvel som høje værdier. Man kan derfor ikke sige meget om den endelige værdi, hvis modellen gav et resultat på mellem 7 og 10, hvilket den lader til at gøre i omkring halvdelen af tilfælde.
+Alt i alt kom vi frem til, at den lineære model ikke er god at bruge i praksis, da modellen har en tendens til at give et bud tæt ved middelværdien, hvilken den gør for lave såvel som høje værdier. Man kan derfor ikke sige meget om patientens endelige Pinheiro score, hvis modellen giver et resultat på mellem 7 og 10.
 
 ## Neural network.
 Inden vi valgte at bruge en logistisk regression, blev muligheden for et neuralt netværk udforsket.
