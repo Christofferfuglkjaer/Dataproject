@@ -146,7 +146,7 @@ I vores tilfælde kan 95% af variansen forklares med 14 variable - en reduktion 
 
 Singular value decomposition (SVD) kan bruges, ligesom PCA, til at reducere antallet af dimensioner. Dette gøres ved at faktorisere vores data til tre matricer. Så $A = U\Sigma V^T$, hvor $A$ er en $m \times n$ matrice, $U$ er en $m \times m$ matrice bestående af de orthonormal egenvektorer fra $AA^T$, $V^T$ er en $n \times n$ matrice af $A^TA$, og $\Sigma$ er diagonalmatrice med roden af de positive egenværdier.
 
-Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datasæt. Vi har også her valgt ikke at benytte reduceringen.
+Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datasæt. Vi har også her valgt ikke at benytte reduceringen, da vi vil miste fortolkningsevnen af SHAP-værdierne.
 
 ## Andre statiske modeller
 
