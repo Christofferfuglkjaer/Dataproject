@@ -11,7 +11,7 @@
 * [Referencer](#referencer)
 
 # Introduktion
-Læbe-ganespalte er en medfødt tilstand, som rammer omkring hvert 500. barn. Børn med læbe-ganespalte gennemgår tre operationer (se figur 1). En primær operation, som er en kirurgisk lukning af læbespalten og den bløde gane. Dette sker, når patienterne er spædbørn. Den sekundære operation  sker i en alder af enten et eller tre år, hvor den hårde gane lukkes. Når patienterne er 8 år for de den tredje operation, hvor man lukker den alveolære spalte (spalte i gummen), og første bøjlebehandlingen påbegyndes. I 12-års alderen vil den endelige bøjlebehandling blive påbegyndt, og der vil eventuelt blive foretaget mindre justeringer. Til sidst vil patientens bøjle blive taget af samt endelige justeringer, typisk i 16-års alderen.
+Læbe-ganespalte er en medfødt tilstand, som rammer omkring hvert 500. barn. Børn med læbe-ganespalte gennemgår tre operationer (se figur 1). En primær operation, som er en kirurgisk lukning af læbespalten og den bløde gane. Dette sker, når patienterne er spædbørn. Den sekundære operation sker i en alder af enten et eller tre år, hvor den hårde gane lukkes. Når patienterne er 8 år for de den tredje operation, hvor man lukker den alveolære spalte (spalte i gummen), og første bøjlebehandlingen påbegyndes. I 12-års alderen vil den endelige bøjlebehandling blive påbegyndt, og der vil eventuelt blive foretaget mindre justeringer. Til sidst vil patientens bøjle blive taget af samt endelige justeringer, typisk i 16-års alderen.
 
 <img width="894" alt="Skærmbillede 2024-04-03 kl  22 26 42" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/ebdc42f4-f83a-4bb9-ada1-b10800b02e95">\
 (figur.1: forløb for ganespaltepatienter)\
@@ -33,9 +33,9 @@ Vi vil gennemgå teorien bag den multiple logistisk regression, og derefter hvor
 
 ## Teori
 
-Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X = [x_1,x_2,...,x_n]$. Vi definerer nu et $Y$, som er en "dummy variabel", der er 0 eller 1. $\pi(x)$ er en betinget sandsynlighed, som er $P(Y=1|x) = \pi(x)$, og $P(Y = 0|x) = 1-\pi(x)$  da er logit af vores multipel regression givet som: 
+Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X = [x_1,x_2,...,x_n]$. Vi definerer nu et $Y$, som er en "dummy variabel", der er 0 eller 1. $\pi(x)$ er en betinget sandsynlighed, som er $P(Y=1|x) = \pi(x)$, og $P(Y = 0|x) = 1-\pi(x)$. Da er logit af vores multipel regression givet som: 
 $$g(x) =\ln\left(\frac{\pi(X)}{1-\pi(X)}\right) = \beta_0+\beta_1x_1+...+b_n x_n$$
-hvor $n=16$.    (er det den samme $\pi$ som i den næste?)
+hvor $n=16$.
 
 Vi kan nu opskrive vores multipel logisitiske regression, den har formen af en logistisk sigmoid:
 
