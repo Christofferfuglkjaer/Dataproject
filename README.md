@@ -66,30 +66,6 @@ Alt teorien er fundet i (1) s.6-9 og s.31-34
 
 I Jupyter notebook filen 'Logistisk-regression' bruger vi Sklearn pakken til vores model. Helt generelt så importerer vi det allerede opryddet data, da standardiserer vi data og opretter vores binær kolonne. Dernæst splitter vi data op i 75 procent trænings data og 25 procent test data. Nu kan vi træne vores model og bagefter bruge test data til at få hvor "god" vores model er, vi laver også en confusion matrix og en klassificerings rapport for bedre at kunne se, hvordan vores model gætter. Da vi havde store svingninger i vores models præcision, valgte vi at bruge en Bootstrap tilgang, hvor vi kører modellen 25 gange og tager middelværdien af forudsigelse, præcision og SHAP-værdierne. Det har gjort at vores model er mere stabil og giver en mere ensartet forudsigelse.
 
-
-
- 
-## SHAP værdier og hvad bruger vi dem til.
-SHAP (SHapley Additive exPlanations) er en metode, der kan bruges på Machine Learning modeller, til at se hver parameters effekt på en forudsigelse.\
-Når man arbejder med SHAP-værdier, er det vigtigt at notere sig, at de ikke kan bruges til at forklare kausalitet. Siger udelukkende noget om, hvordan modellen er kommet frem til en forudsigelse.\
-\
-Vi bruger to plots fra pakken SHAP, til forklare modellens forudsigelser. De kan findes under 'Extra Information' i streamlit appen. Her kan man se, at de fleste gange modellen bliver kørt, vil Antereoposterior 2.1 være den parameter med størst effekt.
-
-![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/026fdeb7-9239-4f76-a84a-c99aae7f6f91)
-
-## Problemer 
-På grund af vores data har vi haft nogle problemer med at lave vores model. Vi har været begrænset af størrelsen af vores data, der indeholder 123 patienter, som har gjort at vi har skulle være opmærksomme på overfitting.  Vi har forsøgt at undgå dette i vores logistiske regressionsmodel ved at bruge bootstrapping. Her vil vi lave modellen på forskellige dele af datasættet, hvor den gennemsnitlige model da gerne skulle have mindre overfitting.
-
-Derudover har datasættet ikke et stærkt sammenhæng mellem målingerne fra 8 og 12 år og målingerne fra 16 år. Særligt har vi set, at patienter, som har en høj score i de to første målinger, kan ende med både gode og dårlige resultater i sidste måling, som kan ses i figuren under.
-
-<img width="730" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/ac63ddf7-863b-44bc-9182-4893c11ec845">
-
-For patienter med end Pinheiro score over 20 i målingen ved 12 år ender omkring 37\% af dem med et godt resultat. Det giver en del usikkerhed i vores model, som derfor har en tendens til at gætte imellem. I denne figur har vi lavet modellem 10.000 gange med et udsnit af datasættet som træningsdata, og observeret hvor sikker den er på, at hver testpatient ender med et godt resultat.
-
-![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/0bcd3a26-f04f-4fa0-9766-871a65c70ba3)
-
-Det kan her ses, at vores model ofte gætter, at sandsynligheden for et godt resultat er mellem 0,4 og 0,7. Den er sjældent meget sikker på at det ender dårligt, og endnu mere sjældent at det ender godt. Det kan godt give problemer, da et usikkert resultat ikke kan aflæses, andet end at det er usikkert. Tandlægerne kan da bruge dette resultat sammen med deres andre værktøjer til at give en forudsigelse for patienten.
-
 ## Streamlit app 
 En del af projekt var at finde en måde hvormed tandlægerne kunne benytte vores model, uden at have kendskab til Python eller den bagved liggende matematik, det endte ud i en app, hvor tandlægerne kan bruge den model vi har lavet som et værktøj. Det er gjort nemt for dem at indsætte tal og for en forudsigelse tilbage. For at lave appen har vi brugt python pakken ‘Streamlit’ som producerer en cloud-based hjemmeside.
 
@@ -100,6 +76,32 @@ Hjemmesiden er blevet modtaget med stor glæde og interesse fra tandlægerne.
  
 Link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
 
+ 
+## SHAP værdier og hvad bruger vi dem til.
+SHAP (SHapley Additive exPlanations) er en metode, der kan bruges på Machine Learning modeller, til at se hver parameters effekt på en forudsigelse.\
+Når man arbejder med SHAP-værdier, er det vigtigt at notere sig, at de ikke kan bruges til at forklare kausalitet. Siger udelukkende noget om, hvordan modellen er kommet frem til en forudsigelse.\
+\
+Vi bruger to plots fra pakken SHAP, til forklare modellens forudsigelser. Det er muligt at se hvordan SHAP værdier bliver lavet i 'logistisk regression.ipynb'. Her kan man se, at de fleste gange modellen bliver kørt, vil Antereoposterior 2.1 være den parameter med størst effekt.
+
+![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/026fdeb7-9239-4f76-a84a-c99aae7f6f91)\
+(figur 2. SHAP plot)
+
+## Problemer 
+På grund af vores data har vi haft nogle problemer med at lave vores model. Vi har været begrænset af størrelsen af vores data, der indeholder 123 patienter, som har gjort at vi har skulle være opmærksomme på overfitting.  Vi har forsøgt at undgå dette i vores logistiske regressionsmodel ved at bruge bootstrapping. Her vil vi lave modellen på forskellige dele af datasættet, hvor den gennemsnitlige model da gerne skulle have mindre overfitting.
+
+Derudover har datasættet ikke et stærkt sammenhæng mellem målingerne fra 8 og 12 år og målingerne fra 16 år. Særligt har vi set, at patienter, som har en høj score i de to første målinger, kan ende med både gode og dårlige resultater i sidste måling, som kan ses i figuren under.
+
+<img width="730" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/ac63ddf7-863b-44bc-9182-4893c11ec845">\
+(figur 3. )
+
+For patienter med end Pinheiro score over 20 i målingen ved 12 år ender omkring 37\% af dem med et godt resultat. Det giver en del usikkerhed i vores model, som derfor har en tendens til at gætte imellem. I denne figur har vi lavet modellem 10.000 gange med et udsnit af datasættet som træningsdata, og observeret hvor sikker den er på, at hver testpatient ender med et godt resultat.
+
+![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/0bcd3a26-f04f-4fa0-9766-871a65c70ba3)\
+(figur 4. )\
+
+Det kan her ses, at vores model ofte gætter, at sandsynligheden for et godt resultat er mellem 0,4 og 0,7. Den er sjældent meget sikker på at det ender dårligt, og endnu mere sjældent at det ender godt. Det kan godt give problemer, da et usikkert resultat ikke kan aflæses, andet end at det er usikkert. Tandlægerne kan da bruge dette resultat sammen med deres andre værktøjer til at give en forudsigelse for patienten.
+
+
 # Andre tilgange
 
 I forbindelse med projektet har vi også forsøgt os med andre tilgange. Det involverer andre modeller samt dimensionalitetsreduktion i forsøg på at forbedre vores modeller.
@@ -109,10 +111,12 @@ En af de første modeller vi forsøgte os med var en lineær model. Vores proces
 $$lm = 0.4430 An_{1.1} + 0.6198 An_{1.2} + 3.277 An_{2.2} - 2.581 Tss_2 - 1.929 Pan_{2.2} + 6.343$$
 Det følgende plot er den egentlige værdi for Pinheiro scoren på værdierne fra vores lineære regression:
 <img width="727" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/074756f0-b463-45ce-a3b3-67c843e53e54">\
+(figur 5.)\
 Her ses et svagt forhold mellem de to, men det er tydeligt, at der ikke er et stærkt forhold. Særligt er der to "egenskaber" at lægge mærke til i dette plot: Vores lineære model giver mange bud omkring 10, både for lave og høje egentlige værdier. Mange af de egentlige værdier ligger omkring 0.
 
 Til den første egenskab, kan vi bemærke, at middelværdien for modellen er nær identisk med det egentlige data, henholdsvis 8.881530 og 8.881536. Tilgengæld er variationen i vores model betydenligt lavere end for det egentlige data, henholdsvis 43.24 og 103.44. Noget af dette kan hænge sammen med den anden egenskab. I et boksplot over den egentlige værdi og lm værdierne, kan man se forskellen i spredning i pinheiro score:\
 <img width="729" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/d77ffbab-81d2-4ac8-912a-00aa82a1a25b">\
+(figur 6.)\
 Det kan her ses, hvordan de egentlige værdier har større spredning, og særligt hvor mange der ligger omkring 0 til 1. Boksplottet for den lineære model ligger langt mere samlet rundt om middelværdien. Da vores lineære model forsøger at mindske afstanden for hele datasættet, er det oplagt at den ligger sig rundt om middelværdien. Den gennemsnitlige afvigelse for vores model er 6.042.\
 En del af dette kan også skyldes, ligesom med den logistiske reggression, at det generelt er et svagt sammenhæng mellem målinger fra 8 og 12 år og målinger fra 16 år.
 
@@ -144,7 +148,8 @@ Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datas
 Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangende i en binær klassifikations model. Det hænger dog sammen med, at mange af datapunkterne er overvejende ens indtil sidste måling. Som diskuteret i afsnittet, om vores problemer/udfordringer.
 
 
-<img width="389" alt="Dataprojekt confusion matrix" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/143393880/18d7ffe9-ac89-4359-b38c-7d7e1170b039">
+<img width="389" alt="Dataprojekt confusion matrix" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/143393880/18d7ffe9-ac89-4359-b38c-7d7e1170b039">\
+(figur 7.)\
 
 Vi har fundet de parametre, som har størst indflydelse på modellen, ved hjælp af SHAP. Det hjælper tandlægerne med forståelse og fortolkning af modellens forudsigelser.
 
