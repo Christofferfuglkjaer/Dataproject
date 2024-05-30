@@ -33,7 +33,7 @@ Vi vil gennemgå teorien bag den multiple logistisk regression, og derefter hvor
 
 ## Teori
 
-Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X = [x_1,x_2,...,x_n]$, vi har da et $Y$, som er vores "dummy variabel", som er 0 eller 1. $\pi(x)$ er en betinget sandsynlighed, som er $P(Y=1|x) = \pi(x)$, og $P(Y = 0|x) = 1-\pi(x)$  da er logit af vores multipel regression givet som: 
+Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X = [x_1,x_2,...,x_n]$. Vi Definerer nu et $Y$, som er en "dummy variabel", der er 0 eller 1. $\pi(x)$ er en betinget sandsynlighed, som er $P(Y=1|x) = \pi(x)$, og $P(Y = 0|x) = 1-\pi(x)$  da er logit af vores multipel regression givet som: 
 $$g(x) =\ln\left(\frac{\pi(X)}{1-\pi(X)}\right) = \beta_0+\beta_1x_1+...+b_n x_n$$
 hvor $n=16$.    (er det den samme $\pi$ som i den næste?)
 
