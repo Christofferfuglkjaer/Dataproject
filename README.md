@@ -57,7 +57,7 @@ $$\hat{\beta'}= \frac{\partial L(\beta')}{\partial \beta_m} = \sum^n_{i=1} y_i x
 Nu har vi fundet vores maksimum likelihood estimater, som vi beskriver ved $\hat{\beta}$
 
 Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi vores $\hat{\beta'}$ og indsætter dem i 
-$$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\textbf{\beta'}}x_m}}$$
+$$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
 
 
 Alt teorien er fundet i (1) s.6-9 og s.31-34
