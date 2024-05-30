@@ -183,3 +183,19 @@ for (i in c(8, 12, 16)) {
 boxplot(y~x, xlab = "Målingsdato", ylab = "Pinheiro score")
 ```
 
+
+```{r}
+data_4 <- data_3[data_3$Total.Row.Score.B > 19,]
+data_4
+```
+
+```{r}
+nrow(data_4[data_4$Total.Row.Score.C <= 5, ]) / nrow(data_4) * 100
+```
+
+
+
+
+
+
+
