@@ -4,7 +4,7 @@
 ## Indholdsfortegnelse
 * [Introduktion](#introduktion)
 * [Model](#model)
-* [SHAP værdier.](#shap-værdier)
+* [SHAP værdier](#shap-værdier)
 * [Udfordringer](#udfordringer)
 * [Andre tilgange](#andre-tilgange)
 * [Resultater](#resultater)
@@ -23,7 +23,7 @@ Vores model, som tager værdier fra målinger af tændernes tilstand efter henho
 
 Her vil et 0 være et godt resultat og 1 dårligt resultat. Modellen vil derfor prædiktere en sandsynlighed for at være i 0 eller 1. 
 
-For at tandlæger kan tilgå og bruge modellen i praksis, er der udviklet en app igennem Streamlit. Gennem appen kan tandlægerene  indtaste værdier for de første to målinger, hvortil vores model vil give en prædiktion for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Appen skal bruges som et værktøj af tandlægerne til at bekræfte deres faglige intuition.
+For at tandlæger kan tilgå og bruge modellen i praksis, er der udviklet en app igennem Streamlit. Gennem appen kan tandlægerene  indtaste værdier for de første to målinger, hvortil vores model vil give en prædiktion for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Appen skal bruges som et værktøj af tandlægerne til at understøtte deres faglige intuition.
 
 
 # Model 
@@ -78,7 +78,7 @@ Hjemmesiden er blevet modtaget med stor glæde og interesse fra tandlægerne.
 Link til hjemmeside:  https://cleft-lip-app-r4y7280urvh.streamlit.app
 
  
-## SHAP værdier.
+## SHAP værdier
 SHAP (Shapley Additive exPlanations) er en metode, der kan bruges på Machine Learning modeller, til at se hver parameters effekt på en forudsigelse.\
 Når man arbejder med SHAP-værdier, er det vigtigt at notere sig, at de ikke kan bruges til at forklare kausalitet. Siger udelukkende noget om, hvordan modellen er kommet frem til en forudsigelse.\
 \
@@ -159,7 +159,9 @@ Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangend
 <img width="389" alt="Dataprojekt confusion matrix" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/143393880/18d7ffe9-ac89-4359-b38c-7d7e1170b039">\
 (figur 7.)
 
-Vi har fundet de parametre, som har størst indflydelse på modellen, ved hjælp af SHAP. Det hjælper tandlægerne med forståelse og fortolkning af modellens forudsigelser.
+Vi har fundet de parametre, som har størst indflydelse på modellen, ved hjælp af SHAP, det tre mest signifikante værende Anteroposterior 2.1, Pan 2 og Anteroposterior 1.1. Det hjælper tandlægerne med forståelse og fortolkning af modellens forudsigelser.
+
+Tandlægerne kan da bruge modellen som et værktøj i deres forudsigelse af en patients udvikling til at understøtte deres faglige intuition.
 
 
 # Referencer 
