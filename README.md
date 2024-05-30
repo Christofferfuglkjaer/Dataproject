@@ -33,7 +33,7 @@ Vi vil gennemgå teorien bag den multiple logistisk regression, og derefter hvor
 
 ## Teori
 
-Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X = [x_1,x_2,...,x_n]$, da er logit af vores multipel regression givet som: 
+Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X = [x_1,x_2,...,x_n]$, vi har da et $Y$, som er vores "dummy variabel", som er 0 eller 1. $\pi(x)$ er en betinget sandsynlighed, som er $P(Y=1|x) = \pi(x)$, og $P(Y = 0|x) = 1-\pi(x)$  da er logit af vores multipel regression givet som: 
 $$g(x) =\ln\left(\frac{\pi(X)}{1-\pi(X)}\right) = \beta_0+\beta_1x_1+...+b_n x_n$$
 hvor $n=16$.    (er det den samme $\pi$ som i den næste?)
 
@@ -41,7 +41,7 @@ Vi kan nu opskrive vores multipel logisitiske regression, den har formen af en l
 
 $$\pi(x)=\frac{e^{g(x)}}{1+e^{g(x)}}$$
 
-Vi vil nu opskrive vores likelihood funktion. Vi har et $Y$, vores "dummy variabel", som er 0 eller 1. $\pi(x)$ er en betinget sandsynlighed, som er $P(Y=1|x) = \pi(x)$, og $P(Y = 0|x) = 1-\pi(x)$  Vi kan nu benytte Bernoulli fordelingen til at opstille vores likelihood funktion.
+Vi kan nu benytte Bernoulli fordelingen til at opstille vores likelihood funktion.
 
 $$\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y}$$
 Vi ved at alle observationer er uafhængige, da det er målinger fra forskellige patienter. Da er vores likelihood funktion et samlet produkt af ovenstående udtryk.
