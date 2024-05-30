@@ -19,17 +19,16 @@ I et internationalt studie, har man undersøgt forskellige primære operationer 
 
  Datasættet har 124 patienter med 36 kolonner, og består af tre målings-tidspunkter i hhv. aldrene 8, 12 og 16. For hver måling har vi 10 værdier for patientens tilstand, f.eks. 'Spacing, 'Transverse' og 'Crowding'. Summen af alle værdierne udgør patientens Pinheiro score. Scoren ligger mellem 0 og 52, og man ønsker en lav score.
 
-Vores model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis 8 og 12 år, og vil prædiktere den endelige tilstand når patienten er 16 år, baseret på tidligere datapunkter
-(Denne model bliver lavet til en app som tandlægerne kan bruge som et værktøj til at bekræfte deres faglige intuition.)
+Vores model, som tager værdier fra målinger af tændernes tilstand efter henholdsvis 8 og 12 år, og vil prædiktere den endelige tilstand når patienten er 16 år, baseret på tidligere datapunkter, dette bliver gjort ved at lave en binær variable som er god hvis den endelige Pinheiro score er 5 eller under, og alt over er et dårligt resultat. Her vil et 0 være et godt resultat og 1 dårligt resultat. Modellen vil derfor prædiktere en sandsynlighed for at være i 0 eller 1. 
 
-For at tandlæger kan tilgå og bruge modellen i praksis, er der udviklet en app igennem Streamlit. Gennem appen kan tandlægerene  indtaste værdier for de første to målinger, hvortil vores model vil give en prædiktion for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. 
+For at tandlæger kan tilgå og bruge modellen i praksis, er der udviklet en app igennem Streamlit. Gennem appen kan tandlægerene  indtaste værdier for de første to målinger, hvortil vores model vil give en prædiktion for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Appen skal bruges som et værktøj af tandlægerne til at bekræfte deres faglige intuition.
 
 
 # Model 
 
 ## Logistisk regression
-Vi har valgt at bruge en logistisk regression, da vi ønskede at lave en binær klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er god eller dårlig. Den logistiske regressions output er en sandsynlighed for at ende i en god eller dårlig.
-For bedre at kunne demonstrere, hvordan vi bruger dette i praksis, gennemgår vi kort teorien bag den multiple logistisk regression, samt hvordan vi implementerer dette i Python.
+Vi har valgt at bruge en logistisk regression, da vi ønskede at lave en binær klassificering, og med den mængde data vi har, gav det mening at bruge en supervised model, hvor labels er god eller dårlig.
+Vi vel hurtigt gennemgå teorien bag den multiple logistisk regression, og derefter hvordan vi implementerer og træner vores model i python.
 
 ## Teori
 
