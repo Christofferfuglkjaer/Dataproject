@@ -150,7 +150,7 @@ Med 14 komponenter er lidt over 95 procent af variansen forklaret, i vores datas
 
 ## Andre statiske modeller
 
-Vi undersøgte også andre klassificeringsmodeller, som $\textit{RandomForrestClassifier}$, $\textit{DecisionTreeClassifier}$ og $\textit{KNeighborsClassifier}$.Som man kan se i $\textit{Andre statistiske modeller }$ så får vi de samme resultater som Logistisk regression, og da logistisk regression var hurtigere. 
+Vi undersøgte også andre klassificeringsmodeller, som $\textit{RandomForrestClassifier}$, $\textit{DecisionTreeClassifier}$ og $\textit{KNeighborsClassifier}$.Som man kan se i $\textit{Andre statistiske modeller}$ så får vi den samme præcision som Logistisk regression, og da logistisk regression var hurtigere valgte vi at beholde vores logistiske regression. 
 
 # Resultater
 Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangende i en binær klassifikations model. Det hænger dog sammen med, at mange af datapunkterne er overvejende ens indtil sidste måling. Som diskuteret i afsnittet, om vores problemer/udfordringer.
