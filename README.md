@@ -4,7 +4,7 @@
 ## Indholdsfortegnelse
 * [Introduktion](#introduktion)
 * [Model](#model)
-* [SHAP værdier og hvad bruger vi dem til.](#shap-værdier-og-hvad-bruger-vi-dem-til)
+* [SHAP værdier.](#shap-værdier)
 * [Udfordringer](#udfordringer)
 * [Andre tilgange](#andre-tilgange)
 * [Konklusion](#konklusion)
