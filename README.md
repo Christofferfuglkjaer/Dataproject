@@ -97,7 +97,7 @@ Derudover har datasættet ikke et stærkt sammenhæng mellem målingerne fra 8 o
 For patienter med end Pinheiro score over 20 i målingen ved 12 år ender omkring 37\% af dem med et godt resultat. Det giver en del usikkerhed i vores model, som derfor har en tendens til at gætte imellem. I denne figur har vi lavet modellem 10.000 gange med et udsnit af datasættet som træningsdata, og observeret hvor sikker den er på, at hver testpatient ender med et godt resultat.
 
 ![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/0bcd3a26-f04f-4fa0-9766-871a65c70ba3)\
-(figur 4. )\
+(figur 4. )
 
 Det kan her ses, at vores model ofte gætter, at sandsynligheden for et godt resultat er mellem 0,4 og 0,7. Den er sjældent meget sikker på at det ender dårligt, og endnu mere sjældent at det ender godt. Det kan godt give problemer, da et usikkert resultat ikke kan aflæses, andet end at det er usikkert. Tandlægerne kan da bruge dette resultat sammen med deres andre værktøjer til at give en forudsigelse for patienten.
 
@@ -149,7 +149,7 @@ Modellen har en præcision på lige over 65%, som selvfølgelig ikke er prangend
 
 
 <img width="389" alt="Dataprojekt confusion matrix" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/143393880/18d7ffe9-ac89-4359-b38c-7d7e1170b039">\
-(figur 7.)\
+(figur 7.)
 
 Vi har fundet de parametre, som har størst indflydelse på modellen, ved hjælp af SHAP. Det hjælper tandlægerne med forståelse og fortolkning af modellens forudsigelser.
 
