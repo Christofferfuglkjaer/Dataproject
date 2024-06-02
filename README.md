@@ -49,7 +49,7 @@ Vi ved at alle observationer er uafhængige, da det er målinger fra forskellige
 $$l(\beta')=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}$$
 hvor $\beta' = [\beta_0,...,\beta_m]$
 
-Princippet bag maksimum likelihood funktionen er at estimere den værdi for hver $\beta_0...\beta_m$ i $\beta'$ , som maksimerer udtrykket. For at gøre det nemmere at estimere $\beta'$, benytter vi Log-likelihood methoden og omskriver  $l(\beta')$ til 
+Princippet bag maksimum likelihood funktionen er at estimere den værdi for hver $\beta_0...\beta_m$ , som maksimerer udtrykket. For at gøre det nemmere at estimere $\beta'$, benytter vi Log-likelihood methoden og omskriver  $l(\beta')$ til 
 
 $$L(\beta')=\ln(l(\beta')) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i))$$
 
