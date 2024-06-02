@@ -100,7 +100,7 @@ Derudover har datasættet ikke en stærk sammenhæng mellem målingerne fra 8 og
 For patienter med en Pinheiro score over 20 i målingen ved 12 år ender omkring 37\% af dem med et godt resultat. Det giver en del usikkerhed i vores model, som derfor har en tendens til at gætte imellem. I denne figur har vi kørt modellen 10.000 gange med et udsnit af datasættet som træningsdata, og observeret hvor sikker den er på, at hver testpatient ender med et godt resultat.
 
 ![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/0bcd3a26-f04f-4fa0-9766-871a65c70ba3)\
-(figur 4. )
+(figur 4. Historgram af modellens usikkerhed )
 
 Det kan her ses, at vores model ofte gætter, at sandsynligheden for et godt resultat er mellem 0.4 og 0.7. Den er sjældent meget sikker på at det ender dårligt, og endnu mere sjældent sikker på at det ender godt. Et usikkert resultat kan være svært for tandlægerne at bruge i deres forudsigelse.
 
