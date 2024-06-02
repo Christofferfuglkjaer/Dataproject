@@ -95,7 +95,7 @@ Begrænsningen af et lille datasæt har vi forsøgt at undgå i vores logistiske
 Derudover har datasættet ikke en stærk sammenhæng mellem målingerne fra 8 og 12 år og målingerne fra 16 år. Særligt har vi set, at patienter, som har en høj score i de to første målinger, kan ende med både gode og dårlige resultater i sidste måling, som kan ses i figuren under.
 
 <img width="730" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/ac63ddf7-863b-44bc-9182-4893c11ec845">\
-(figur 3. )
+(figur 3. Målinger fra 8-12-16 år)
 
 For patienter med en Pinheiro score over 20 i målingen ved 12 år ender omkring 37\% af dem med et godt resultat. Det giver en del usikkerhed i vores model, som derfor har en tendens til at gætte imellem. I denne figur har vi kørt modellen 10.000 gange med et udsnit af datasættet som træningsdata, og observeret hvor sikker den er på, at hver testpatient ender med et godt resultat.
 
@@ -118,13 +118,13 @@ Denne model har en forklaringsgrad på 0.4, og den gennemsnitlige afvigelse fra 
 
 I figur 5 herunder er den egentlige værdi for  Pinheiro scoren af x-aksen imod værdierne fra vores lineære regression af y-aksen:
 <img width="727" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/074756f0-b463-45ce-a3b3-67c843e53e54">\
-(figur 5.)\
+(figur 5. Linenær model scatterplot)\
 Af dette plot kan vi se begrænsningerne i vores lineære model. Mange af de egentlige værdier for Pinheiro scoren ender i nul, mens den lineære model giver værdier mellem nul og 10 for disse patienter. På samme vis ser vi en gruppe af egentlige værdier omkring 30, som modellen giver en værdi omkring 10.
 Generelt ser vi et svagt sammenhæng, idet værdierne af den lineære model stiger sammen med de egentlige værdier. Men outputtet fra modellen kan variere meget fra den egentlige værdi.
 
 Vi bemærker også, at middelværdien for modellen er nær identisk med det oprindelige data, henholdsvis 8.881530 og 8.881536. Til gengæld er variationen i vores model markant lavere end for det oprindelige data, henholdsvis 43.24 og 103.44. I et boksplot over den egentlige værdi og lm værdierne kan man se forskellen i spredning for Pinheiro scoren:\
 <img width="729" alt="image" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/d77ffbab-81d2-4ac8-912a-00aa82a1a25b">\
-(figur 6.)\
+(figur 6.Lineær model boxplot)\
 Det kan her ses, hvordan de egentlige værdier har større spredning, og særligt hvor mange der ligger omkring 0 til 1. Boksplottet for den lineære model ligger langt mere samlet rundt om middelværdien.\
 Ligesom med den multiple logistiske regression konkluderer vi, at der generelt er et svagt sammenhæng mellem målinger fra 8 og 12 år og målinger fra 16 år.
 
@@ -161,7 +161,7 @@ Vi bruger her en confusion matrix til at visualisere modellens præcision, hvor 
 
 
 <img width="389" alt="Dataprojekt confusion matrix" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/143393880/18d7ffe9-ac89-4359-b38c-7d7e1170b039">\
-(figur 7.)
+(figur 7. Confusion matrix)
 
 Vi ville også undersøge, hvilke parametre, der mest indflydelse på det endelige resultat. Det blev gjort ved hjælp af SHAP-værdier, som viser at de tre parametre, der har størst effekt på modellens prædiktion, er Anteroposterior 2.1, Pan 2 og Anteroposterior 1.1. Ligeledes kan man se hvor meget de andre parametere påvirker modellens prædiktion. 
 
