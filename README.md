@@ -11,31 +11,31 @@
 * [Referencer](#referencer)
 
 # Introduktion
-Læbe-ganespalte er en medfødt tilstand, som rammer omkring hvert 500. barn. Børn med læbe-ganespalte gennemgår tre operationer (se figur 1). En primær operation, som er en kirurgisk lukning af læbespalten og den bløde gane. Dette sker, når patienterne er spædbørn. Den sekundære operation sker i en alder af enten et eller tre år, hvor den hårde gane lukkes. Når patienterne er 8 år for de den tredje operation, hvor man lukker den alveolære spalte (spalte i gummen), og første bøjlebehandlingen påbegyndes. I 12-års alderen vil den endelige bøjlebehandling blive påbegyndt, og der vil eventuelt blive foretaget mindre justeringer. Til sidst vil patientens bøjle blive taget af samt endelige justeringer, typisk i 16-års alderen.
+Læbe-ganespalte er en medfødt tilstand, som rammer omkring hvert 500. barn. Børn med læbe-ganespalte gennemgår tre operationer (se figur 1). En primær operation, som er en kirurgisk lukning af læbespalten og den bløde gane. Dette sker, når patienterne er spædbørn. Den sekundære operation sker i en alder af enten et eller tre år, hvor den hårde gane lukkes. Når patienterne er 8 år får de den tredje operation, hvor man lukker den alveolære spalte (spalten i gummen), og første bøjlebehandling påbegyndes. I 12-års alderen vil den endelige bøjlebehandling blive påbegyndt, og der vil eventuelt blive foretaget mindre justeringer. Til sidst vil patientens bøjle blive taget af samt endelige justeringer, typisk i 16-års alderen.
 
 <img width="894" alt="Skærmbillede 2024-04-03 kl  22 26 42" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/120389174/ebdc42f4-f83a-4bb9-ada1-b10800b02e95">\
 (figur.1: forløb for ganespaltepatienter)\
-I et internationalt studie, har man undersøgt forskellige sekundære operationer til sammenligning. I forbindelse med dette har man i Danmark indsamlet data på børnenes udvikling ved henholdsvis 8, 12 og 16 år.
+I et internationalt studie, har man sammenlignet forskellige sekundære operationer i en population af patienter med læbe ganesplatning. I forbindelse med dette har man i Danmark indsamlet data på børnenes udvikling ved henholdsvis 8, 12 og 16 år.
 
  Datasættet har 123 patienter med 36 kolonner, og består af tre målings-tidspunkter i henholdsvis aldrene 8, 12 og 16. For hver måling har vi 10 værdier for patientens tilstand, f.eks. 'Spacing', 'Transverse' og 'Crowding'. Summen af alle værdierne i en måling udgør patientens Pinheiro score. Scoren ligger mellem 0 og 52, og man ønsker en lav score.
 
-Vores model tager værdier fra målinger af tændernes tilstand efter henholdsvis 8 og 12 år, og vil prædiktere den endelige tilstand når patienten er 16 år, baseret på tidligere datapunkter. Dette bliver gjort ved at lave en binær variable, som er god, hvis den endelige Pinheiro score er 5 eller under, hvilket vi klassificere som 0, og alt over 5 er et dårligt resultat, hvilket vi klassificere som 1. Vi har valgt 5 som grænsen i samarbejde med tandlægerne, da det er medianen for endelige Pinheiro-score og stemmer overens med et lægefagligt godt resultat. 
+Vores model tager værdier fra målinger af tændernes tilstand efter henholdsvis 8 og 12 år, og vil prædiktere den endelige tilstand når patienten er 16 år, baseret på tidligere datapunkter. Dette bliver gjort ved at lave en binær variabel, som er god, hvis den endelige Pinheiro score er 5 eller under, hvilket vi klassificerer som 0, og alt over 5 er et dårligt resultat, hvilket vi klassificerer som 1. Vi har valgt 5 som grænsen i samarbejde med tandlægerne, da det er medianen for endelige Pinheiro-score og stemmer overens med et lægefagligt godt resultat. 
 
 
-For at tandlæger kan tilgå og bruge modellen i praksis, er der udviklet en app igennem Streamlit. Gennem appen kan tandlægerene  indtaste værdier for de første to målinger, hvortil vores model vil give en prædiktion for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Appen skal bruges som et værktøj af tandlægerne til at understøtte deres faglige intuition og de andre midler de benytter.
+For at tandlægerne kan tilgå og bruge modellen i praksis, er der udviklet en app igennem Streamlit. Gennem appen kan tandlægerene  indtaste værdier for de første to målinger, hvortil vores model vil give en prædiktion for den endelige udvikling, samt hvor sikker modellen er på sin forudsigelse. Appen skal bruges som et værktøj af tandlægerne til at understøtte deres faglige intuition og de andre midler de benytter.
 
 
 # Model 
 
 ## Logistisk regression
-Vi har valgt at bruge en logistisk regression, da vi ønsker at lave en binær klassificering. Det giver derfor mening at bruge en supervised model, hvor labels er givet ud fra vores binære variabel.
+Vi har valgt at bruge en multiple logistisk regression, da vi ønsker at lave en binær klassificering. Det giver derfor mening at bruge en supervised model, hvor labels er givet ud fra vores binære variabel.
 Vi vil gennemgå teorien bag den multiple logistisk regression, og derefter hvordan vi implementerer og fitter vores model i python.
 
 ## Teori
 
-Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X = [x_1,x_2,...,x_n]$. Vi definerer nu et $Y$, som er en "dummy variabel", der er 0 eller 1. $\pi(x)$ er en betinget sandsynlighed, som er $P(Y=1|x) = \pi(x)$, og $P(Y = 0|x) = 1-\pi(x)$. Da er logit af vores multipel regression givet som: 
+Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X = [x_1,x_2,...,x_n]$. Vi definerer nu et $Y$, som er en "dummy variabel", der er 0 eller 1. Lad nu $\pi(x)$ være en betinget sandsynlighed, som er $P(Y=1|x) = \pi(x)$, og $P(Y = 0|x) = 1-\pi(x)$. Da er logit af vores multipel regression givet som: 
 $$g(x) =\ln\left(\frac{\pi(X)}{1-\pi(X)}\right) = \beta_0+\beta_1x_1+...+b_n x_n$$
-hvor $n=16$.
+
 
 Vi kan nu opskrive vores multipel logisitiske regression, den har formen af en logistisk sigmoid:
 
@@ -49,19 +49,19 @@ Vi ved at alle observationer er uafhængige, da det er målinger fra forskellige
 $$l(\beta')=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}$$
 hvor $\beta' = [\beta_0,...,\beta_m]$
 
-Princippet bag maksimum likelihood funktionen er at estimere den værdi for hver $\beta_m$, som maksimerer udtrykket. For at gøre det nemmere at estimere $\beta'$, benytter vi Log-likelihood methoden og omskriver  $l(\beta')$ til 
+Princippet bag maksimum likelihood funktionen er at estimere den værdi for hver $\beta_0...\beta_m$ i $\beta'$ , som maksimerer udtrykket. For at gøre det nemmere at estimere $\beta'$, benytter vi Log-likelihood methoden og omskriver  $l(\beta')$ til 
 
 $$L(\beta')=\ln(l(\beta')) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i))$$
 
 Nu differencierer vi $L(\beta')$ med respekt til $\beta'$ for at finde de værdier, som maksimerer vores udtryk.
-$$\hat{\beta'}= \frac{\partial L(\beta')}{\partial \beta_m} = \sum^n_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
+$$\hat{\beta'}= \frac{\partial L(\beta')}{\partial \beta_'} = \sum^n_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
 Nu har vi fundet vores maksimum likelihood estimater, som vi beskriver ved $\hat{\beta'} = [\hat{\beta_0},...,\hat{\beta_m}]$$
 
-Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi $\hat{\beta'}$ og indsætter dem i 
+Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi $\hat{\beta_0...\hat{\beta_m}}$ og indsætter dem i 
 $$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
 
 
-Alt teorien er fundet i [1] s.6-9 og s.31-34
+Alt teorien er fundet i [1] s.6-9 og s.31-34.
 
 
 I Jupyter notebook filen 'Logistisk-regression.ipynb' bruger vi $\textit{Sklearn}$ til lave og fitte vores model. Helt generelt, så importerer vi det behandlede data, som vi standardiserer med en $\textit{MinMaxScaler}$, hvilket betyder at datapunkter bliver skaleret til at være mellem 0 og 1. Da kan vi oprette vores binær target kolonne. Dernæst splitter vi data op i 75 procent trænings data og 25 procent test data. Nu kan vi fitte vores model og bruge test data til analysere hvor præcis vores model er. Da vi havde store svingninger i vores models præcision, valgte vi at bruge en Bootstrap tilgang, hvor vi kører modellen 25 gange, med tilbagelægning, og tager middelværdien af forudsigelserne, præcision og SHAP-værdierne. Det har gjort at vores model er mere stabil og giver en mere ensartet forudsigelse. 
