@@ -57,7 +57,7 @@ Nu differencierer vi $L(\beta')$ med respekt til $\beta'$ for at finde de værdi
 $$\hat{\beta'}= \frac{\partial L(\beta')}{\partial \beta'} = \sum^n_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
 Nu har vi fundet vores maksimum likelihood estimater, som vi beskriver ved $\hat{\beta'} = [\hat{\beta_0},...,\hat{\beta_m}]$
 
-Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi $\hat{\beta_0...\hat{\beta_m}}$ og indsætter dem i 
+Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi $\hat{\beta_0}...\hat{\beta_m}$ og indsætter dem i 
 $$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
 
 
