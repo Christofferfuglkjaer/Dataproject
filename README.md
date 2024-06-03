@@ -58,7 +58,7 @@ $$\hat{\beta_j'}= \frac{\partial L(\beta_j')}{\partial \beta_j'} = \sum^n_{i=1} 
 Nu har vi fundet vores maksimum likelihood estimater, som vi beskriver ved $\hat{\beta'} = [\hat{\beta_0},...,\hat{\beta_m}]$
 
 Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi $\hat{\beta_0}...\hat{\beta_m}$ og indsætter dem i 
-$$z(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
+$$\hat{z(x)} = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
 
 
 Alt teorien er fundet i [1] s.6-9 og s.31-34.
