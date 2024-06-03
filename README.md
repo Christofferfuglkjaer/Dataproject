@@ -43,7 +43,7 @@ $$z(x)=\frac{e^{g(x)}}{1+e^{g(x)}}$$
 
 Vi kan nu benytte Bernoulli fordelingen til at opstille vores likelihood funktion.
 
-$$\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y}$$
+$$\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y_i}$$
 Vi ved at alle observationer er uafhængige, da det er målinger fra forskellige patienter. Da er vores likelihood funktion et samlet produkt af ovenstående udtryk.
 
 $$l(\beta')=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_i))^{1-y_i}$$
