@@ -46,7 +46,7 @@ Vi kan nu benytte Bernoulli fordelingen til at opstille vores likelihood funktio
 $$\pi(x_i)^{y_i}(1-\pi(x_i))^{1-y}$$
 Vi ved at alle observationer er uafhængige, da det er målinger fra forskellige patienter. Da er vores likelihood funktion et samlet produkt af ovenstående udtryk.
 
-$$l(\beta')=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_1))^{1-y}$$
+$$l(\beta')=\prod^n_{i=1} \pi(x_i)^{y_i} (1-\pi(x_i))^{1-y_i}$$
 hvor $\beta' = [\beta_0,...,\beta_m]$
 
 Princippet bag maksimum likelihood funktionen er at estimere den værdi for hver $\beta_0...\beta_m$ , som maksimerer udtrykket. For at gøre det nemmere at estimere $\beta'$, benytter vi Log-likelihood methoden og omskriver  $l(\beta')$ til 
@@ -54,7 +54,7 @@ Princippet bag maksimum likelihood funktionen er at estimere den værdi for hver
 $$L(\beta')=\ln(l(\beta')) = \sum^n_{i=1} y_i \ln(\pi(x_i))+(1-y_i)\ln(1-\pi(x_i))$$
 
 Nu differencierer vi $L(\beta')$ med respekt til $\beta'$ for at finde de værdier, som maksimerer vores udtryk.
-$$\hat{\beta'}= \frac{\partial L(\beta')}{\partial \beta'} = \sum^n_{i=1} y_i x_{im} - x_{im} \pi(x_i) = 0$$
+$$\hat{\beta_j'}= \frac{\partial L(\beta_j')}{\partial \beta_j'} = \sum^n_{i=1} y_i x_{ij} - x_{ij} \pi(x_i) = 0$$
 Nu har vi fundet vores maksimum likelihood estimater, som vi beskriver ved $\hat{\beta'} = [\hat{\beta_0},...,\hat{\beta_m}]$
 
 Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi $\hat{\beta_0}...\hat{\beta_m}$ og indsætter dem i 
