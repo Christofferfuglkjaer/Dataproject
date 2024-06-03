@@ -33,13 +33,13 @@ Vi vil gennemgå teorien bag den multiple logistisk regression, og derefter hvor
 
 ## Teori
 
-Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X = [x_1,x_2,...,x_n]$. Vi definerer nu et $Y$, som er en "dummy variabel", der er 0 eller 1. Lad nu $\pi(x)$ være en betinget sandsynlighed, som er $P(Y=1|x) = \pi(x)$, og $P(Y = 0|x) = 1-\pi(x)$. Da er logit af vores multipel regression givet som: 
-$$g(x) =\ln\left(\frac{\pi(X)}{1-\pi(X)}\right) = \beta_0+\beta_1x_1+...+b_n x_n$$
+Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X \in R^{n \times m}$. Vi definerer nu et $Y$, som er en "dummy variabel", der er 0 eller 1. Lad nu $\pi(x)$ være en betinget sandsynlighed, som er $P(Y=1|x_i) = \pi(x_i)$, og $P(Y = 0|x_i) = 1-\pi(x_i)$. Da er logit af vores multipel regression givet som: 
+$$g(x) =\ln\left(\frac{\pi(x_i)}{1-\pi(x_i)}\right) = \beta_0+\beta_1x_{i1}+...+b_m x_{im}$$
 
 
 Vi kan nu opskrive vores multipel logisitiske regression, den har formen af en logistisk sigmoid:
 
-$$\pi(x)=\frac{e^{g(x)}}{1+e^{g(x)}}$$
+$$z(x)=\frac{e^{g(x)}}{1+e^{g(x)}}$$
 
 Vi kan nu benytte Bernoulli fordelingen til at opstille vores likelihood funktion.
 
@@ -58,7 +58,7 @@ $$\hat{\beta'}= \frac{\partial L(\beta')}{\partial \beta'} = \sum^n_{i=1} y_i x_
 Nu har vi fundet vores maksimum likelihood estimater, som vi beskriver ved $\hat{\beta'} = [\hat{\beta_0},...,\hat{\beta_m}]$
 
 Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi $\hat{\beta_0}...\hat{\beta_m}$ og indsætter dem i 
-$$\pi(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
+$$z(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_m}}$$
 
 
 Alt teorien er fundet i [1] s.6-9 og s.31-34.
