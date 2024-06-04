@@ -87,7 +87,7 @@ Vi bruger et plot fra pakken SHAP, til forklare modellens forudsigelser. Det er 
 
 ## Udfordringer 
 
-PDen største udfordring med dette projekt er fokuseret omkring det data gjort tilgængeligt. Vi har været begrænset af størrelsen af vores data, der indeholder 123 patienter, som betyder, at vi skal være opmærksomme på overfitting. Yderlige har der været datapunkter med manglende værdier, så vi ender med 116 datapunkter. Datoerne for målingerne er tilgængelige for patienter fra hovedstaden, men manglende for patienter fra Aarhus, hvilket tvinger os til ikke at bruge dem. De kunne have haft en effekt, da patientens alder ved sidste måling varierer en del. Dette skyldes, at patienten skal være helt færdig med behandlingen før de får taget de sidste mål.
+Den største udfordring med dette projekt er fokuseret omkring det data gjort tilgængeligt. Vi har været begrænset af størrelsen af vores data, der indeholder 123 patienter, som betyder, at vi skal være opmærksomme på overfitting. Yderlige har der været datapunkter med manglende værdier, så vi ender med 116 datapunkter. Datoerne for målingerne er tilgængelige for patienter fra hovedstaden, men manglende for patienter fra Aarhus, hvilket tvinger os til ikke at bruge dem. De kunne have haft en effekt, da patientens alder ved sidste måling varierer en del. Dette skyldes, at patienten skal være helt færdig med behandlingen før de får taget de sidste mål.
 
 Begrænsningen af et lille datasæt har vi forsøgt at undgå i vores logistiske regressionsmodel ved at bruge Bootstrapping. Her vil vi lave modellen på forskellige dele af datasættet, hvor den gennemsnitlige model da gerne skulle have mindre overfitting.
 
