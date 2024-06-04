@@ -34,7 +34,7 @@ Vi vil gennemgå teorien bag den multiple logistisk regression, og derefter hvor
 ## Teori
 
 Givet vi har n datapunkter, som er I.I.D og er angivet på formen $X \in R^{n \times m}$. Vi definerer nu et $Y$, som er en "dummy variabel", der er 0 eller 1. Lad nu $\pi(x)$ være en betinget sandsynlighed, som er $P(Y=1|x_i) = \pi(x_i)$, og $P(Y = 0|x_i) = 1-\pi(x_i)$. Da er logit af vores multipel regression givet som: 
-$$g(x) =\ln\left(\frac{\pi(x_i)}{1-\pi(x_i)}\right) = \beta_0+\beta_1x_{i1}+...+b_m x_{im}$$
+$$g(x) =\ln\left(\frac{\pi(x_i)}{1-\pi(x_i)}\right) = \beta_0+\beta_1x_{i1}+...+\beta_m x_{im}$$
 
 
 Vi kan nu opskrive vores multipel logisitiske regression, den har formen af en logistisk sigmoid:
