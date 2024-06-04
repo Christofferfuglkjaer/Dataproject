@@ -160,7 +160,8 @@ Formålet med projektet var at forsøge at prædiktere om den endelige Pinheiro-
 Vi bruger her en confusion matrix til at visualisere modellens præcision, hvor nederste venstre boks er antallet af falske positive og øverste højre boks er falske negative.
 
 
-<img width="389" alt="Dataprojekt confusion matrix" src="https://github.com/Christofferfuglkjaer/Dataproject/assets/143393880/18d7ffe9-ac89-4359-b38c-7d7e1170b039">\
+![image](https://github.com/Christofferfuglkjaer/Dataproject/assets/118052934/83d59fd0-9176-4fff-ae53-85cc39fd6830)
+
 (figur 7. Confusion matrix)
 
 Vi ville også undersøge, hvilke parametre, der mest indflydelse på det endelige resultat. Det blev gjort ved hjælp af SHAP-værdier, som viser at de tre parametre, der har størst effekt på modellens prædiktion, er Anteroposterior 2.1, Pan 2 og Anteroposterior 1.1. Ligeledes kan man se hvor meget de andre parametere påvirker modellens prædiktion. 
