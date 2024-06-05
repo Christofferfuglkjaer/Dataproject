@@ -39,7 +39,7 @@ $$g(x) =\ln\left(\frac{\pi(x_i)}{1-\pi(x_i)}\right) = \beta_0+\beta_1x_{i1}+...+
 
 Vi kan nu opskrive vores multipel logisitiske regression, den har formen af en logistisk sigmoid:
 
-$$z(x)=\frac{e^{g(x)}}{1+e^{g(x)}}$$
+$$\pi(x)=\frac{e^{g(x)}}{1+e^{g(x)}}$$
 
 Vi kan nu benytte Bernoulli fordelingen til at opstille vores likelihood funktion.
 
@@ -58,7 +58,7 @@ $$\hat{\beta_j'}= \frac{\partial L(\beta_j')}{\partial \beta_j'} = \sum^n_{i=1} 
 Nu har vi fundet vores maksimum likelihood estimater, som vi beskriver ved $\hat{\beta'} = [\hat{\beta_0},...,\hat{\beta_m}]$
 
 Nu hvis vi gerne vil lave en forudsigelse med vores model, benytter vi $\hat{\beta_0}...\hat{\beta_m}$ og indsætter dem i 
-$$\hat{z}(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_{im}}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_{im}}}$$
+$$\hat{\pi}(x) = \frac{e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_{im}}}{1+e^{\hat{\beta_0}+\hat{\beta_1}x_1+...+\hat{\beta_m}x_{im}}}$$
 
 
 Alt teorien er fundet i [1] s.6-9 og s.31-34.
